@@ -51,9 +51,44 @@ statisztikák és elemzések készítéséhez rendelkezésre álljanak az adatok
 Az alkalmazás célja, hogy egyszerűsítse a felmérések készítését és az adatok kezelését az egyetemi
 közösség számára, és biztonságosan és hatékonyan tárolja az összegyűjtött információkat a jövőbeli felhasználás céljából.
 
+## Funkcionális követelmények
+
+## Törvények Jogszabályok
+
+__Általános Adatvédelmi Rendelet (GDPR)__: Az Európai Unióban működő mobilalkalmazásoknak a GDPR 
+rendelkezéseit be kell tartaniuk, ha az alkalmazás felhasználóinak személyes adatait kezelik. 
+Ez magában foglalja a felhasználók hozzájárulását, adatbiztonságot és az adatokhoz való hozzáférés korlátozását is.
+
+__Felhasználási feltételek és Adatvédelmi Nyilatkozat__: Az alkalmazásnak egyértelműen és érthetően 
+kell megjelenítenie a felhasználási feltételeket és az adatvédelmi nyilatkozatot. 
+Ezeknek tartalmazniuk kell, hogy milyen adatokat gyűjtenek, hogyan használják fel azokat, és kivel osztják meg.
+
+__Cookie-k és Süti Beleegyezés__: Az Európai Unióban és sok más országban kötelezően előírják a 
+felhasználói süti beleegyezést, ha az alkalmazás sütiket vagy hasonló technológiákat használ az adatgyűjtéshez.
+
+__Adatbiztonság__: Az alkalmazásnak megfelelő intézkedéseket kell tennie az adatok biztonságos 
+tárolására és védelmére, hogy megakadályozza az illetéktelen hozzáférést vagy adatvédelmi incidenseket.
+
+__Hozzájárulás és hozzáférési jogok__: A felhasználóknak joguk van hozzájárulni adataik használatához 
+a kérdőív kitöltésekor, és joguk van hozzáférni, módosítani vagy törölni ezeket az adatokat.
+
+__Harmadik fél hozzáférés__: Ha az alkalmazás harmadik féllel osztja meg a kérdőívek adatait 
+(például az eredmények elemzése céljából), akkor erre vonatkozóan is megfelelő hozzájárulást és 
+adatvédelmi intézkedéseket kell alkalmazni.
+
+__Hozzáférhetőség és diszkrimináció elkerülése__: Az alkalmazásnak biztosítania kell, hogy a kérdőívek 
+ne diskrimináljanak semmilyen személy vagy csoport ellen, és azok hozzáférhetők legyenek mindenki számára.
+
+__Szerzői jog és szellemi tulajdon__: Az alkalmazásnak biztosítania kell, hogy a kérdőívek ne sértsenek szerzői jogokat vagy szellemi tulajdont.
+
+__Adatkezelési tájékoztatás__: Az alkalmazásnak világosan tájékoztatnia kell a felhasználókat arról, 
+hogy milyen módon használják fel az adataikat, és milyen jogokkal rendelkeznek az adataik felett.
+
 ## Követelménylista
 
 ## Jelenlegi üzleti folyamatok modellje
+
+## Igényelt üzleti folyamatok modellje
 
 ## Riport
 
