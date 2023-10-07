@@ -22,6 +22,19 @@ Ezzel a megértéssel és megfelelő biztonsági intézkedésekkel a szoftver k�
 biztonságosan kezelni a diákok adatait és a felméréseket.
 
 ## Jelenlegi helyzet
+Mára már elavult és költséges megoldásnak számít a papíralapú kérdőívek használata, amelyeket kézzel
+írnak alá és töltik ki az emberek. A papírok beszerzése és nyomtatása költséges, és hosszadalmas
+folyamat. Az emberek elkapása, hogy kitöltsék a kérdőívet, különösen a hosszabb, részletesebb kérdőívek
+esetén, nehézkes és időigényes feladat, amit nehéz ellenőrizni is. Ráadásul gyakran előfordul, hogy
+a kitöltők hibás vagy hiányos adatokat adnak meg, vagy félreértelmezett kérdésekre adnak válaszokat.
+Az adatok kézi felvitele a számítógépbe további időt és energiát igényel.
+
+Ehelyett az online kérdőívek használata sokkal hatékonyabb és kényelmesebb megoldás. Az emberek
+könnyedén és bármikor kitölthetik a kérdőívet az interneten keresztül, anélkül, hogy az egyetem
+területére kellene menniük. Az online kérdőívek használata lehetővé teszi, hogy csak azok a válaszok
+legyenek elfogadhatóak, amelyek megfelelő azonosítással és válaszokkal rendelkeznek, így elkerülve
+a hibák és az adatok helytelen rögzítését. Ezenkívül az online platform lehetővé teszi az adatok
+gyors és egyszerű rögzítését, és könnyen kezelhetővé teszi az adatok elemzését is.
 
 ## Vágyálom rendszer
 
