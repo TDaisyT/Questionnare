@@ -1,4 +1,4 @@
-# Funkcionális Specifikációk
+# Funkcionális Specifikációk(160 sor)
 
 
 ## Áttekintés
