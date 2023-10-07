@@ -88,6 +88,18 @@ hogy milyen módon használják fel az adataikat, és milyen jogokkal rendelkezn
 
 ## Jelenlegi üzleti folyamatok modellje
 
+<img src="Diagrams/JelenlegiÜzFoly.png" width="600">
+
+Napjainkban még mindig elterjedtek a papir alapú kérdőivek, melyek kinyomtatása éredkében évente több 
+ezer fát vágnak ki papir készítéséhez, ami nem előnyös környezetünk és bolygónk egészsége érdekében.
+Ehez még hozzá jön az ipari menyniségű tinta, ami a nyomtatások során felhasználásra kerülnek. 
+Több tonna haszált papir halmozodik fel világszerte évente kérdőivek követekeztében és ennek nem biztos, 
+hogy az egésze egyáltalán újra hasznosításra tud e jutni. és mind ez csak azért, hogy a nagy történések
+tekintetében egy minimális ideig legyen használva az a kérdőívet tartalmazó lap. 
+Az arra vállalkozók kitöltik a kérdőívet, majd azt a szakszerű feldolgozás és sztatisztika érdekében 
+egy szakembernek be kell vinnie a megadott adatokat a számítógépbe, amik lehetnek hiányosak, 
+kiolvashatatlanok, ezzel megnehezítve a munkát.
+
 ## Igényelt üzleti folyamatok modellje
 
 ## Riport
