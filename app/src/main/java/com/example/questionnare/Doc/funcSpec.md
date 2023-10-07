@@ -31,6 +31,30 @@ javítása. A projektnek kiemelten kell kezelnie az adatvédelmet, hogy biztosí
 kezelését és a felhasználók személyes adatainak védelmét.
 
 ## Jelenlegi helyzet
+A hagyományos, papíralapú kérdőívek használata hosszú ideje szolgálta az adatgyűjtés és felmérések
+célt, de ma már számos problémát hordoz magában, különösen az egyetemi környezetben:
+
+* A papíralapú kérdőívek előkészítése és terjesztése jelentős költségekkel jár. Az egyetemnek pénzt
+kell fordítania a nyomtatásra, papírra, nyomtató tintára és egyéb nyomtatási költségekre. Ezen felül
+a papíralapú kérdőívek kézi feldolgozása és adatrögzítése további időt és pénzt emészt fel.
+* A kérdőívek elkészítése és kiosztása hosszadalmas folyamat. Nehéz olyan időpontokat találni, amikor
+a hallgatók könnyen hozzáférhetnek a kérdőívekhez, és nehéz ellenőrizni, hogy mindenkit elért-e a kérdőív.
+Ezáltal a válaszadási arány csökkenhet.
+* Az adatok kézzel történő rögzítése a számítógépen rendkívül időigényes és hibalehetőségekkel terhelt
+folyamat. Az emberi hiba lehetősége fennáll, és az adatok elveszhetnek vagy megsérülhetnek.
+* Gyakran előfordul, hogy a kitöltők hibás vagy hiányos adatokat adnak meg, vagy félreértelmezett kérdésekre
+adnak válaszokat. Ez torzíthatja az eredményeket és nehezítheti az adatok értelmezését.
+
+Ezzel szemben az online kérdőívek használata modern és hatékony alternatívát kínál az egyetemnek a papíralapú kérdőívekhez képest:
+* Nincs szükség nyomtatásra, postázásra vagy kézi adatrögzítésre, így a költségek minimalizálódnak.
+* Az online kérdőívek azonnal hozzáférhetők a diákok számára, és a válaszok automatikusan rögzülnek.
+Ez lehetővé teszi, hogy az egyetem gyorsabban és hatékonyabban gyűjthesse az adatokat.
+* Az online kérdőívek csak azokat a válaszokat fogadják el, amelyek megfelelő azonosítással és
+válaszokkal rendelkeznek. Ez minimalizálja az emberi hibák és adatok helytelen rögzítésének lehetőségét.
+* Az emberek bármikor és bárhol kitölthetik az online kérdőíveket az interneten keresztül.
+Ez növeli a válaszadási arányt, mivel a diákoknak nincs szükségük fizikai jelenlétre.
+* Az online platformok lehetővé teszik az adatok gyors és egyszerű elemzését. Az egyetem könnyen és
+* gyorsan létrehozhat riportokat és statisztikákat az összegyűjtött adatok alapján.
 
 ## Követelménylista
 
