@@ -37,6 +37,19 @@ a hibák és az adatok helytelen rögzítését. Ezenkívül az online platform 
 gyors és egyszerű rögzítését, és könnyen kezelhetővé teszi az adatok elemzését is.
 
 ## Vágyálom rendszer
+A projekt célja, hogy egy olyan rendszert hozzunk létre, amely lehetővé teszi a könnyű és hatékony
+felmérések készítését az egyetemen tanuló hallgatók körében. Az alkalmazás kizárólag az egyetemi
+hallgatók számára lesz elérhető, és azoknak kell használniuk saját egyetemi e-mail címükkel való
+regisztrációval és bejelentkezéssel.
+
+Az alkalmazás felhasználóbarát lesz, hogy a hallgatók könnyedén és gyorsan megértsék, hogyan kell
+kitölteni a kérdőíveket. Az alkalmazás felhasználói felülete egyszerűen kezelhető és átlátható legyen.
+A felhasználók regisztrációs adatai biztonságosan tárolásra kerülnek egy adatbázisban, hogy elkerüljük
+az illetéktelen hozzáférést. A hallgatók által megadott válaszokat is tárolni fogjuk, hogy későbbi
+statisztikák és elemzések készítéséhez rendelkezésre álljanak az adatok.
+
+Az alkalmazás célja, hogy egyszerűsítse a felmérések készítését és az adatok kezelését az egyetemi
+közösség számára, és biztonságosan és hatékonyan tárolja az összegyűjtött információkat a jövőbeli felhasználás céljából.
 
 ## Követelménylista
 
