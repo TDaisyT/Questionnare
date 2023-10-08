@@ -60,6 +60,32 @@ Ez növeli a válaszadási arányt, mivel a diákoknak nincs szükségük fizika
 
 ## Jelenlegi üzleti folyamatok modellje
 
+<img src="Diagrams/JelenlegiÜzFoly.png" width="600">
+
+Napjainkban továbbra is elterjedt a papír alapú kérdőívek használata, amelyek nyomtatása érdekében 
+évente több ezer fa kerül kivágásra. Ez a gyakorlat sajnos súlyos környezeti hatásokkal jár, mivel 
+a fafeldolgozás és a papírgyártás szén-dioxid-kibocsátással jár, és az erdőirtás veszélyezteti a 
+biodiverzitást és a természetes élőhelyeket. A nagy mennyiségű papírhasználatunk tehát károsítja 
+bolygónk egészségét és hozzájárul a klímaváltozás problémájához.
+
+Ezenkívül ne feledkezzünk meg az ipari mennyiségű tintáról is, amely a kérdőívek nyomtatásakor kerül 
+felhasználásra. A tinta előállítása is környezeti terhelést jelent, és a felesleges tintától való 
+megszabadulás sem egyszerű feladat.
+
+Világszerte évente több tonna használt papír halmozódik fel a kitöltött kérdőívek eredményeként, 
+és sajnálatosan kevés ezek közül kerül újrahasznosításra. Ez azzal is jár, hogy a már egyszer használt 
+papíranyagot további faanyagokra van szükség annak pótlásához, ami további erdőirtást eredményez.
+
+Minden ez csak azért történik, hogy a kérdőívek tartalmazó lapokat egy rövid ideig használják fel. 
+Azok, akik kitöltik ezeket a kérdőíveket, átadják azokat, és a megadott adatokat egy szakembernek kell 
+beírnia a számítógépbe a szakszerű feldolgozás és statisztikai elemzés érdekében. Ebben a folyamatban 
+gyakran előfordulhatnak problémák, például hiányos vagy olvashatatlan kérdőívek, amelyek tovább 
+nehezítik a munkát és hozzájárulnak az erőforrások pazarlásához.
+
+Ezek az aggályok és problémák rámutatnak arra, hogy sürgősen szükség van a digitális technológiák 
+és az online adatgyűjtés előnyeinek kihasználására, hogy csökkentsük a papírfelhasználást, 
+minimalizáljuk a környezeti hatásokat, és hatékonyabban dolgozzunk az adatokkal.
+
 ## Igényelt üzleti folyamatok modellje
 
 ## Használati esetek
