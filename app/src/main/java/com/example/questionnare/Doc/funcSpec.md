@@ -90,6 +90,18 @@ minimalizáljuk a környezeti hatásokat, és hatékonyabban dolgozzunk az adato
 
 ## Használati esetek
 
+__Felhasználó__: A felhasználó regisztráció után bejelentkezhet az alkalmazásba. Az alkalmazás 
+főoldalán a kitöltésre váró Kérdőívekre rákattintva azt a felhasználó kitöltheti. A Kérdőív több
+típusú kérdést is tartalmazhat amelyek a továbbiak:
+ * Nyitott kérdések: a válaszadó a saját véleményét fogalmazhatja meg az adott témában
+ * Zárt kérdések: 
+   * Alternatív: 2 közül lehet választani (I-H)
+   * Szelektív: több válasz lehetőség, 1 vagy több válasz lehetőség is megjelőlhető
+   * Skála: minősítési sorrend (pl. 1-5)
+
+__Admin__: Kérdőíveket publikálhat az alkalmazásban a felhasználók számára. A kitöltött kérdőívek 
+eredményeit megszemlélheti, statisztikát készíthet belőle
+
 ## Képernyő tervek
 
 ## Forgatókönyv
