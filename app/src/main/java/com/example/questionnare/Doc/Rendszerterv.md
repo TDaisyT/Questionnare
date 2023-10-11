@@ -39,13 +39,13 @@ rá, hogy biztosítsák a projekt sikeres előrehaladását és zökkenőmentes 
 9.hét: A projekt bemutatása, átadás-átvétel.
 
 ### Mérföldkövek
-Projekt kezdése: 2023.10.02.
-Követelmény specifikáció és funkcionális specifikáció befejezése: XXXX
-Rendszerterv befejezése: XXXX
-Fejlesztés és tesztelés kezdete: 2023.10.23.
-A demo bemutatása: 2023.11.06.
-Utolsó simítások: 2023.11.26.
-A projekt bemutatása: 2023.11.27.
+Projekt kezdése: 2023.10.02.\
+Követelmény specifikáció és funkcionális specifikáció befejezése: XXXX\
+Rendszerterv befejezése: XXXX\
+Fejlesztés és tesztelés kezdete: 2023.10.23.\
+A demo bemutatása: 2023.11.06.\
+Utolsó simítások: 2023.11.26.\
+A projekt bemutatása: 2023.11.27.\
 
 
 ## Üzleti folyamatok modellje
