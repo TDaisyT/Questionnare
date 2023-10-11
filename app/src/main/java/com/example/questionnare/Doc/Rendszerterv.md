@@ -52,13 +52,27 @@ A projekt bemutatása: 2023.11.27.
 
 
 ## Követelmények(Leírja, hogy mit kell teljesíteni a programnak. Még javítandó,a követelmény listából kell kiszedni a dolgokat)
+A rendszer fő célja, hogy Android platformon működjön, és lehetővé tegye az egyetem hallgatóinak, hogy
+saját fiókkal ki tudják tölteni a kérdőívet. Ennek érdekében a következő funkcionális követelményeket határoztuk meg:
 
+### Funckionális követelmények(Mit tesz a rendszer?):
+* Androidon való működés
+* A hallgatóknak lehetővé kell tenni, hogy egy egyedi fiókot alkothassanak, amelyhez e-mail cím és
+jelszó szükséges, ami adatbázisban lesz tárolva
+* Az egyedi fiókkal rendelkező felhasználóknak lehetőséget kell nyújtani a bejelentkezéshez
+* A diákoknak lehetőséget kell adni a kérdőívek kitöltésére az online felületen, majd válaszaik eltárolására
+* Az adminisztrátoroknak admin fiókkal kell rendelkezniük, hogy képesek legyenek az összegyűjtött
+adatok elemzésére és statisztikai riportok készítésére
 
-## Követelmények(Leírja, hogy mit kell teljesíteni a programnak. Még javítandó,a követelmény listából kell kiszedni a dolgokat)
-### Funckionális követelmények:
-### Nem funkcionális követelménye:
+### Nem funkcionális követelménye(Hogyan működik a rendszer?):
+* A kérdőív kitöltése során a diákoknak egyszerű és felhasználóbarát felületen kell tudniuk navigálni
+* A szoftvernek stabilan kell működnie, azaz nem szabad rendszerösszeomlásokat vagy hibás adatok megjelenítését okoznia
+* Az adatoknak szigorúan titkosnak kell lenniük, és csak a megfelelő jogosultságokkal rendelkező
+személyek férhetnek hozzá, azaz egy felhasználó nem juthat hozzá egy másik felhasználó személyes adataihoz
+
 ### Törvényi előírások, szabványok:
-
+* A szoftvernek meg kell felelnie az adatvédelmi és felhasználói adatok kezelésére vonatkozó helyi
+törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 
 ## Funkcionális terv(Leírja a felhasználói szerepköröket, és hogy milyen feladatokat tudnak csinálni.)
 ### Rendszer szereplők:
