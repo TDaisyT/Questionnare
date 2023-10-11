@@ -105,7 +105,12 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 
 
 ## Implementációs terv
-
+Az alkalmazás Android platformon fog futni, így a két választható nyelv közül a Java programozási
+nyelvet fogjuk használni a mobilalkalmazás fejlesztéséhez, a Kotlinnal szemben, ugyanis több
+tapasztalatunk van Java-val Az adatbázis kezeléshez SQLite adatbázist használunk amely könnyen
+integrálható az Android alkalmazásokba. A felhasználó felület tervezéséhez az Android Studio saját
+XML alapú layout rendszerét alkalmazzuk, amivel kialakíthatjuk a kérdőív könnyen navigálható és
+felhasználóbarát felületét.
 
 ## Tesztterv (utólag még szerkesztendő)
 ### Tesztelési eljárások
