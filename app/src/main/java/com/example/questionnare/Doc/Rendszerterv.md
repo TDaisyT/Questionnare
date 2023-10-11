@@ -30,13 +30,13 @@ szerepköre, mindannyian készen állnak arra, hogy egymást támogassák és se
 rá, hogy biztosítsák a projekt sikeres előrehaladását és zökkenőmentes működését.
 
 ### Ütemterv
-1.hét: Projekt kitűzése. Github és Trello tábla megalkotása. A trello táblára feltölteni az elvégezendő feladatokat.
-2.hét: Követelmény specifikáció és funkcionális specifikáció elkészítese. Fejenként 20-40 sor.
-3.hét: Rendszerterv elkészítése, 1-2 ábrával együtt. Fejenként 40-80 sor. Felosztani a kötelességeket a sprintre.
-4-5.hét Fejlesztési sprint. Fejenként 300-600 sor kódolás
-6.hét: Demó bemutatása, problémák felírása és kijavítása
-7-8.hét: Fejlesztési sprint folytatása és tesztelés jegyzőkönyveléssel
-9.hét: A projekt bemutatása, átadás-átvétel
+1.hét: Projekt kitűzése. Github és Trello tábla megalkotása. A trello táblára feltölteni az elvégezendő feladatokat.\
+2.hét: Követelmény specifikáció és funkcionális specifikáció elkészítese. Fejenként 20-40 sor.\
+3.hét: Rendszerterv elkészítése, 1-2 ábrával együtt. Fejenként 40-80 sor. Felosztani a kötelességeket a sprintre.\
+4-5.hét Fejlesztési sprint. Fejenként 300-600 sor kódolás.\
+6.hét: Demó bemutatása, problémák felírása és kijavítása.\
+7-8.hét: Fejlesztési sprint folytatása és tesztelés jegyzőkönyveléssel.\
+9.hét: A projekt bemutatása, átadás-átvétel.
 
 ### Mérföldkövek
 Projekt kezdése: 2023.10.02.
