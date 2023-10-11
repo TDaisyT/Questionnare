@@ -5,8 +5,8 @@
 Az egyetem olyan szoftvert kér tőlünk, amely lehetővé teszi, hogy questionnare-k, azaz kérdőívek
 formájában adatokat gyűjtsön az ott tanuló diákokról. Azért, hogy minden diákot egyedileg azonosítani
 lehessen, szükség van arra, hogy mindegyikük rendelkezzen saját fiókkal. Ennek érdekében szükség van
-regisztrációra és bejelentkezésre is. A felhasználóknak létre kell hozniuk egy fiókot, amelyhez név
-és email-cím szükséges, ezek az adatok pedig az adatbázisban kerülnek tárolásra. Emellett a felhasználónak
+regisztrációra és bejelentkezésre is. A felhasználóknak létre kell hozniuk egy fiókot, amelyhez email-cím
+és jelszó szükséges, ezek az adatok pedig az adatbázisban kerülnek tárolásra. Emellett a felhasználónak
 lehetőséget kell nyújtani a ki- és bejelentkezéshez is.
 
 Miután a felhasználó bejelentkezett, megkezdődhet a felmérés. Fontos, hogy maga a kérdőív könnyen

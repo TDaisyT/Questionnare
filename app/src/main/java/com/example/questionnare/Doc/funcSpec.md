@@ -8,7 +8,7 @@ véleményét és tapasztalatait az egyetemi élettel kapcsolatban, valamint az 
 és oktatási programokkal kapcsolatban.
 
 Az alkalmazásban minden diáknak saját felhasználói fiókja kell legyen, amelyet regisztrációval hoznak
-létre. A regisztrációhoz név és egyetemi e-mail cím szükséges, és ezek az adatok kerülnek tárolásra
+létre. A regisztrációhoz egyetemi e-mail cím és jelszó szükséges, és ezek az adatok kerülnek tárolásra
 egy adatbázisban. A felhasználóknak lehetőséget kell adni a be- és kijelentkezésre is.
 
 Az alkalmazásnak lehetővé kell tennie az egyetem által létrehozott kérdőív könnyű kezelését.

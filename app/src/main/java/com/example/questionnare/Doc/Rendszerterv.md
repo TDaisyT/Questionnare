@@ -45,7 +45,7 @@ Rendszerterv befejezése: XXXX\
 Fejlesztés és tesztelés kezdete: 2023.10.23.\
 A demo bemutatása: 2023.11.06.\
 Utolsó simítások: 2023.11.26.\
-A projekt bemutatása: 2023.11.27.\
+A projekt bemutatása: 2023.11.27.
 
 
 ## Üzleti folyamatok modellje
