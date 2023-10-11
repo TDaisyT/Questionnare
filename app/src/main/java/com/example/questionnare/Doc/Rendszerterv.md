@@ -13,8 +13,7 @@
 
 ## Üzleti folyamatok modellje
 
-<img source="Diagrams/ÜzletiFolyMod.png" width=600> 
-
+<img src="Diagrams/ÜzletiFolyMod.png" width=600>
 
 ## Követelmények(Leírja, hogy mit kell teljesíteni a programnak. Még javítandó,a követelmény listából kell kiszedni a dolgokat)
 
