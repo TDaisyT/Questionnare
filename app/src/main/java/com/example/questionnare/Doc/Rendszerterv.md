@@ -83,7 +83,10 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 
 
 ## Fizikai környezet(Itt kell leírni milyen platformra készül a szoftver ,mik vannak engedélyezve és milyen fejlesztői eszközöket / programokat használunk fejlesztés közben)
-
+* Programozási Nyelv: A szoftvert Java programozási nyelven fogjuk fejleszteni.
+* Fejlesztői Környezet: Az Android Studio-t fogjuk használni a fejlesztéshez és teszteléshez.
+* Operációs Rendszer: A szoftvert Android operációs rendszeren fogjuk futtatni a mobil alkalmazás verzió esetében.
+* Nincsenek megvásárolt komponenseink.
 
 ## Absztrakt domain modell
 
