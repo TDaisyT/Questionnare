@@ -110,6 +110,16 @@ kiolvashatatlanok, ezzel megnehezítve a munkát.
 
 ## Igényelt üzleti folyamatok modellje
 
+A felhasználó a nyitó oldal után be tudjon jelentkezni a saját adataival az applikációba, hogy szabadon, rendeltetésszerűen
+használhassa. Fontos, hogy a felhasználó, ebben az esetben a diák által megadott adatok véletlenül se kerüljenek harmadik illetlen
+fél kezébe. Bejelentkezés után a jogosultsági szintnek megfelelően kell, hogy tudja használni a diák az alkalmazást és a 
+szintjéhez tartozó hozzáféréseket megkapja. A kvízeket a diák már csak kitölteni tudja. A kvíz akkor ér véget, ha a diák 
+az összes kérdésre válaszol. Az applikációban a diák számára egyértelműnek kell lennie, hogy hol ér véget az adott kvíz.
+A kvízek kérdéseinek a száma nem mindig azonos. A felhasználó válaszait egy adatbázisban tárolni kell, későbbi elemzés valamint 
+felhasználás céljából. A kvízek különböző egyetemi célből hasznos témájúak lehetnek. 
+
 ## Riport
+
+
 
 ## Fogalomszótár
