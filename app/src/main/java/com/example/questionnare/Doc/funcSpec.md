@@ -88,7 +88,10 @@ minimalizáljuk a környezeti hatásokat, és hatékonyabban dolgozzunk az adato
 
 ## Igényelt üzleti folyamatok modellje
 
-Létrehozunk egy olyan felületet, amely képes az ún. szűrésre a felhasználók között. Ez kiemelten fontos, mivel szeretnénk a hallgatók tapasztalatai alapján szűrni a válaszadók között. Ezért a kérdőív kitöltése előtt egy rövid "tesztet" kérünk tőlük, amely segít megállapítani, mennyi tapasztalatuk van az adott témával kapcsolatosan. A felhasználók a kérdőív kitöltése során számos választási lehetőséggel találkozhatnak, például 
+Létrehozunk egy olyan felületet, amely képes az ún. szűrésre a felhasználók között. Ez kiemelten fontos, 
+mivel szeretnénk a hallgatók tapasztalatai alapján szűrni a válaszadók között. Ezért a kérdőív 
+kitöltése előtt egy rövid "tesztet" kérünk tőlük, amely segít megállapítani, mennyi tapasztalatuk van 
+az adott témával kapcsolatosan. A felhasználók a kérdőív kitöltése során számos választási lehetőséggel találkozhatnak, például 
 *  igaz-hamis
 *  feleletválasztós, egy választási lehetőséggel
 *  feleletválasztós, több választási lehetőséggel
@@ -96,7 +99,8 @@ Létrehozunk egy olyan felületet, amely képes az ún. szűrésre a felhasznál
   
 Ezen adatok természetesen titkosítva vannak, és tilos bárminemű visszaélés velük.
 
-A hallgatók saját fiókkal kell, hogy rendelkezzenek, hogy ki tudják tölteni a kérdőívet, illetve az adminoknak is saját fiókjuk lesz, hogy hozzáférjenek a statisztikákhoz.
+A hallgatók saját fiókkal kell, hogy rendelkezzenek, hogy ki tudják tölteni a kérdőívet, illetve az 
+adminoknak is saját fiókjuk lesz, hogy hozzáférjenek a statisztikákhoz.
 
 
 ## Használati esetek
@@ -140,7 +144,9 @@ A kérdőív kizárólag a hallgatók számára lesz elérhető, és kitölthet�
 ## Funkció - követelmény megfeleltetés 
 
 A hallgató a felületen keresztül bejelentkezhet az egyetemi e-mail címe segítségével.
-Ezután jöhetnek a kérdőív kérdései, mely legelején egy rövid teszt segítségével felmérjük, illetve megállapítjuk a kitöltő tapasztalatát az adott témában. A felmérés után jöhetnek a számunkra, illetve a statisztika számára is fontos kérdések. Ezen kérdések megjelenhetnek a következő formákban:
+Ezután jöhetnek a kérdőív kérdései, mely legelején egy rövid teszt segítségével felmérjük, illetve 
+megállapítjuk a kitöltő tapasztalatát az adott témában. A felmérés után jöhetnek a számunkra, illetve 
+a statisztika számára is fontos kérdések. Ezen kérdések megjelenhetnek a következő formákban:
 * két válaszlehetőség közül egy válasz kiválasztása
 * több válaszlehetőség közül egy válasz kiválasztása
 * több válaszlehetőség közül több válasz kiválasztása
