@@ -119,7 +119,31 @@ A kvízek kérdéseinek a száma nem mindig azonos. A felhasználó válaszait e
 felhasználás céljából. A kvízek különböző egyetemi célből hasznos témájúak lehetnek. 
 
 ## Riport
+*Hogyan kellene működnie ennek a rendszernek?*
 
+Az applikáció Andriod Studion megvalósított, a fejlesztők által kiválasztott nyelven íródik. A felhasználónak az applikáció
+használásához be kell regisztrálnia, majd minden egyes használatkor a későbbiekben be kell jelentkeznie. A felhasználónak a nyitóképernyő után
+a saját adatainak a megadásával kell belépnie az alkalmazásba. A felhasználó az egytetemmel kapcsolatos kvízek közül választhat, hogy melyiket
+szeretné kitölteni. A kvízen belül a felhasználónak minden kérdéssre választ kelladnia. A felhasználó a kvíz kitöltése után kiléphet, vagy 
+esetleg kitölthet egy újabbat. Minden használat után ki kell jelentkeznie a felhasználónak.
 
+*Kötelező-e bejelentkezni a felhasználónak?*
+
+Igen, hogy egyértelműen azonosítani tudjuk a felhasználót, valamint azt, hogy az egyetem tanulója e.
+
+*Írhat-e a diák is kvízt?*
+
+Nem, a diák semmi esetre sem, csak a kvízeket tudja kitölteni.
+
+*Miért kell az adatbázis az applikáció működéséhez?*
+
+Az adatbázis 2 nagyon fontos ok miatt kell. A diákok, vagyis a felhasználók bejelentkezési adatait kell, hogy tárolja,
+valamint a kvízek kérdéseit is. A kérdéseknek a válaszait is kell, hogy elraktározzuk, hogy később kiértékelésre kerüljenek, ezzel együtt azonban
+a válaszokat bizalmasan kell elraktározni.
+
+*Kikerülhet-e esetleg az adatok ismeretlenek kezébe?*
+
+Nem, amint az a felhasználási feltételekben is meg van írva. A fejlesztők és az egyetemen kívül, semmilyen idegen, jogosulatlan személy
+nem tekintheti meg őket.
 
 ## Fogalomszótár
