@@ -53,6 +53,8 @@ közösség számára, és biztonságosan és hatékonyan tárolja az összegyű
 
 ## Funkcionális követelmények
 
+A projekt célja az, hogy egy olyan rendszert hozzunk létre, amely lehetővé teszi különböző adatok és vélemények lekérdezését. Az igények alapján szeretnénk elérhetővé tenni ezt a rendszert a lehető legnagyobb felhasználói kör számára, és úgy gondoljuk, hogy az egyik legmegfelelőbb felhasználói felület egy alkalmazás lenne. A rendszernek képesnek kell lennie arra, hogy különböző felhasználóktól érkező adatokat tároljon. Annak érdekében, megfelelő információkat szerezzünk a hallgatóktól egy adott témában, tervezünk kalibráló kérdéseket is feltenni, mivel fontos az, hogy az adott témában jártas személyek válaszoljanak, és ne olyanok, akiknek nincs tapasztalatuk 1-1 adott témában.
+
 ## Törvények Jogszabályok
 
 __Általános Adatvédelmi Rendelet (GDPR)__: Az Európai Unióban működő mobilalkalmazásoknak a GDPR 
