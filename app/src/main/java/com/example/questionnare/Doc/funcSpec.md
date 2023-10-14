@@ -137,4 +137,15 @@ A kérdőív kizárólag a hallgatók számára lesz elérhető, és kitölthet�
 
 ## Forgatókönyv
 
+## Funkció - követelmény megfeleltetés 
+
+A hallgató a felületen keresztül bejelentkezhet az egyetemi e-mail címe segítségével.
+Ezután jöhetnek a kérdőív kérdései, mely legelején egy rövid teszt segítségével felmérjük, illetve megállapítjuk a kitöltő tapasztalatát az adott témában. A felmérés után jöhetnek a számunkra, illetve a statisztika számára is fontos kérdések. Ezen kérdések megjelenhetnek a következő formákban:
+* két válaszlehetőség közül egy válasz kiválasztása
+* több válaszlehetőség közül egy válasz kiválasztása
+* több válaszlehetőség közül több válasz kiválasztása
+* a kitöltő a saját szavaival válaszolhat a kérdésre
+
+Az adatokat az arra szolgáló adatbázisban tároljuk el. 
+
 ## Fogalomszótár
