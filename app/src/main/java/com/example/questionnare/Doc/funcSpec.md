@@ -113,6 +113,22 @@ típusú kérdést is tartalmazhat amelyek a továbbiak:
 __Admin__: Kérdőíveket publikálhat az alkalmazásban a felhasználók számára. A kitöltött kérdőívek 
 eredményeit megszemlélheti, statisztikát készíthet belőle
 
+## Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
+
+A kérdőív kizárólag a hallgatók számára lesz elérhető, és kitölthető,
+
+1. egyszerű adatgyűjtésre:
+
+* igaz-hamis kérdés
+* feleletválasztós kérdés
+* kitöltendő kérdés
+
+2. tematizált adatgyűjtésre:
+
+* igaz-hamis kérdés
+* feleletválasztós kérdés
+* kitöltendő kérdés
+
 ## Képernyő tervek
 
 <img src="Diagrams/bejelentkezesScreen.png" width="250"> <img src="Diagrams/regisztracioScreen.png" width="250">
