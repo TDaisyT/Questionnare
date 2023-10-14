@@ -104,6 +104,8 @@ eredményeit megszemlélheti, statisztikát készíthet belőle
 
 ## Képernyő tervek
 
+<img src="Diagrams/bejelentkezesScreen.png" width="250"> <img src="Diagrams/regisztracioScreen.png" width="250">
+
 ## Forgatókönyv
 
 ## Fogalomszótár
