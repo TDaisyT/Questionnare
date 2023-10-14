@@ -139,6 +139,21 @@ A kérdőív kizárólag a hallgatók számára lesz elérhető, és kitölthet�
 <img src="Diagrams/homeScreen.png" width="250"> <img src="Diagrams/profilScreen.png" width="250"> 
 <img src="Diagrams/fillingScreen.png" width="250">
 
+Az első képen a bejelentkezési képernyőt látható, ahol egy email cím és jelszó megadását követően be is jelentkezhetünk az alkamazásba.
+
+A második képen a regisztrációs képernyőn a regisztráció egy email cím, egy jelszó és a karunk megadása után
+meg is történik, amennyiben elfogadjuk az Adatvédelmi tájékoztatót.
+
+A harmadik képernyőn az alkamazás fő képernyője szerepel ahol elsőként láthatjuk a kitöltésre váró
+kérdőíveket. A képernyő alján lévő menüben láthatunk 2 gombot. A középen elhelyezkedő a fő képernyőhöz 
+vezet minket, míg a jobb oldalon lévő a felhasználó profilját nyitja meg.
+
+A profil képernyőn a felhasználó láthatja a regisztrációnál megadott adatait. Az adatok módositását 
+elvégezheti a képernyő alján elhelyezkedő módositás gombbal. A mellette elhelyezkedő törlés gombbal pedig törölheti 
+a felhasználói fiókját
+
+Az utolsó képen pedig a kitöltés alatt álló kérdőívet láthatjuk különféle kérdés tipusokkal. 
+
 ## Forgatókönyv
 
 ## Funkció - követelmény megfeleltetés 
