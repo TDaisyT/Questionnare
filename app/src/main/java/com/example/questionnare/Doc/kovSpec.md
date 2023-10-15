@@ -148,23 +148,23 @@ nem tekintheti meg őket.
 
 ## Fogalomszótár
 
-+Adatbázis: A számítógépen tárolt adatok összesége.
-+Szoftver: Az elektronikus adatfeldolgozó berendezések memóriájában elhelyezkedő, azokat működtető programokat értjük.
-+Adatbiztonság: Az összegyűjtött adatvagyon sérthetetlenségét, integritását, használhatóságát és bizalmasságát lehetővé tevő technológiák és szervezési 
++ Adatbázis: A számítógépen tárolt adatok összesége.
++ Szoftver: Az elektronikus adatfeldolgozó berendezések memóriájában elhelyezkedő, azokat működtető programokat értjük.
++ Adatbiztonság: Az összegyűjtött adatvagyon sérthetetlenségét, integritását, használhatóságát és bizalmasságát lehetővé tevő technológiák és szervezési 
 módszerek összessége.
-+Cookie: Olyan kisméretű szövegfájlok, melyeket a webhely tárol el az oldalaikra látogató felhasználó számítógépén, illetve mobilkészülékén. Belső cookie-k
++ Cookie: Olyan kisméretű szövegfájlok, melyeket a webhely tárol el az oldalaikra látogató felhasználó számítógépén, illetve mobilkészülékén. Belső cookie-k
 azok,melyeket az Ön által felkeresett honlap használ. A belső cookie-k által gyűjtött információkat csak az adott honlap tudja feldolgozni és hasznosítani.
-+Szerzői jog: A szerzői művek alkotói számára biztosítja azt, hogy korlátozhassák műveiknek lemásolását és felhasználását egy meghatározott időtartam 
++ Szerzői jog: A szerzői művek alkotói számára biztosítja azt, hogy korlátozhassák műveiknek lemásolását és felhasználását egy meghatározott időtartam 
 leteltéig.
-+Szellemi tulajdon: Biztosítja a fogyasztói bizalom megőrzéséhez szükséges kiadások megtérülését.
-+Regisztráció: Bejegyez egy felsorolásba, kimutatásba vagy listába.
-+Adat: Elemi ismeret, tények, fogalmak vagy utasítások formalizált ábrázolása, amely az emberek vagy automatikus eszközök számára közlésre, megjelenítésre vagy
++ Szellemi tulajdon: Biztosítja a fogyasztói bizalom megőrzéséhez szükséges kiadások megtérülését.
++ Regisztráció: Bejegyez egy felsorolásba, kimutatásba vagy listába.
++ Adat: Elemi ismeret, tények, fogalmak vagy utasítások formalizált ábrázolása, amely az emberek vagy automatikus eszközök számára közlésre, megjelenítésre vagy
 feldolgozásra alkalmas. Az adatokból az adatfeldolgozás eredményeként új ismeretek nyerhetők.
-+Felhasználási feltétel:  Felhasználási szerződés alapján a szerző engedélyt ad művének a felhasználására, a felhasználó pedig köteles ennek fejében díjat fizetni 
++ Felhasználási feltétel:  Felhasználási szerződés alapján a szerző engedélyt ad művének a felhasználására, a felhasználó pedig köteles ennek fejében díjat fizetni 
 vagy értesíteni a felhasználót a műve felhasználásáról.
-+Applikáció: Egy számítógépes program, ami egy fordítóprogram segítségével készül el egy forráskódból.
-+Jogosultság: Hivatalos engedéllyel rendelkező személy, amelyet megilleti egy lehetőség, tulajdon. Másokkal ellentétben előnnyel felruházott (fél), aki engedélyt
++ Applikáció: Egy számítógépes program, ami egy fordítóprogram segítségével készül el egy forráskódból.
++ Jogosultság: Hivatalos engedéllyel rendelkező személy, amelyet megilleti egy lehetőség, tulajdon. Másokkal ellentétben előnnyel felruházott (fél), aki engedélyt
 kapott egy cselekvésre, intézkedésre.
-+Kérdőív: Az adatközlők válaszainak rögzítésére szolgál, általában strukturált, előre rögzített kérdéssorok mentén.
-+Felhasználó: Az a személy  vagy szoftverágens, aki egy számítógépes vagy számítógép-hálózati szolgáltatás használója.
++ Kérdőív: Az adatközlők válaszainak rögzítésére szolgál, általában strukturált, előre rögzített kérdéssorok mentén.
++ Felhasználó: Az a személy  vagy szoftverágens, aki egy számítógépes vagy számítógép-hálózati szolgáltatás használója.
 
