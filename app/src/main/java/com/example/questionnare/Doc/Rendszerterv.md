@@ -3,6 +3,13 @@
 
 ## A rendszer célja
 ### (Definiálja a rendszer célját. Gyakran leírjuk azt is, ami nem cél, hogy ezzel is tisztázzuk a feladat kört (scope), amit meg akarunk oldani.)
+A rendszer célja egy olyan Android alkalmazás létrehozása, amelyet csak az egyetem hallgatói használhatnak csak. Az alkalmazás egy Questionnare, vagyis
+egy olyan applikáció, amelyben a diákok (ez esetben a felhasználók) az egyetemmel kapcsolatos kvízeket tölthetnek ki. Ezek a kvízek az egyetemmel kapcsolatosak, 
+annak javulására szolgálnak. A kvízekben a kérdések fajtái lehetnek többfélék, feleletválasztósak, vagy akár kifejtendőek is. A cél egy stabil adatbázisrendszer 
+létrehozása, amely tárolja a felhasználók bejelentkezési adatait, valamint a kérdésekre adott válaszaikat is. Kiemelendő az a kitűzésünk is, hogy ezt
+teljesen törvényesen, valamint úgy akarjuk megalkotni, hogy az adatok biztonságban legyenek. Lehetőleg olyan rendszert állítanánk fel, ahol a kvízeket
+lehet módosítani, törölni valamint teljesen újakat létrehozni. A tervezés közbeni hibákat minél jobban szeretnénk elkerülni vagy esetleg teljesen 
+kijavítani. 
 
 ## Projektterv
 A projekt végrehajtásához négy csapattag fog részt venni, akik különböző szerepköröket töltenek be.
