@@ -122,14 +122,56 @@ XML alapú layout rendszerét alkalmazzuk, amivel kialakíthatjuk a kérdőív k
 felhasználóbarát felületét.
 
 ## Tesztterv (utólag még szerkesztendő)
-### Tesztelési eljárások
-#### UNIT teszt:
-#### Alfa teszt: 
-#### Béta teszt:
-### Tesztelési funkciók:
-#### Backend:
-#### Android felület:
 
+A tesztelés célja, hogy a kódolás és a szerkesztés közben, a backend és a frontend folyamatok is rendben zajlódjnak le,
+hogy a felhasználót semmi se zavarja az applikáció használata közben, valamint az, hogy az adatok ne vesszenek el.
+Egy ilyen applikációnál kiemelten fontos, hogy az adatszivárgás véletlenül se következzen be. 
+
+### Tesztelési eljárások
+
+A különböző tesztelési eljárásokról jegyzőkönyvet készítünk. Ebben a jegyzőkönyben lesznek feltüntetve a felmerülő
+hibák és azok javítása is.
+
+#### UNIT teszt: 
+A kódolás közben a metódusokat, valamint az implementációkat folyamatosan tesztelni kell. Minden egyes
+metódust csak akkor tekinthetünk megfelelőnek, hogyha az Unit teszt hiba nélkül fut le rajta, ezzel kerülhetjük el 
+a nagyobb, végzetes hibákat, amelyek az egész rendszer összeomlásával fenyegetnének. Tesztelés közben figyelemmel kell
+kísérnünk azt is, hogy a tesztelés minél nagyobb kódlefedetséget érintsen. A teszt időtartama a kódolás kezdetétől, 
+a kódolás végéig tart.
+
+#### Alfa teszt: 
+A teszt célja a mi esetünkben az, hogy az eddig meglévő funkciókat, kvízeket Andriod felülettel való
+kompabitibilitását ellenőrizzük. Ezt mi, a fejlesztők végezzük el. A tesztet csak akkor tekinthetjük sikeresnek, ha 
+különböző készülékeken, különböző Android rendszereken működnek hibamentesen a meglévő funkciók. A teszt időtartama
+kb. 1 hét.
+
+#### Béta teszt: 
+Az alfa tesztel ellentétben a tesztelést már nem a fejlesztők végzik, hanem a célközönség, vagy a rendelő.  Ebben
+az esetben a diákok.
+Tesztelendő rendszerek: Android 8.0.0 (minimum)
+A teszt időtartama öt nap. Ez idő alatt a béta tesztelők visszajelzéseket, esetleges hibaüzeneteket küldhetnek a 
+fejlesztőknek, az alkalmazás fejlesztése érdekében. Túl sok esetlegesen túl kevés hiba esetén a tesztelés időtartama
+változhat.
+
+### Tesztelési funkciók:
+
+#### Backend:
+Az applikációnak képesnek kell lennie, hogy az adatokat gond nélkül tárolja. Képesnek kell lennie az Androidos
+felületeken lévő hibamentes futásra. Az adatbázisban lévő adatokat az illetékes személyeknek gond nélkül el kell
+tudni érniük. Az adatbázis adatait lehessen frissíteni vagy törölni. A kódolásban nem léphet fel kritikus hiba
+sehol sem, ezáltal az összes funkciónak hibamentesen kell működnie. Az applikációnak képesnek kell lennie egyszerre
+több felhasználó kiszolgálására is.
+
+#### Android felület:
+##### Login felület:
+A képernyőtervben megszabottnak kell kinéznie. A felhasználó az adatainak a megfelelő megadásával, melyek az adatbázisban
+szerepelnek, problémamentesen be kell tudnia lépni az applikációba.
+
+##### Regisztrációs felület:
+A regisztrációt a program telepítése után, ( amely a telepítési tervben van megírva) a felhasználó gond nelkül el tudhassa
+érni. A regisztrációs ablaknak űgy kell kinéznie mint ahogy a képernyő tervek között szerepel. A regisztráció során a programnak
+azonosítania kell, hogy megfelelő jogosultsággal rendelkezik e a felhasználó, hogy ezt az applikációt használhassa. A regisztráció
+után fontos, hogy a megadott adatok belekerüljenek az applikációhoz tartozó adatbázis rendszerbe.
 
 ## Telepítési terv
 
