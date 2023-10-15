@@ -93,6 +93,18 @@ __Adatkezelési tájékoztatás__: Az alkalmazásnak világosan tájékoztatnia 
 hogy milyen módon használják fel az adataikat, és milyen jogokkal rendelkeznek az adataik felett.
 
 ## Követelménylista
+| Modul  | ID  | Név | v. | Kifejtés                                                                            |
+| ------ | --- | --- | -- | ----------------------------------------------------------------------------------- |
+| Jogosultság | K1   | Bejelentkezési felület | 1.0 | A felhasználó a felhasználónevével és a jelszavával bejelentkezhet. |
+| Jogosultság   | K2   | Jogosultsgi szint | 1.0 | A fejlesztők, hogy tudják módosítani a szoftvert, valamint a felhasználó, aki a megfelelő módon tudja használni. |
+| Jogosultság | K3 | Regisztráció | 1.0 | A felhasználó ha az egyetem tanulója, az email címével, a felhasználónevével regisztrálhatja magát. |
+| Feladattípus | K4 | Portál | 1.0 | A felhasználó választhat a kitöltendő kvízek közül. |
+| Feladattípus | K5 | Kvíz | 1.0 | A felhasználó kitölti az általa választott kvízt |
+| Feladattípus | K6| Értékelés | 1.0 |A felhasználónak a kvíz minden kérdésére válaszolnia kell. |
+| Feladattípus | K7 | Új kvíz | 1.0 | A teszt végén a felhasználó másik kvízt is kitölthet. |
+| Felület | K8 | Fejlesztői felület | 1.0 | A fejlesztők számára, a szoftver karbantartására. |
+| Felület | K9 | Hibabejelentő | 1.0 | Esetlegesen felmerülő gond esetére egy visszajelző felület. |
+| Felület | K10 | Új kvíz létrehozása | 1.0 | Az egyetemnek új kvíz létrehozásához szükséges jogok megadása |
 
 ## Jelenlegi üzleti folyamatok modellje
 
