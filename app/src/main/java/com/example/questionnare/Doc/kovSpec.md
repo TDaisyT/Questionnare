@@ -122,6 +122,8 @@ kiolvashatatlanok, ezzel megnehezítve a munkát.
 
 ## Igényelt üzleti folyamatok modellje
 
+<img src="Diagrams/igüzl.jpg" >
+
 A felhasználó a nyitó oldal után be tudjon jelentkezni a saját adataival az applikációba, hogy szabadon, rendeltetésszerűen
 használhassa. Fontos, hogy a felhasználó, ebben az esetben a diák által megadott adatok véletlenül se kerüljenek harmadik illetlen
 fél kezébe. Bejelentkezés után a jogosultsági szintnek megfelelően kell, hogy tudja használni a diák az alkalmazást és a 
