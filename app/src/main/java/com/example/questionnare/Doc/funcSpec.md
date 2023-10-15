@@ -156,6 +156,13 @@ Az utolsó képen pedig a kitöltés alatt álló kérdőívet láthatjuk külö
 
 ## Forgatókönyv
 
+* Három szereplő vesz részt a programban
+  * a felhasználó, aki a kérdőívet kitölti)
+  * az admin, aki hozzáfér a kitöltési statisztikákhoz, szűrni tud
+  * maga a szoftver, ami felületet biztosít a kérdőív kitöltésére
+
+---------TO DO---------
+
 ## Funkció - követelmény megfeleltetés 
 
 A hallgató a felületen keresztül bejelentkezhet az egyetemi e-mail címe segítségével.
