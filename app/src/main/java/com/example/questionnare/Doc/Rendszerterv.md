@@ -185,10 +185,10 @@ fejlődik, így ellenőrizni kell, hogy az újabb Android rendszereken is probl�
 hogy minden funkció kompatibillis e.
 
 ### Karbantartás:
-+Corrective Maintenance: A diákok által felfedezett és mezei felhasználó módban elküldött hibák kijavítása.
-+Adaptive Maintenance: A program mindennapi frissen tartása.
-+Perfective Maintenance: "Hosszú élet titka", azaz az applikáció frissítése, új funkciók hozzáadása, a teljesítmény és a 
-működés fenntartása. 
-+Preventive Maintenance: Egy ártatlan probléma, mely még kicsinek és jelentéktelennek tűnik, de a későbbiekben komoly, akár
++ Corrective Maintenance: A diákok által felfedezett és mezei felhasználó módban elküldött hibák kijavítása.
++ Adaptive Maintenance: A program mindennapi frissen tartása.
++ Perfective Maintenance: "Hosszú élet titka", azaz az applikáció frissítése, új funkciók hozzáadása, a teljesítmény és a 
+működés fenntartása.
++ Preventive Maintenance: Egy ártatlan probléma, mely még kicsinek és jelentéktelennek tűnik, de a későbbiekben komoly, akár
 visszafordíthatatlan gondokat jelenthetnek. Ezeket a gondokat rengeteg teszteléssel majd a hibák kijavításával könnyen el 
 lehet kerülni.
