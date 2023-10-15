@@ -9,7 +9,8 @@ annak javulására szolgálnak. A kvízekben a kérdések fajtái lehetnek több
 létrehozása, amely tárolja a felhasználók bejelentkezési adatait, valamint a kérdésekre adott válaszaikat is. Kiemelendő az a kitűzésünk is, hogy ezt
 teljesen törvényesen, valamint úgy akarjuk megalkotni, hogy az adatok biztonságban legyenek. Lehetőleg olyan rendszert állítanánk fel, ahol a kvízeket
 lehet módosítani, törölni valamint teljesen újakat létrehozni. A tervezés közbeni hibákat minél jobban szeretnénk elkerülni vagy esetleg teljesen 
-kijavítani. 
+kijavítani. Fontos azonban, hogy olyan rendszert hozzunk létre, amelyet olyan diákok is könnyedén tudjanak használni, akik nem rendelkeznek kiemelkedő 
+informatikai tudással, vagyis az applikáció felhasználóbarát legyen. 
 
 ## Projektterv
 A projekt végrehajtásához négy csapattag fog részt venni, akik különböző szerepköröket töltenek be.
