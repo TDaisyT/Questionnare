@@ -113,32 +113,32 @@ kiolvashatatlanok, ezzel megnehezítve a munkát.
 A felhasználó a nyitó oldal után be tudjon jelentkezni a saját adataival az applikációba, hogy szabadon, rendeltetésszerűen
 használhassa. Fontos, hogy a felhasználó, ebben az esetben a diák által megadott adatok véletlenül se kerüljenek harmadik illetlen
 fél kezébe. Bejelentkezés után a jogosultsági szintnek megfelelően kell, hogy tudja használni a diák az alkalmazást és a 
-szintjéhez tartozó hozzáféréseket megkapja. A kvízeket a diák már csak kitölteni tudja. A kvíz akkor ér véget, ha a diák 
-az összes kérdésre válaszol. Az applikációban a diák számára egyértelműnek kell lennie, hogy hol ér véget az adott kvíz.
-A kvízek kérdéseinek a száma nem mindig azonos. A felhasználó válaszait egy adatbázisban tárolni kell, későbbi elemzés valamint 
-felhasználás céljából. A kvízek különböző egyetemi célből hasznos témájúak lehetnek. 
+szintjéhez tartozó hozzáféréseket megkapja. A kérdőívet a diák már csak kitölteni tudja. A kérdőív akkor ér véget, ha a diák 
+az összes kérdésre válaszol. Az applikációban a diák számára egyértelműnek kell lennie, hogy hol ér véget az adott kérdőív.
+A külünböző hallgatók által kitöltött kérdőívek kérdéseinek a száma mindig azonos. A felhasználó válaszait egy adatbázisban
+tárolni kell, későbbi elemzés valamint felhasználás céljából. A kvízek különböző egyetemi célből hasznos témájúak lehetnek. 
 
 ## Riport
 *Hogyan kellene működnie ennek a rendszernek?*
 
 Az applikáció Andriod Studion megvalósított, a fejlesztők által kiválasztott nyelven íródik. A felhasználónak az applikáció
 használásához be kell regisztrálnia, majd minden egyes használatkor a későbbiekben be kell jelentkeznie. A felhasználónak a nyitóképernyő után
-a saját adatainak a megadásával kell belépnie az alkalmazásba. A felhasználó az egytetemmel kapcsolatos kvízek közül választhat, hogy melyiket
-szeretné kitölteni. A kvízen belül a felhasználónak minden kérdéssre választ kelladnia. A felhasználó a kvíz kitöltése után kiléphet, vagy 
-esetleg kitölthet egy újabbat. Minden használat után ki kell jelentkeznie a felhasználónak.
+a saját adatainak a megadásával kell belépnie az alkalmazásba. A felhasználó jelenleg csak egy egyetemmel kapcsolatos kérdőívet tud majd kitölteni.
+A kérdőíven belül a felhasználónak minden kérdéssre választ kell adnia. A felhasználó a kérdőív kitöltése után kiléphet.
+Minden használat után ki kell jelentkeznie a felhasználónak.
 
 *Kötelező-e bejelentkezni a felhasználónak?*
 
 Igen, hogy egyértelműen azonosítani tudjuk a felhasználót, valamint azt, hogy az egyetem tanulója e.
 
-*Írhat-e a diák is kvízt?*
+*Írhat-e a diák is kérdőívet?*
 
-Nem, a diák semmi esetre sem, csak a kvízeket tudja kitölteni.
+Nem, a diák semmi esetre sem, csak a kérdőívet tudja kitölteni.
 
 *Miért kell az adatbázis az applikáció működéséhez?*
 
 Az adatbázis 2 nagyon fontos ok miatt kell. A diákok, vagyis a felhasználók bejelentkezési adatait kell, hogy tárolja,
-valamint a kvízek kérdéseit is. A kérdéseknek a válaszait is kell, hogy elraktározzuk, hogy később kiértékelésre kerüljenek, ezzel együtt azonban
+valamint a kérdőív kérdéseit is. A kérdéseknek a válaszait is kell, hogy elraktározzuk, hogy később kiértékelésre kerüljenek, ezzel együtt azonban
 a válaszokat bizalmasan kell elraktározni.
 
 *Kikerülhet-e esetleg az adatok ismeretlenek kezébe?*
