@@ -177,4 +177,18 @@ után fontos, hogy a megadott adatok belekerüljenek az applikációhoz tartozó
 
 
 ## Karbantartási terv (Tesztelés közben frissíteni)
+
+A karbantartás célja, hogy a felhasználók bövülésével se omoljon össze a rendszer, valamint az applikáció frissítése és
+újítása. Az új kvízek hozzáadásával felmerülő problémákat hárítani kell, valamint az elavulttá vált kvízek törlését és
+az azzal járó esetlegs hibákat is orvosolni kell. Nem szabad megfeledkezni arról sem, hogy a technológia folyamatosan 
+fejlődik, így ellenőrizni kell, hogy az újabb Android rendszereken is problémamnetesen működik e az applikáció valamint
+hogy minden funkció kompatibillis e.
+
 ### Karbantartás:
++Corrective Maintenance: A diákok által felfedezett és mezei felhasználó módban elküldött hibák kijavítása.
++Adaptive Maintenance: A program mindennapi frissen tartása.
++Perfective Maintenance: "Hosszú élet titka", azaz az applikáció frissítése, új funkciók hozzáadása, a teljesítmény és a 
+működés fenntartása. 
++Preventive Maintenance: Egy ártatlan probléma, mely még kicsinek és jelentéktelennek tűnik, de a későbbiekben komoly, akár
+visszafordíthatatlan gondokat jelenthetnek. Ezeket a gondokat rengeteg teszteléssel majd a hibák kijavításával könnyen el 
+lehet kerülni.
