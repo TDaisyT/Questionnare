@@ -164,7 +164,7 @@ kérdőíveket. A képernyő alján lévő menüben láthatunk 2 gombot. A köz�
 vezet minket, míg a jobb oldalon lévő a felhasználó profilját nyitja meg.
 
 A profil képernyőn a felhasználó láthatja a regisztrációnál megadott adatait. Az adatok módositását 
-elvégezheti a képernyő alján elhelyezkedő módositás gombbal. A mellette elhelyezkedő törlés gombbal pedig kiléphet
+elvégezheti a képernyő alján elhelyezkedő módositás gombbal. A mellette elhelyezkedő kijelentkezés gombbal pedig kiléphet
 a felhasználói fiókjából.
 
 Az utolsó képen pedig a kitöltés alatt álló kérdőívet láthatjuk különféle kérdés tipusokkal. 
