@@ -124,9 +124,8 @@ __Felhasználó__: A felhasználó regisztráció után bejelentkezhet az alkalm
 főoldalán a kitöltésre váró Kérdőívekre rákattintva azt a felhasználó kitöltheti. A Kérdőív több
 típusú kérdést is tartalmazhat amelyek a továbbiak:
  * Nyitott kérdések: a válaszadó a saját véleményét fogalmazhatja meg az adott témában
- * Zárt kérdések: 
-   * Alternatív: 2 közül lehet választani (I-H)
-   * Szelektív: több válasz lehetőség, 1 vagy több válasz lehetőség is megjelőlhető
+ * Zárt kérdések:
+   * Szelektív: több válasz lehetőség közül 1 válasz lehetőséget kell megjelölni
    * Skála: minősítési sorrend (pl. 1-5)
 
 __Admin__: Kérdőíveket publikálhat az alkalmazásban a felhasználók számára. A kitöltött kérdőívek 
@@ -167,7 +166,7 @@ A profil képernyőn a felhasználó láthatja a regisztrációnál megadott ada
 elvégezheti a képernyő alján elhelyezkedő módositás gombbal. A mellette elhelyezkedő kijelentkezés gombbal pedig kiléphet
 a felhasználói fiókjából.
 
-Az utolsó képen pedig a kitöltés alatt álló kérdőívet láthatjuk különféle kérdés tipusokkal. 
+Az utolsó képen pedig a kitöltés alatt álló kérdőívet láthatjuk. 
 
 ## Forgatókönyv
 
