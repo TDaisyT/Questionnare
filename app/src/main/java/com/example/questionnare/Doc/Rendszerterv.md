@@ -29,9 +29,9 @@ A projekt során az alábbi szerepkörök és felelősségeik kerülnek kijelöl
 
 ### Projektmunkások és felelőségek(TODO: szerepek kiosztása):
 * Papp Gréta az adatbázis kezelési munkálatokkal foglalkozik, gondoskodva az adatok tárolásáról és hozzáférhetőségéről.
-* XY a backend munkálatokért felelős, ami magában foglalja a szoftver háttérlogikájának fejlesztését.
-* XY a frontend fejlesztésért felelős, azaz az alkalmazás felhasználói felületének tervezésével és kialakításával foglalkozik.
-* XY a tesztelési és jegyzőkönyvezési feladatokat látja el, hogy semmilyen hiba ne lépjen fel a szoftver bemutatásakor.
+* Kaponyás Lüszien a backend munkálatokért felelős, ami magában foglalja a szoftver háttérlogikájának fejlesztését.
+* Varga Petra a frontend fejlesztésért felelős, azaz az alkalmazás felhasználói felületének tervezésével és kialakításával foglalkozik.
+* Fekete Enikő a tesztelési és jegyzőkönyvezési feladatokat látja el, hogy semmilyen hiba ne lépjen fel a szoftver bemutatásakor.
 
 A projektszerepkörök mellett fontos hangsúlyozni, hogy bár minden csapattagnak megvan a saját
 szerepköre, mindannyian készen állnak arra, hogy egymást támogassák és segítsék, amikor szükség van
