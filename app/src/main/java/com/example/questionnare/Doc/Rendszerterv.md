@@ -3,6 +3,14 @@
 
 ## A rendszer célja
 ### (Definiálja a rendszer célját. Gyakran leírjuk azt is, ami nem cél, hogy ezzel is tisztázzuk a feladat kört (scope), amit meg akarunk oldani.)
+A rendszer célja egy olyan Android alkalmazás létrehozása, amelyet csak az egyetem hallgatói használhatnak csak. Az alkalmazás egy Questionnare, vagyis
+egy olyan applikáció, amelyben a diákok (ez esetben a felhasználók) az egyetemmel kapcsolatos kvízeket tölthetnek ki. Ezek a kvízek az egyetemmel kapcsolatosak, 
+annak javulására szolgálnak. A kvízekben a kérdések fajtái lehetnek többfélék, feleletválasztósak, vagy akár kifejtendőek is. A cél egy stabil adatbázisrendszer 
+létrehozása, amely tárolja a felhasználók bejelentkezési adatait, valamint a kérdésekre adott válaszaikat is. Kiemelendő az a kitűzésünk is, hogy ezt
+teljesen törvényesen, valamint úgy akarjuk megalkotni, hogy az adatok biztonságban legyenek. Lehetőleg olyan rendszert állítanánk fel, ahol a kvízeket
+lehet módosítani, törölni valamint teljesen újakat létrehozni. A tervezés közbeni hibákat minél jobban szeretnénk elkerülni vagy esetleg teljesen 
+kijavítani. Fontos azonban, hogy olyan rendszert hozzunk létre, amelyet olyan diákok is könnyedén tudjanak használni, akik nem rendelkeznek kiemelkedő 
+informatikai tudással, vagyis az applikáció felhasználóbarát legyen. 
 
 ## Projektterv
 A projekt végrehajtásához négy csapattag fog részt venni, akik különböző szerepköröket töltenek be.
@@ -114,17 +122,73 @@ XML alapú layout rendszerét alkalmazzuk, amivel kialakíthatjuk a kérdőív k
 felhasználóbarát felületét.
 
 ## Tesztterv (utólag még szerkesztendő)
-### Tesztelési eljárások
-#### UNIT teszt:
-#### Alfa teszt: 
-#### Béta teszt:
-### Tesztelési funkciók:
-#### Backend:
-#### Android felület:
 
+A tesztelés célja, hogy a kódolás és a szerkesztés közben, a backend és a frontend folyamatok is rendben zajlódjnak le,
+hogy a felhasználót semmi se zavarja az applikáció használata közben, valamint az, hogy az adatok ne vesszenek el.
+Egy ilyen applikációnál kiemelten fontos, hogy az adatszivárgás véletlenül se következzen be. 
+
+### Tesztelési eljárások
+
+A különböző tesztelési eljárásokról jegyzőkönyvet készítünk. Ebben a jegyzőkönyben lesznek feltüntetve a felmerülő
+hibák és azok javítása is.
+
+#### UNIT teszt: 
+A kódolás közben a metódusokat, valamint az implementációkat folyamatosan tesztelni kell. Minden egyes
+metódust csak akkor tekinthetünk megfelelőnek, hogyha az Unit teszt hiba nélkül fut le rajta, ezzel kerülhetjük el 
+a nagyobb, végzetes hibákat, amelyek az egész rendszer összeomlásával fenyegetnének. Tesztelés közben figyelemmel kell
+kísérnünk azt is, hogy a tesztelés minél nagyobb kódlefedetséget érintsen. A teszt időtartama a kódolás kezdetétől, 
+a kódolás végéig tart.
+
+#### Alfa teszt: 
+A teszt célja a mi esetünkben az, hogy az eddig meglévő funkciókat, kvízeket Andriod felülettel való
+kompabitibilitását ellenőrizzük. Ezt mi, a fejlesztők végezzük el. A tesztet csak akkor tekinthetjük sikeresnek, ha 
+különböző készülékeken, különböző Android rendszereken működnek hibamentesen a meglévő funkciók. A teszt időtartama
+kb. 1 hét.
+
+#### Béta teszt: 
+Az alfa tesztel ellentétben a tesztelést már nem a fejlesztők végzik, hanem a célközönség, vagy a rendelő.  Ebben
+az esetben a diákok.
+Tesztelendő rendszerek: Android 8.0.0 (minimum)
+A teszt időtartama öt nap. Ez idő alatt a béta tesztelők visszajelzéseket, esetleges hibaüzeneteket küldhetnek a 
+fejlesztőknek, az alkalmazás fejlesztése érdekében. Túl sok esetlegesen túl kevés hiba esetén a tesztelés időtartama
+változhat.
+
+### Tesztelési funkciók:
+
+#### Backend:
+Az applikációnak képesnek kell lennie, hogy az adatokat gond nélkül tárolja. Képesnek kell lennie az Androidos
+felületeken lévő hibamentes futásra. Az adatbázisban lévő adatokat az illetékes személyeknek gond nélkül el kell
+tudni érniük. Az adatbázis adatait lehessen frissíteni vagy törölni. A kódolásban nem léphet fel kritikus hiba
+sehol sem, ezáltal az összes funkciónak hibamentesen kell működnie. Az applikációnak képesnek kell lennie egyszerre
+több felhasználó kiszolgálására is.
+
+#### Android felület:
+##### Login felület:
+A képernyőtervben megszabottnak kell kinéznie. A felhasználó az adatainak a megfelelő megadásával, melyek az adatbázisban
+szerepelnek, problémamentesen be kell tudnia lépni az applikációba.
+
+##### Regisztrációs felület:
+A regisztrációt a program telepítése után, ( amely a telepítési tervben van megírva) a felhasználó gond nelkül el tudhassa
+érni. A regisztrációs ablaknak űgy kell kinéznie mint ahogy a képernyő tervek között szerepel. A regisztráció során a programnak
+azonosítania kell, hogy megfelelő jogosultsággal rendelkezik e a felhasználó, hogy ezt az applikációt használhassa. A regisztráció
+után fontos, hogy a megadott adatok belekerüljenek az applikációhoz tartozó adatbázis rendszerbe.
 
 ## Telepítési terv
 
 
 ## Karbantartási terv (Tesztelés közben frissíteni)
+
+A karbantartás célja, hogy a felhasználók bövülésével se omoljon össze a rendszer, valamint az applikáció frissítése és
+újítása. Az új kvízek hozzáadásával felmerülő problémákat hárítani kell, valamint az elavulttá vált kvízek törlését és
+az azzal járó esetlegs hibákat is orvosolni kell. Nem szabad megfeledkezni arról sem, hogy a technológia folyamatosan 
+fejlődik, így ellenőrizni kell, hogy az újabb Android rendszereken is problémamnetesen működik e az applikáció valamint
+hogy minden funkció kompatibillis e.
+
 ### Karbantartás:
++ Corrective Maintenance: A diákok által felfedezett és mezei felhasználó módban elküldött hibák kijavítása.
++ Adaptive Maintenance: A program mindennapi frissen tartása.
++ Perfective Maintenance: "Hosszú élet titka", azaz az applikáció frissítése, új funkciók hozzáadása, a teljesítmény és a 
+működés fenntartása.
++ Preventive Maintenance: Egy ártatlan probléma, mely még kicsinek és jelentéktelennek tűnik, de a későbbiekben komoly, akár
+visszafordíthatatlan gondokat jelenthetnek. Ezeket a gondokat rengeteg teszteléssel majd a hibák kijavításával könnyen el 
+lehet kerülni.

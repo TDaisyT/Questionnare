@@ -93,6 +93,18 @@ __Adatkezelési tájékoztatás__: Az alkalmazásnak világosan tájékoztatnia 
 hogy milyen módon használják fel az adataikat, és milyen jogokkal rendelkeznek az adataik felett.
 
 ## Követelménylista
+| Modul  | ID  | Név | v. | Kifejtés                                                                            |
+| ------ | --- | --- | -- | ----------------------------------------------------------------------------------- |
+| Jogosultság | K1   | Bejelentkezési felület | 1.0 | A felhasználó a felhasználónevével és a jelszavával bejelentkezhet. |
+| Jogosultság   | K2   | Jogosultsgi szint | 1.0 | A fejlesztők, hogy tudják módosítani a szoftvert, valamint a felhasználó, aki a megfelelő módon tudja használni. |
+| Jogosultság | K3 | Regisztráció | 1.0 | A felhasználó ha az egyetem tanulója, az email címével, a felhasználónevével regisztrálhatja magát. |
+| Feladattípus | K4 | Portál | 1.0 | A felhasználó választhat a kitöltendő kvízek közül. |
+| Feladattípus | K5 | Kvíz | 1.0 | A felhasználó kitölti az általa választott kvízt |
+| Feladattípus | K6| Értékelés | 1.0 |A felhasználónak a kvíz minden kérdésére válaszolnia kell. |
+| Feladattípus | K7 | Új kvíz | 1.0 | A teszt végén a felhasználó másik kvízt is kitölthet. |
+| Felület | K8 | Fejlesztői felület | 1.0 | A fejlesztők számára, a szoftver karbantartására. |
+| Felület | K9 | Hibabejelentő | 1.0 | Esetlegesen felmerülő gond esetére egy visszajelző felület. |
+| Felület | K10 | Új kvíz létrehozása | 1.0 | Az egyetemnek új kvíz létrehozásához szükséges jogok megadása |
 
 ## Jelenlegi üzleti folyamatok modellje
 
@@ -110,35 +122,37 @@ kiolvashatatlanok, ezzel megnehezítve a munkát.
 
 ## Igényelt üzleti folyamatok modellje
 
+<img src="Diagrams/igüzl.jpg" >
+
 A felhasználó a nyitó oldal után be tudjon jelentkezni a saját adataival az applikációba, hogy szabadon, rendeltetésszerűen
 használhassa. Fontos, hogy a felhasználó, ebben az esetben a diák által megadott adatok véletlenül se kerüljenek harmadik illetlen
 fél kezébe. Bejelentkezés után a jogosultsági szintnek megfelelően kell, hogy tudja használni a diák az alkalmazást és a 
-szintjéhez tartozó hozzáféréseket megkapja. A kvízeket a diák már csak kitölteni tudja. A kvíz akkor ér véget, ha a diák 
-az összes kérdésre válaszol. Az applikációban a diák számára egyértelműnek kell lennie, hogy hol ér véget az adott kvíz.
-A kvízek kérdéseinek a száma nem mindig azonos. A felhasználó válaszait egy adatbázisban tárolni kell, későbbi elemzés valamint 
-felhasználás céljából. A kvízek különböző egyetemi célből hasznos témájúak lehetnek. 
+szintjéhez tartozó hozzáféréseket megkapja. A kérdőívet a diák már csak kitölteni tudja. A kérdőív akkor ér véget, ha a diák 
+az összes kérdésre válaszol. Az applikációban a diák számára egyértelműnek kell lennie, hogy hol ér véget az adott kérdőív.
+A külünböző hallgatók által kitöltött kérdőívek kérdéseinek a száma mindig azonos. A felhasználó válaszait egy adatbázisban
+tárolni kell, későbbi elemzés valamint felhasználás céljából. A kvízek különböző egyetemi célből hasznos témájúak lehetnek. 
 
 ## Riport
 *Hogyan kellene működnie ennek a rendszernek?*
 
 Az applikáció Andriod Studion megvalósított, a fejlesztők által kiválasztott nyelven íródik. A felhasználónak az applikáció
 használásához be kell regisztrálnia, majd minden egyes használatkor a későbbiekben be kell jelentkeznie. A felhasználónak a nyitóképernyő után
-a saját adatainak a megadásával kell belépnie az alkalmazásba. A felhasználó az egytetemmel kapcsolatos kvízek közül választhat, hogy melyiket
-szeretné kitölteni. A kvízen belül a felhasználónak minden kérdéssre választ kelladnia. A felhasználó a kvíz kitöltése után kiléphet, vagy 
-esetleg kitölthet egy újabbat. Minden használat után ki kell jelentkeznie a felhasználónak.
+a saját adatainak a megadásával kell belépnie az alkalmazásba. A felhasználó jelenleg csak egy egyetemmel kapcsolatos kérdőívet tud majd kitölteni.
+A kérdőíven belül a felhasználónak minden kérdéssre választ kell adnia. A felhasználó a kérdőív kitöltése után kiléphet.
+Minden használat után ki kell jelentkeznie a felhasználónak.
 
 *Kötelező-e bejelentkezni a felhasználónak?*
 
 Igen, hogy egyértelműen azonosítani tudjuk a felhasználót, valamint azt, hogy az egyetem tanulója e.
 
-*Írhat-e a diák is kvízt?*
+*Írhat-e a diák is kérdőívet?*
 
-Nem, a diák semmi esetre sem, csak a kvízeket tudja kitölteni.
+Nem, a diák semmi esetre sem, csak a kérdőívet tudja kitölteni.
 
 *Miért kell az adatbázis az applikáció működéséhez?*
 
 Az adatbázis 2 nagyon fontos ok miatt kell. A diákok, vagyis a felhasználók bejelentkezési adatait kell, hogy tárolja,
-valamint a kvízek kérdéseit is. A kérdéseknek a válaszait is kell, hogy elraktározzuk, hogy később kiértékelésre kerüljenek, ezzel együtt azonban
+valamint a kérdőív kérdéseit is. A kérdéseknek a válaszait is kell, hogy elraktározzuk, hogy később kiértékelésre kerüljenek, ezzel együtt azonban
 a válaszokat bizalmasan kell elraktározni.
 
 *Kikerülhet-e esetleg az adatok ismeretlenek kezébe?*
@@ -148,23 +162,23 @@ nem tekintheti meg őket.
 
 ## Fogalomszótár
 
-+Adatbázis: A számítógépen tárolt adatok összesége.
-+Szoftver: Az elektronikus adatfeldolgozó berendezések memóriájában elhelyezkedő, azokat működtető programokat értjük.
-+Adatbiztonság: Az összegyűjtött adatvagyon sérthetetlenségét, integritását, használhatóságát és bizalmasságát lehetővé tevő technológiák és szervezési 
++ Adatbázis: A számítógépen tárolt adatok összesége.
++ Szoftver: Az elektronikus adatfeldolgozó berendezések memóriájában elhelyezkedő, azokat működtető programokat értjük.
++ Adatbiztonság: Az összegyűjtött adatvagyon sérthetetlenségét, integritását, használhatóságát és bizalmasságát lehetővé tevő technológiák és szervezési 
 módszerek összessége.
-+Cookie: Olyan kisméretű szövegfájlok, melyeket a webhely tárol el az oldalaikra látogató felhasználó számítógépén, illetve mobilkészülékén. Belső cookie-k
++ Cookie: Olyan kisméretű szövegfájlok, melyeket a webhely tárol el az oldalaikra látogató felhasználó számítógépén, illetve mobilkészülékén. Belső cookie-k
 azok,melyeket az Ön által felkeresett honlap használ. A belső cookie-k által gyűjtött információkat csak az adott honlap tudja feldolgozni és hasznosítani.
-+Szerzői jog: A szerzői művek alkotói számára biztosítja azt, hogy korlátozhassák műveiknek lemásolását és felhasználását egy meghatározott időtartam 
++ Szerzői jog: A szerzői művek alkotói számára biztosítja azt, hogy korlátozhassák műveiknek lemásolását és felhasználását egy meghatározott időtartam 
 leteltéig.
-+Szellemi tulajdon: Biztosítja a fogyasztói bizalom megőrzéséhez szükséges kiadások megtérülését.
-+Regisztráció: Bejegyez egy felsorolásba, kimutatásba vagy listába.
-+Adat: Elemi ismeret, tények, fogalmak vagy utasítások formalizált ábrázolása, amely az emberek vagy automatikus eszközök számára közlésre, megjelenítésre vagy
++ Szellemi tulajdon: Biztosítja a fogyasztói bizalom megőrzéséhez szükséges kiadások megtérülését.
++ Regisztráció: Bejegyez egy felsorolásba, kimutatásba vagy listába.
++ Adat: Elemi ismeret, tények, fogalmak vagy utasítások formalizált ábrázolása, amely az emberek vagy automatikus eszközök számára közlésre, megjelenítésre vagy
 feldolgozásra alkalmas. Az adatokból az adatfeldolgozás eredményeként új ismeretek nyerhetők.
-+Felhasználási feltétel:  Felhasználási szerződés alapján a szerző engedélyt ad művének a felhasználására, a felhasználó pedig köteles ennek fejében díjat fizetni 
++ Felhasználási feltétel:  Felhasználási szerződés alapján a szerző engedélyt ad művének a felhasználására, a felhasználó pedig köteles ennek fejében díjat fizetni 
 vagy értesíteni a felhasználót a műve felhasználásáról.
-+Applikáció: Egy számítógépes program, ami egy fordítóprogram segítségével készül el egy forráskódból.
-+Jogosultság: Hivatalos engedéllyel rendelkező személy, amelyet megilleti egy lehetőség, tulajdon. Másokkal ellentétben előnnyel felruházott (fél), aki engedélyt
++ Applikáció: Egy számítógépes program, ami egy fordítóprogram segítségével készül el egy forráskódból.
++ Jogosultság: Hivatalos engedéllyel rendelkező személy, amelyet megilleti egy lehetőség, tulajdon. Másokkal ellentétben előnnyel felruházott (fél), aki engedélyt
 kapott egy cselekvésre, intézkedésre.
-+Kérdőív: Az adatközlők válaszainak rögzítésére szolgál, általában strukturált, előre rögzített kérdéssorok mentén.
-+Felhasználó: Az a személy  vagy szoftverágens, aki egy számítógépes vagy számítógép-hálózati szolgáltatás használója.
++ Kérdőív: Az adatközlők válaszainak rögzítésére szolgál, általában strukturált, előre rögzített kérdéssorok mentén.
++ Felhasználó: Az a személy  vagy szoftverágens, aki egy számítógépes vagy számítógép-hálózati szolgáltatás használója.
 

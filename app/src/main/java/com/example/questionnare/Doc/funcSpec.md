@@ -58,6 +58,21 @@ Ez növeli a válaszadási arányt, mivel a diákoknak nincs szükségük fizika
 
 ## Követelménylista
 
+| Modul  | ID  | Név | v. | Kifejtés                                                                            |
+| ------ | --- | --- | -- | ----------------------------------------------------------------------------------- |
+| Jogosultság | K1   | Bejelentkezési felület | 1.0 | A felhasználó a felhasználónevével és a jelszavával bejelentkezhet. |
+| Jogosultság   | K2   | Jogosultsgi szint | 1.0 | A fejlesztők, hogy tudják módosítani a szoftvert, valamint a felhasználó, aki a megfelelő módon tudja használni. |
+| Jogosultság | K3 | Regisztráció | 1.0 | A felhasználó ha az egyetem tanulója, az email címével, a felhasználónevével regisztrálhatja magát. |
+| Feladattípus | K4 | Portál | 1.0 | A felhasználó választhat a kitöltendő kvízek közül. |
+| Feladattípus | K5 | Kvíz | 1.0 | A felhasználó kitölti az általa választott kvízt |
+| Feladattípus | K6| Értékelés | 1.0 |A felhasználónak a kvíz minden kérdésére válaszolnia kell. |
+| Feladattípus | K7 | Új kvíz | 1.0 | A teszt végén a felhasználó másik kvízt is kitölthet. |
+| Felület | K8 | Fejlesztői felület | 1.0 | A fejlesztők számára, a szoftver karbantartására. |
+| Felület | K9 | Hibabejelentő | 1.0 | Esetlegesen felmerülő gond esetére egy visszajelző felület. |
+| Felület | K10 | Új kvíz létrehozása | 1.0 | Az egyetemnek új kvíz létrehozásához szükséges jogok megadása. |
+| Jogosultság | K11 | Adatkezelés | 1.0 | A diákok válaszainak illetéktelen kézbe való jutásának megelőzése. |
+| Jogosultság | K12 | Adatfelhasználás | 1.0 | A jogilag és törvényes módon az adatok felhasználásának gondtalan levezetése. |
+
 ## Jelenlegi üzleti folyamatok modellje
 
 <img src="Diagrams/JelenlegiÜzFoly.png" width="600">
@@ -156,6 +171,13 @@ Az utolsó képen pedig a kitöltés alatt álló kérdőívet láthatjuk külö
 
 ## Forgatókönyv
 
+* Három szereplő vesz részt a programban
+  * a felhasználó, aki a kérdőívet kitölti)
+  * az admin, aki hozzáfér a kitöltési statisztikákhoz, szűrni tud
+  * maga a szoftver, ami felületet biztosít a kérdőív kitöltésére
+
+---------TO DO---------
+
 ## Funkció - követelmény megfeleltetés 
 
 A hallgató a felületen keresztül bejelentkezhet az egyetemi e-mail címe segítségével.
@@ -170,3 +192,25 @@ a statisztika számára is fontos kérdések. Ezen kérdések megjelenhetnek a k
 Az adatokat az arra szolgáló adatbázisban tároljuk el. 
 
 ## Fogalomszótár
++ Adatbázis: A számítógépen tárolt adatok összesége.
++ Szoftver: Az elektronikus adatfeldolgozó berendezések memóriájában elhelyezkedő, azokat működtető programokat értjük.
++ Adatbiztonság: Az összegyűjtött adatvagyon sérthetetlenségét, integritását, használhatóságát és bizalmasságát lehetővé tevő technológiák és szervezési 
+módszerek összessége.
++ Cookie: Olyan kisméretű szövegfájlok, melyeket a webhely tárol el az oldalaikra látogató felhasználó számítógépén, illetve
+  mobilkészülékén. Belső cookie-k azok,melyeket az Ön által felkeresett honlap használ. A belső cookie-k által gyűjtött információkat csak az adott honlap tudja feldolgozni és hasznosítani.
++ Szerzői jog: A szerzői művek alkotói számára biztosítja azt, hogy korlátozhassák műveiknek lemásolását és felhasználását egy
+ meghatározott időtartam leteltéig.
++ Szellemi tulajdon: Biztosítja a fogyasztói bizalom megőrzéséhez szükséges kiadások megtérülését.
++ Regisztráció: Bejegyez egy felsorolásba, kimutatásba vagy listába.
++ Adat: Elemi ismeret, tények, fogalmak vagy utasítások formalizált ábrázolása, amely az emberek vagy automatikus eszközök
+  számára közlésre, megjelenítésre vagy feldolgozásra alkalmas. Az adatokból az adatfeldolgozás eredményeként új ismeretek
+  nyerhetők.
++ Felhasználási feltétel:  Felhasználási szerződés alapján a szerző engedélyt ad művének a felhasználására, a felhasználó pedig
+  köteles ennek fejében díjat fizetni vagy értesíteni a felhasználót a műve felhasználásáról.
++ Applikáció: Egy számítógépes program, ami egy fordítóprogram segítségével készül el egy forráskódból.
++ Jogosultság: Hivatalos engedéllyel rendelkező személy, amelyet megilleti egy lehetőség, tulajdon. Másokkal ellentétben
+  előnnyel felruházott (fél), aki engedélyt kapott egy cselekvésre, intézkedésre.
++ Kérdőív: Az adatközlők válaszainak rögzítésére szolgál, általában strukturált, előre rögzített kérdéssorok mentén.
++ Felhasználó: Az a személy  vagy szoftverágens, aki egy számítógépes vagy számítógép-hálózati szolgáltatás használója.
++ Admin: Szerkesztői jogokkal felruházott személy. Bármit módosíthat.
++ Adatgyűjtés:Adatgyűjtésnek nevezzük az adatok összegyűjtését és rögzítését akár gépi úton, akár emberi észlelő, leíró, rögzítő tevékenységgel történik, amely művelet során az elemek legalább sorszámmal, de legtöbbször ennél bővebb „azonosító adatokkal” azonosíthatók.
