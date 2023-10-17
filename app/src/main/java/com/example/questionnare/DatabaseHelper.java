@@ -35,17 +35,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "FOREIGN KEY (UserId) REFERENCES users (Id)," +
             "FOREIGN KEY (QAId) REFERENCES qa (Id))";
 
-    public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public DatabaseHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    //az adatbázis séma létrehozásáért felelős
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(CREATE_USERS_TABLE);
+        db.execSQL(CREATE_QA_TABLE);
+        db.execSQL(CREATE_RESULT_TABLE);
     }
 
+    //Kezeli az adatbázis verziójának frissítéseit és az esetleges változásokat az adatbázis sémában
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    //TODO:Jelenleg azt olvastam, hogy ide nem kell most semmit írni, de ennek még utána nézek
     }
 }
