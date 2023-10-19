@@ -112,6 +112,19 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 
 ## Adatbázis terv
 
+<img src="databaseplan" width="600">
+
+Az alkalmazás adatbázisát három tábla segítségével oldjuk meg.
+Az első tábla a felhsználói fiókhoz tartozó adatok eltárolását végzi. Ebbe beletartorik a bejelentkezéshez
+szükséges email cím és jelszó páros.
+
+Egy másik tábla a kérdőívhez tartozó kérdéseket tartalmazza a hozzájuk tartozó választási lehetőségekkel együttvéve. 
+Jelen model szerint egy kérdésre négy darab különféle válasz adható
+
+Az utolsó tábla pedig a kérdésekre adott válaszok rögzitésébens szolgál segitséget. 
+Minden válasz saját azonosítótt kap. Eltárolja a a kérdést amihez a válasz tarzozik és magát a választ 
+
+
 
 ## Implementációs terv
 Az alkalmazás Android platformon fog futni, így a két választható nyelv közül a Java programozási
