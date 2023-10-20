@@ -191,6 +191,11 @@ után fontos, hogy a megadott adatok belekerüljenek az applikációhoz tartozó
 
 ## Telepítési terv
 
+A Questionnare alkalmazás a Play áruház közreműködésével lesz elérhető a felhasználók számára. 
+Telepítése megtehető a Play áruház alkalmazáson belül, a Questionnare alkalmazás egyéni oldalán a 
+telepités gombra kattintva. 
+A telepítés befejezése után az alkalmazásaink között megtalálható lesz a Questionnare alkalmazás használatra készen.
+
 
 ## Karbantartási terv (Tesztelés közben frissíteni)
 
