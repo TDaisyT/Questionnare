@@ -60,6 +60,9 @@ A projekt bemutatása: 2023.11.27.
 
 <img src="Diagrams/ÜzletiFolyMod.png" width=600>
 
+A felhasználó regisztrációt követően lehetősége van bejelentkezni. Bejelenkezés után az alkalazásban lévő kérdőívet kitöltheti
+Az Admin bejelentkzeés után megtekintheti a kitöltött kérdőívek felhasználásával létrehozott statisztákáját a kérdőívnek.
+
 ## Követelmények(Leírja, hogy mit kell teljesíteni a programnak. Még javítandó,a követelmény listából kell kiszedni a dolgokat)
 A rendszer fő célja, hogy Android platformon működjön, és lehetővé tegye az egyetem hallgatóinak, hogy
 saját fiókkal ki tudják tölteni a kérdőívet. Ennek érdekében a következő funkcionális követelményeket határoztuk meg:
@@ -112,7 +115,7 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 
 ## Adatbázis terv
 
-<img src="databaseplan" width="600">
+<img src="Diagrams/databaseplan" width="600">
 
 Az alkalmazás adatbázisát három tábla segítségével oldjuk meg.
 Az első tábla a felhsználói fiókhoz tartozó adatok eltárolását végzi. Ebbe beletartorik a bejelentkezéshez
