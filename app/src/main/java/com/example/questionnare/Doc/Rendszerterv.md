@@ -115,7 +115,7 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 
 ## Adatbázis terv
 
-<img src="Diagrams/databaseplan" width="600">
+<img src="Diagrams/databaseplan.png" width="600">
 
 Az alkalmazás adatbázisát három tábla segítségével oldjuk meg.
 Az első tábla a felhsználói fiókhoz tartozó adatok eltárolását végzi. Ebbe beletartorik a bejelentkezéshez
