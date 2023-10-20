@@ -149,13 +149,13 @@ A kérdőív kizárólag a hallgatók számára lesz elérhető, és kitölthet�
 
 ## Képernyő tervek
 
-<img src="Diagrams/bejelentkezesScreen.png" width="250"> <img src="Diagrams/regisztracioScreen.png" width="250">
+<img src="Diagrams/bejelentkezesScreen.png" width="250"> <img src="Diagrams/registrationScreen.png" width="250">
 <img src="Diagrams/homeScreen.png" width="250"> <img src="Diagrams/profilScreen.png" width="250"> 
 <img src="Diagrams/fillingScreen.png" width="250">
 
 Az első képen a bejelentkezési képernyőt látható, ahol egy email cím és jelszó megadását követően be is jelentkezhetünk az alkamazásba.
 
-A második képen a regisztrációs képernyőn a regisztráció egy email cím, egy jelszó és a karunk megadása után
+A második képen a regisztrációs képernyőn a regisztráció egy email cím és egy jelszó megadása után
 meg is történik, amennyiben elfogadjuk az Adatvédelmi tájékoztatót.
 
 A harmadik képernyőn az alkamazás fő képernyője szerepel ahol elsőként láthatjuk a kitöltésre váró
