@@ -103,10 +103,25 @@ személyek férhetnek hozzá, azaz egy felhasználó nem juthat hozzá egy mási
 törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 
 ## Funkcionális terv(Leírja a felhasználói szerepköröket, és hogy milyen feladatokat tudnak csinálni.)
-### Rendszer szereplők:
+### Rendszer szereplők: 
+* a felhasználó, aki a kérdőívet kitölti)
+* az admin, aki hozzáfér a kitöltési statisztikákhoz, szűrni tud
+* maga a szoftver, ami felületet biztosít a kérdőív kitöltésére
 ### Rendszer használati esetek és lefutásaik
+* a bejelentkezett hallgató jogosultságú felhasználó kitölti a kérdőívet
+* a bejelentkezett admin jogosultságú felhasználó lekérdezi a kitöltési statisztikát
 ### Határ osztályok(A határ osztályok azok az osztályok, amelyek közvetlenül kezelik a felhasználói felületet és az interakciókat. Ezek az osztályok kapcsolódnak a képernyők megjelenítéséhez és a felhasználói inputok kezeléséhez.)
 ### Menü hierarchiák(A menü hierarchiák leírják az alkalmazás menürendszerét és az elérhető opciókat. Navigálásra jó)
+* a bejelentkező képernyőn keresztül tud a felhasználó vagy:
+   * bejelentkezni
+   * regisztrálni
+* bejelentkezés után:
+   * ha hallgató jogosultságú:
+      * kitölteni a kérdőívet
+    * ha admin jogosultságú:
+      * lekérdezni a kitöltési statisztikát
+    * jogosultságtól függetlenül:
+      * az ember alakú ikonra kattintva megnyitni a profilt, ahol ki tud jelentkezni  
 ### Képernyő tervek
 
 
