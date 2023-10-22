@@ -111,17 +111,34 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 * a bejelentkezett hallgató jogosultságú felhasználó kitölti a kérdőívet
 * a bejelentkezett admin jogosultságú felhasználó lekérdezi a kitöltési statisztikát
 ### Határ osztályok(A határ osztályok azok az osztályok, amelyek közvetlenül kezelik a felhasználói felületet és az interakciókat. Ezek az osztályok kapcsolódnak a képernyők megjelenítéséhez és a felhasználói inputok kezeléséhez.)
+* Bejelentkező képernyő:
+   * az adat beviteléért (e-mail cím, jelszó) felelős
+   * megvizsgálja az adat helyességét, azaz hogy nem-e maradt öresen mező és hogy létező e-mail cím+jelszó páros 
+     került bevitelre
+   * a hitelesítő gomb végzi az ellenőrzést, ha az adatok helyesek, átirányít a főoldalra
+   * a regisztráció gomb átirányít a regisztráció képernyőre
+* Regisztráció képernyő
+   * a bevitt adatok ellenőrzését végzi, ezek a következők:
+      * vitt-e be adatot a felhasználó
+      * valóban e-mail címet adott meg a felhasználó
+      * szerepel-e már a megadott e-mail cím az adatbázisban
+      * ugyanaz-e a két jelszó
+      * elfogadta-e az adatvédelmi tájékoztatót
+ * Főoldal
+   * a bejelentkezett felhasználó jogosultsága alapján (hallgató, admin) jelenik meg 
+   * ha hallgató jogosultságú a felhasználó, a kérdőív képernyőre vezeti
+   * ha admin jogosultságú a felhasználó, a kitöltési statisztikákhoz biztosít hozzáférést
+   * jogosultságtól föggetlenül az ember alakú ikon a profil felületre vezet át
+* Kérdőív képernyő
+   * ellenőrzi a felhasználói input helyességét, azaz hogy válaszolt-e az összes kötelező kérdésre
+   * lehetőséget biztosít, hogy az "egy válaszos" kérdéseknél csak egy válasz megjelölése legyen lehetséges
+   * a beküldés gomb rögzíti az adatokat az adatbázisba
+* Profil képernyő
+   * a felhasználó adatait kérdezi le az adatbázisból, és jeleníti meg a képernyőt
+   * lehetőséget ad adatmódosításra
+   * a kijelentkezés gomb a bejelentkező képernyőre vezet vissza   
 ### Menü hierarchiák(A menü hierarchiák leírják az alkalmazás menürendszerét és az elérhető opciókat. Navigálásra jó)
-* a bejelentkező képernyőn keresztül tud a felhasználó vagy:
-   * bejelentkezni
-   * regisztrálni
-* bejelentkezés után:
-   * ha hallgató jogosultságú:
-      * kitölteni a kérdőívet
-    * ha admin jogosultságú:
-      * lekérdezni a kitöltési statisztikát
-    * jogosultságtól függetlenül:
-      * az ember alakú ikonra kattintva megnyitni a profilt, ahol ki tud jelentkezni  
+
 ### Képernyő tervek
 
 
