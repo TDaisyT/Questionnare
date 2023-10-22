@@ -174,6 +174,14 @@ Az utolsó képen pedig a kitöltés alatt álló kérdőívet láthatjuk.
   * a felhasználó, aki a kérdőívet kitölti)
   * az admin, aki hozzáfér a kitöltési statisztikákhoz, szűrni tud
   * maga a szoftver, ami felületet biztosít a kérdőív kitöltésére
+* Indításkor a bejelentkezési felület jön be
+* A képernyő alján egy gomb segítségével a hallgató át tud menni a regisztrációs felületre, ahol regisztrál és bekerül az adatbázisba
+* A bejelentkezési felületen csak az léphet be, aki már benne van az adatbázisban (az admin eleve benne lesz)
+* Bejelentkezés után a főoldal jelenik meg, ahol a kitölthető kérdőív van
+* A kérdőívre való kattintással elkezdődik a kitöltés
+* A főoldal jobb oldalán elhelyezkledő emberi alakot ábrázoló ikonnal van lehetőség a profilra menni, majd onnan a középen lévő gombbal vissza a főoldalra
+* A profil fül alatt lehetőség van kijelentkezni
+* Ha admin jogosultságú felhasználóval jelentkezel be, akkor csak maga a statisztika fog megjelenni
 
 ---------TO DO---------
 
