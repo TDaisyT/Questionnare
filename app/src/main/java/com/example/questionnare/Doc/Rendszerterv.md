@@ -211,13 +211,11 @@ Kapcsolatok:
 ### Felhasználó felület:
 A Bejelentkező képernyő lesz az első képernyő, amely megjelenik a felhasználónak az alkalmazás indításakor. A felhasználó itt adja meg a bejelentkezési adatokat, majd a "Bejelentkezés" gombra kattintva átkerül a Főoldal képernyőre. Ezen kívül itt van még lehetősége a "Regisztráció" gomb segítségével a Regisztrációs képernyőre átmenni. A Regisztrációs képernyőn regisztrálni tud. A Főoldal képernyőn ismét két lehetősége van. Ha hallgató jogosultságú a felhasználó, az egyik lehetősége a "kérdőív kitöltése" gomb, mely a Kérdőív képernyőre vezeti át. Ha admin jogosultságú, ez a gomb "kérdőív statisztikák" gombra módosul. Mindkét jogosultságú felhasználó a "profil ikon" gomb segítségével a Profil képernyőre juthat el. A Kérdőív képernyőn a felhasználó a kérdésekre válaszol, majd a "Beküldés" gombbal rögzíti a válaszait, majd visszakerül a Főoldal képernyőre. A Profil képernyőn az adatait tudja módosítani az "Adatok módosítása" gombbal, vagy kijelentkezni a "Kijelentkezés" gombbal, ez a Bejelentkező képernyőre vezeti vissza a felhasználót.
 ### Játék logikai:
-
----TODO---
+A komponens az alkalmazás kezelése, azaz az alkalmazás iráyítása. Rögzíti a felhasználó válaszait, illetve statisztikát állít össze az admin számára.
 ### Adatkezelés:
 Az alkalmazás három fajta adattal fog foglalkozni. Az egyik a felhasználókhoz kapcsolódó bejelentkezési adatok, a második a felhasználó által beküldött válaszok, a harmadik a kérdőívhez tartozó adatok, azaz maguk a kérdések és a hozzájuk tartozó válaszlehetőségek.
 ### Kapcsolatok
-
----TODO---
+A Felhasználó felület interagál a Játék logikával az alkalmazás során. A Játék logika használja az Adatkezelést az alkalmazás vezérléséhez, az adatok tárolásához valamint a kérdések rögzítéséhez. Az Adatkezelés tárolja a felhasználói adatokat és a kérdésekre vonatkozó információkat. 
 ### Technológiai megvalósítás
 Az alkalmazást az Android Studio fejlesztői környezetben fejlesztjük, Java programozási nyelven. Az adatok tárolásához SQLite adatbázist fogunk használni
 ### Működési folyamat
