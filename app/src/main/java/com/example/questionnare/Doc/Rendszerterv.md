@@ -104,12 +104,13 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 
 ## Funkcionális terv(Leírja a felhasználói szerepköröket, és hogy milyen feladatokat tudnak csinálni.)
 ### Rendszer szereplők: 
-* a felhasználó, aki a kérdőívet kitölti)
-* az admin, aki hozzáfér a kitöltési statisztikákhoz, szűrni tud
-* maga a szoftver, ami felületet biztosít a kérdőív kitöltésére
-### Rendszer használati esetek és lefutásaik
-* a bejelentkezett hallgató jogosultságú felhasználó kitölti a kérdőívet
-* a bejelentkezett admin jogosultságú felhasználó lekérdezi a kitöltési statisztikát
+* felhasználó
+* fejlesztő
+### Rendszer használati esetek és lefutásaik:
+Felhasználó: A felhasználó a rendszer azon szereplője, aki aktívan használja az alkalmazást. Regisztrál, bejelentkezik, jogosultságától függően (hallgató, admin) kitölti a kérdőívet vagy a kitöltési statisztikákat nézi meg. Ő az aki interakcióba lép a rendszerrel, az általa végzett tevékenységek vannak az adatbázisba rögzítve.
+
+Fejlesztő: A fejlesztő szerepkörben működő személy felelős az alkalmazás karbantartásáért és feljesztéséért. A fejlesztőnek automatikusan admin jogosultsága van, ami lehetővé teszi számára a felülethez való hozzáféréshez, ami lehetővé teszi számukra a rendszer működésének ellenőrzését, valamint új funkciók hozzáadását és a rendszer frissítését.
+
 ### Határ osztályok(A határ osztályok azok az osztályok, amelyek közvetlenül kezelik a felhasználói felületet és az interakciókat. Ezek az osztályok kapcsolódnak a képernyők megjelenítéséhez és a felhasználói inputok kezeléséhez.)
 * Bejelentkező képernyő:
    * az adat beviteléért (e-mail cím, jelszó) felelős
@@ -138,8 +139,30 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
    * lehetőséget ad adatmódosításra
    * a kijelentkezés gomb a bejelentkező képernyőre vezet vissza   
 ### Menü hierarchiák(A menü hierarchiák leírják az alkalmazás menürendszerét és az elérhető opciókat. Navigálásra jó)
-
+* Bejelentkezés:
+   * menü megnevezése az oldal tetején
+   * beviteli mezők a képernyő közepén
+   * e-mail, jelszó beírására 2 szövegdoboz
+   * bejelentkezés gomb
+   * regisztráció gomb
+* Regisztráció:
+   * menü megnevezése az oldal tetején
+   * beviteli mezők a képernyő közepén
+   * e-mail, jelszó, jelszó ismét beírására 3 szövegdoboz
+   * adatvédelmi tájékoztatóhoz egy checkbox
+   * regisztráció gomb
+* Főoldal:
+   * menü megnevezése az oldal tetején
+   * kérdőív kitöltése gomb ez alatt
+   * profil elérése gomb a képernyő jobb also sarkában
+* Kérdőív:
+   * menü megnevezése az oldal tetejé 
+   * a kérdések a menüszalag alatt
+   * beküldés gomb a képernyő alján
 ### Képernyő tervek
+<img src="Diagrams/bejelentkezesScreen.png" width="250"> <img src="Diagrams/registrationScreen.png" width="250">
+<img src="Diagrams/homeScreen.png" width="250"> <img src="Diagrams/profilScreen.png" width="250"> 
+<img src="Diagrams/fillingScreen.png" width="250">
 
 
 ## Fizikai környezet(Itt kell leírni milyen platformra készül a szoftver ,mik vannak engedélyezve és milyen fejlesztői eszközöket / programokat használunk fejlesztés közben)
