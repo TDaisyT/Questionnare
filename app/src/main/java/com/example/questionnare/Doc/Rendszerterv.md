@@ -174,6 +174,36 @@ alkalmazás verzió esetében.
 
 ## Absztrakt domain modell
 
+Fő komponensei:
+
+* Felhasználó: A személy, aki bejelentkezik az alkalmazásba
+* Az alkalmazás:
+  * Bejelentkező képernyő: Az alkamazás azon része, ahol a felhasználó beírja az adatait és belép
+  * Regisztrációs képernyő: A még nem regisztrált felhasználó itt tudja felrögzíteni az adatait az adatbázsiba, 
+    melyek megadásával később bejelentkezhet
+  * Főoldal: Az a rész, ahol a felhasználó hozzáférhet a kérdőívhez és a profiljához
+  * Kérdőív képernyő: Az a része az alkalmazásnak, ahol a felhasználó kitölti a kérdőívet
+  * Profil képernyő: A felhasználó ki tud jelentkezni, vagy módosítani az adatait
+
+Kapcsolatok:
+
+* A felhasználó interakcióba lép a:
+  * Bejelentkezési
+  * Regisztrációs
+  * Főoldal
+  * Kérdőív
+  * Profil képernyőkkel
+* A Bejelentkező képernyőn keresztül érhető el a:
+  * Regisztrációs képernyő
+  * Főoldal
+* A Regisztrációs képernnyő új felhasználót rögzít a rendszerbe és visszavezet a Bejelentkező képernyőre
+* A Főoldalon elérhető a:
+  * Kérdőív képernyő
+  * Profil képernyő
+* A Kérdőív képernyő kezeli a kérdőív kitöltését, rögzíti a válaszokat és visszavezet a Főoldalra
+* A Profil képernyő kezeli az esetleges adatmódosításokat és átvezethet a:
+  * Főoldalra
+  * Bejelentkezési képernyőre
 
 ## Architekturális terv(A nemfunkcionális követelményekből lesz az architekturális terv.)
 ### Felhasználó felület:
