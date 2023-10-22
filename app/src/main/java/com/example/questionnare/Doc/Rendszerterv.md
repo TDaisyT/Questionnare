@@ -205,6 +205,8 @@ Kapcsolatok:
   * Főoldalra
   * Bejelentkezési képernyőre
 
+<img src="Diagrams/absztraktDomainModell.png" width=600>
+
 ## Architekturális terv(A nemfunkcionális követelményekből lesz az architekturális terv.)
 ### Felhasználó felület:
 A Bejelentkező képernyő lesz az első képernyő, amely megjelenik a felhasználónak az alkalmazás indításakor. A felhasználó itt adja meg a bejelentkezési adatokat, majd a "Bejelentkezés" gombra kattintva átkerül a Főoldal képernyőre. Ezen kívül itt van még lehetősége a "Regisztráció" gomb segítségével a Regisztrációs képernyőre átmenni. A Regisztrációs képernyőn regisztrálni tud. A Főoldal képernyőn ismét két lehetősége van. Ha hallgató jogosultságú a felhasználó, az egyik lehetősége a "kérdőív kitöltése" gomb, mely a Kérdőív képernyőre vezeti át. Ha admin jogosultságú, ez a gomb "kérdőív statisztikák" gombra módosul. Mindkét jogosultságú felhasználó a "profil ikon" gomb segítségével a Profil képernyőre juthat el. A Kérdőív képernyőn a felhasználó a kérdésekre válaszol, majd a "Beküldés" gombbal rögzíti a válaszait, majd visszakerül a Főoldal képernyőre. A Profil képernyőn az adatait tudja módosítani az "Adatok módosítása" gombbal, vagy kijelentkezni a "Kijelentkezés" gombbal, ez a Bejelentkező képernyőre vezeti vissza a felhasználót.
