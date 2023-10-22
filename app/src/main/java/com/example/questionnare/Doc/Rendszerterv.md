@@ -189,7 +189,7 @@ Az alkalmazás három fajta adattal fog foglalkozni. Az egyik a felhasználókho
 ### Technológiai megvalósítás
 Az alkalmazást az Android Studio fejlesztői környezetben fejlesztjük, Java programozási nyelven. Az adatok tárolásához SQLite adatbázist fogunk használni
 ### Működési folyamat
----TODO---
+A felhasználó bejelentkezik a Bejelentkező képernyőn. A felhasználó átkerül a Főoldalra, ahol lehetősége van megkezdeni a kitöltést. A Kérdőív képernyőn kitölti a kérdőívet, melyre előre meghatározatlan idő áll rendelkezésére. A beküldés után a válaszai rögzítve vannak az adatbázisba. 
 ### Tesztelés
 Az alkalmazás alapos tesztelésen megy keresztül a létrehozása során, ellenőrizve minden problémát, ami eszünkbe juthat.
 
