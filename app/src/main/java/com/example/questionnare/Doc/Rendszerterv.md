@@ -107,9 +107,15 @@ törvényi előírásoknak és szabványoknak, GDPR-nek való megfelelés.
 * felhasználó
 * fejlesztő
 ### Rendszer használati esetek és lefutásaik:
-Felhasználó: A felhasználó a rendszer azon szereplője, aki aktívan használja az alkalmazást. Regisztrál, bejelentkezik, jogosultságától függően (hallgató, admin) kitölti a kérdőívet vagy a kitöltési statisztikákat nézi meg. Ő az aki interakcióba lép a rendszerrel, az általa végzett tevékenységek vannak az adatbázisba rögzítve.
+Felhasználó: A felhasználó a rendszer azon szereplője, aki aktívan használja az alkalmazást.
+Regisztrál, bejelentkezik, jogosultságától függően (hallgató, admin) kitölti a kérdőívet vagy a
+kitöltési statisztikákat nézi meg. Ő az aki interakcióba lép a rendszerrel, az általa végzett
+tevékenységek vannak az adatbázisba rögzítve.
 
-Fejlesztő: A fejlesztő szerepkörben működő személy felelős az alkalmazás karbantartásáért és feljesztéséért. A fejlesztőnek automatikusan admin jogosultsága van, ami lehetővé teszi számára a felülethez való hozzáféréshez, ami lehetővé teszi számukra a rendszer működésének ellenőrzését, valamint új funkciók hozzáadását és a rendszer frissítését.
+Fejlesztő: A fejlesztő szerepkörben működő személy felelős az alkalmazás karbantartásáért és
+feljesztéséért. A fejlesztőnek automatikusan admin jogosultsága van, ami lehetővé teszi számára 
+a felülethez való hozzáféréshez, ami lehetővé teszi számukra a rendszer működésének ellenőrzését, 
+valamint új funkciók hozzáadását és a rendszer frissítését.
 
 ### Határ osztályok(A határ osztályok azok az osztályok, amelyek közvetlenül kezelik a felhasználói felületet és az interakciókat. Ezek az osztályok kapcsolódnak a képernyők megjelenítéséhez és a felhasználói inputok kezeléséhez.)
 * Bejelentkező képernyő:
@@ -209,17 +215,38 @@ Kapcsolatok:
 
 ## Architekturális terv(A nemfunkcionális követelményekből lesz az architekturális terv.)
 ### Felhasználó felület:
-A Bejelentkező képernyő lesz az első képernyő, amely megjelenik a felhasználónak az alkalmazás indításakor. A felhasználó itt adja meg a bejelentkezési adatokat, majd a "Bejelentkezés" gombra kattintva átkerül a Főoldal képernyőre. Ezen kívül itt van még lehetősége a "Regisztráció" gomb segítségével a Regisztrációs képernyőre átmenni. A Regisztrációs képernyőn regisztrálni tud. A Főoldal képernyőn ismét két lehetősége van. Ha hallgató jogosultságú a felhasználó, az egyik lehetősége a "kérdőív kitöltése" gomb, mely a Kérdőív képernyőre vezeti át. Ha admin jogosultságú, ez a gomb "kérdőív statisztikák" gombra módosul. Mindkét jogosultságú felhasználó a "profil ikon" gomb segítségével a Profil képernyőre juthat el. A Kérdőív képernyőn a felhasználó a kérdésekre válaszol, majd a "Beküldés" gombbal rögzíti a válaszait, majd visszakerül a Főoldal képernyőre. A Profil képernyőn az adatait tudja módosítani az "Adatok módosítása" gombbal, vagy kijelentkezni a "Kijelentkezés" gombbal, ez a Bejelentkező képernyőre vezeti vissza a felhasználót.
+A Bejelentkező képernyő lesz az első képernyő, amely megjelenik a felhasználónak az alkalmazás 
+indításakor. A felhasználó itt adja meg a bejelentkezési adatokat, majd a "Bejelentkezés" gombra 
+kattintva átkerül a Főoldal képernyőre. Ezen kívül itt van még lehetősége a "Regisztráció" gomb 
+segítségével a Regisztrációs képernyőre átmenni. A Regisztrációs képernyőn regisztrálni tud.
+
+A Főoldal képernyőn ismét két lehetősége van. Ha hallgató jogosultságú a felhasználó, az egyik lehetősége 
+a "kérdőív kitöltése" gomb, mely a Kérdőív képernyőre vezeti át. Ha admin jogosultságú, ez a gomb 
+"kérdőív statisztikák" gombra módosul. Mindkét jogosultságú felhasználó a "profil ikon" gomb segítségével 
+a Profil képernyőre juthat el.
+
+A Kérdőív képernyőn a felhasználó a kérdésekre válaszol, majd a "Beküldés" gombbal rögzíti a válaszait,
+majd visszakerül a Főoldal képernyőre. A Profil képernyőn az adatait tudja módosítani az "Adatok módosítása"
+gombbal, vagy kijelentkezni a "Kijelentkezés" gombbal, ez a Bejelentkező képernyőre vezeti vissza a felhasználót.
+
 ### Játék logikai:
-A komponens az alkalmazás kezelése, azaz az alkalmazás iráyítása. Rögzíti a felhasználó válaszait, illetve statisztikát állít össze az admin számára.
+A komponens az alkalmazás kezelése, azaz az alkalmazás iráyítása. Rögzíti a felhasználó válaszait,
+illetve statisztikát állít össze az admin számára.
 ### Adatkezelés:
-Az alkalmazás három fajta adattal fog foglalkozni. Az egyik a felhasználókhoz kapcsolódó bejelentkezési adatok, a második a felhasználó által beküldött válaszok, a harmadik a kérdőívhez tartozó adatok, azaz maguk a kérdések és a hozzájuk tartozó válaszlehetőségek.
+Az alkalmazás három fajta adattal fog foglalkozni. Az egyik a felhasználókhoz kapcsolódó bejelentkezési 
+adatok, a második a felhasználó által beküldött válaszok, a harmadik a kérdőívhez tartozó adatok, azaz 
+maguk a kérdések és a hozzájuk tartozó válaszlehetőségek.
 ### Kapcsolatok
-A Felhasználó felület interagál a Játék logikával az alkalmazás során. A Játék logika használja az Adatkezelést az alkalmazás vezérléséhez, az adatok tárolásához valamint a kérdések rögzítéséhez. Az Adatkezelés tárolja a felhasználói adatokat és a kérdésekre vonatkozó információkat. 
+A Felhasználó felület interagál a Játék logikával az alkalmazás során. A Játék logika használja az 
+Adatkezelést az alkalmazás vezérléséhez, az adatok tárolásához valamint a kérdések rögzítéséhez. Az 
+Adatkezelés tárolja a felhasználói adatokat és a kérdésekre vonatkozó információkat. 
 ### Technológiai megvalósítás
-Az alkalmazást az Android Studio fejlesztői környezetben fejlesztjük, Java programozási nyelven. Az adatok tárolásához SQLite adatbázist fogunk használni
+Az alkalmazást az Android Studio fejlesztői környezetben fejlesztjük, Java programozási nyelven. Az 
+adatok tárolásához SQLite adatbázist fogunk használni
 ### Működési folyamat
-A felhasználó bejelentkezik a Bejelentkező képernyőn. A felhasználó átkerül a Főoldalra, ahol lehetősége van megkezdeni a kitöltést. A Kérdőív képernyőn kitölti a kérdőívet, melyre előre meghatározatlan idő áll rendelkezésére. A beküldés után a válaszai rögzítve vannak az adatbázisba. 
+A felhasználó bejelentkezik a Bejelentkező képernyőn. A felhasználó átkerül a Főoldalra, ahol 
+lehetősége van megkezdeni a kitöltést. A Kérdőív képernyőn kitölti a kérdőívet, melyre előre 
+meghatározatlan idő áll rendelkezésére. A beküldés után a válaszai rögzítve vannak az adatbázisba. 
 ### Tesztelés
 Az alkalmazás alapos tesztelésen megy keresztül a létrehozása során, ellenőrizve minden problémát, ami eszünkbe juthat.
 
