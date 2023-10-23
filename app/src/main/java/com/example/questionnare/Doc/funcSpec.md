@@ -151,7 +151,7 @@ A kérdőív kizárólag a hallgatók számára lesz elérhető, és kitölthet�
 
 <img src="Diagrams/bejelentkezesScreen.png" width="250"> <img src="Diagrams/registrationScreen.png" width="250">
 <img src="Diagrams/homeScreen.png" width="250"> <img src="Diagrams/profilScreen.png" width="250"> 
-<img src="Diagrams/fillingScreen.png" width="250">
+<img src="Diagrams/filloutScreen.png" width="250">
 
 Az első képen a bejelentkezési képernyőt látható, ahol egy email cím és jelszó megadását követően be is jelentkezhetünk az alkamazásba.
 

@@ -168,7 +168,7 @@ valamint új funkciók hozzáadását és a rendszer frissítését.
 ### Képernyő tervek
 <img src="Diagrams/bejelentkezesScreen.png" width="250"> <img src="Diagrams/registrationScreen.png" width="250">
 <img src="Diagrams/homeScreen.png" width="250"> <img src="Diagrams/profilScreen.png" width="250"> 
-<img src="Diagrams/fillingScreen.png" width="250">
+<img src="Diagrams/filloutScreen.png" width="250">
 
 
 ## Fizikai környezet(Itt kell leírni milyen platformra készül a szoftver ,mik vannak engedélyezve és milyen fejlesztői eszközöket / programokat használunk fejlesztés közben)
