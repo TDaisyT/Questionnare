@@ -7,49 +7,86 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "Questionnaire";
-    private static final int DATABASE_VERSION = 1;
+    static final String DATABASE_NAME = "Questionnaire";
+    static final int DATABASE_VERSION = 1;
 
-    //SQL parancsok, hogy létrehozzam a három táblát az adatbázishoz:
-    //Felhasználó adatokkal foglalkozó tábla (users a neve):
-    private static final String CREATE_USERS_TABLE =  "CREATE TABLE users (" +
-            "Id INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "Email TEXT NOT NULL," +
-            "Password TEXT NOT NULL)";
+    public static final String TABLE_USERS = "User";
+    public static final String TABLE_QA = "QA";
+    public static final String TABLE_RESULT = "Result";
 
-    //A kérdésekkel és válaszokkal foglalkozó tábla (qa a neve):
-    private static final String CREATE_QA_TABLE = "CREATE TABLE qa (" +
-            "Id INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "Question TEXT NOT NULL," +
-            "Answer1 TEXT NOT NULL," +
-            "Answer2 TEXT NOT NULL," +
-            "Answer3 TEXT NOT NULL," +
-            "Answer4 TEXT NOT NULL)";
 
-    //A felhasználó által kiválasztott választ tárolja, összeköti a másik két táblát(result a neve):
-    private static final String CREATE_RESULT_TABLE = "CREATE TABLE result (" +
-            "Id INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "UserId INTEGER," +
-            "QAId INTEGER," +
-            "SelectedAnswer TEXT," +
-            "FOREIGN KEY (UserId) REFERENCES users (Id)," +
-            "FOREIGN KEY (QAId) REFERENCES qa (Id))";
+    public static final String COL_ID = "id";
+    public static final String COL_EMAIL = "email";
+    public static final String COL_PASSWORD = "password";
+    public static final String COL_QUESTION = "question";
+    public static final String COL_ANSWER1 = "answer1";
+    public static final String COL_ANSWER2 = "answer2";
+    public static final String COL_ANSWER3 = "answer3";
+    public static final String COL_ANSWER4 = "answer4";
+    public static final String COL_QA_ID = "QAId";
+    public static final String COL_USERS_ID = "UserId";
+    public static final String COL_FINAL_ANSWER = "FinalAnswer";
+    
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        // Create the tables
+        String createUsersTable = "CREATE TABLE " + TABLE_USERS + " (" +
+                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COL_EMAIL + " TEXT, " +
+                COL_PASSWORD + " TEXT)";
+        db.execSQL(createUsersTable);//az adatbázis séma létrehozásáért felelős
+
+        String createQATable = "CREATE TABLE " + TABLE_QA + " (" +
+                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COL_QUESTION + " TEXT, " +
+                COL_ANSWER1 + " TEXT, " +
+                COL_ANSWER2 + " TEXT, " +
+                COL_ANSWER3 + " TEXT, " +
+                COL_ANSWER4 + " TEXT)";
+        db.execSQL(createQATable);
+
+        String createResultTable = "CREATE TABLE " + TABLE_RESULT + " (" +
+                COL_QA_ID + " INTEGER, " +
+                COL_USERS_ID + " INTEGER, " +
+                COL_FINAL_ANSWER + " TEXT, " +
+                "FOREIGN KEY (" + COL_QA_ID + ") REFERENCES " + TABLE_QA + "(" + COL_ID + "), " +
+                "FOREIGN KEY (" + COL_USERS_ID + ") REFERENCES " + TABLE_USERS + "(" + COL_ID + "))";
+        db.execSQL(createResultTable);
+    }
+
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    //az adatbázis séma létrehozásáért felelős
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_USERS_TABLE);
-        db.execSQL(CREATE_QA_TABLE);
-        db.execSQL(CREATE_RESULT_TABLE);
-    }
+
 
     //Kezeli az adatbázis verziójának frissítéseit és az esetleges változásokat az adatbázis sémában
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-    //TODO:Jelenleg azt olvastam, hogy ide nem kell most semmit írni, de ennek még utána nézek
+        if (newVersion > oldVersion) {
+            // Elmenti az eddigi adatokat ideiglenes táblákban
+            db.execSQL("CREATE TABLE backup_users AS SELECT * FROM " + TABLE_USERS);
+            db.execSQL("CREATE TABLE backup_qa AS SELECT * FROM " + TABLE_QA);
+            db.execSQL("CREATE TABLE backup_result AS SELECT * FROM " + TABLE_RESULT);
+
+            // Törli az eddigi táblákat
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_QA);
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_RESULT);
+
+            // Új táblákat hozz létre a sémákkal
+            onCreate(db);
+
+            // Visszamásolja az adatokat az új táblákba az ideiglenes táblákból
+            db.execSQL("INSERT INTO " + TABLE_USERS + " SELECT * FROM backup_users");
+            db.execSQL("INSERT INTO " + TABLE_QA + " SELECT * FROM backup_qa");
+            db.execSQL("INSERT INTO " + TABLE_RESULT + " SELECT * FROM backup_result");
+
+            // Törli az ideiglenes táblákat
+            db.execSQL("DROP TABLE IF EXISTS backup_users");
+            db.execSQL("DROP TABLE IF EXISTS backup_qa");
+            db.execSQL("DROP TABLE IF EXISTS backup_result");
+        }
     }
 }
