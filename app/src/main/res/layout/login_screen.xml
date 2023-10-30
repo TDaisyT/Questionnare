@@ -44,6 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Még nincs fiókom"
         android:clickable="true"
+        android:textSize="40dp"
         android:background="?android:attr/selectableItemBackground"
 
         app:layout_constraintStart_toStartOf="parent"
