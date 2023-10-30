@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <EditText
+        android:id="@+id/emailSignUp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="E-mail"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/passwordSignUp"/>
+
+
+
+    <EditText
+        android:id="@+id/passwordSignUp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Jelszó"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailSignUp"
+        app:layout_constraintBottom_toTopOf="@id/passwordAgain"/>
+
+    <EditText
+        android:id="@+id/passwordAgain"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Jelszó ismétlése"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordSignUp"
+        app:layout_constraintBottom_toTopOf="@id/checkBox"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/signUpButton"
+        app:layout_constraintTop_toBottomOf="@id/passwordAgain"/>
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="Bejelentkezés"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBox"
+        app:layout_constraintBottom_toTopOf="@id/loginRedirect"/>
+
+    <TextView
+        android:id="@+id/loginRedirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Már van fiókom"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBox"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
