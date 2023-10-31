@@ -2,7 +2,6 @@ package com.example.questionnare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText userEmailET;
     private EditText userPasswordET;
     private Button LoginButton;
-
     private TextView signInRedirect;
-    private TextView loginRedirect;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,15 +24,13 @@ public class MainActivity extends AppCompatActivity {
         userPasswordET = findViewById(R.id.passwordLogin);
         LoginButton = findViewById(R.id.loginButton);
         signInRedirect = findViewById(R.id.signinRedirect);
-        loginRedirect = findViewById(R.id.loginRedirect);
-
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email =userEmailET.getText().toString();
                 String password = userPasswordET.getText().toString();
-
+                // todo mikor engedje a bejelentkezést
                 setContentView(R.layout.home_screen);
             }
         });
@@ -48,15 +42,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        loginRedirect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setContentView((R.layout.login_screen));
-            }
-        });
-
 
     }
 
 
-}
+}g
