@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button LoginButton;
 
     private TextView signInRedirect;
+    private TextView loginRedirect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         userPasswordET = findViewById(R.id.passwordLogin);
         LoginButton = findViewById(R.id.loginButton);
         signInRedirect = findViewById(R.id.signinRedirect);
+        loginRedirect = findViewById(R.id.loginRedirect);
+
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 setContentView(R.layout.signup_screen);
+            }
+        });
+
+        loginRedirect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView((R.layout.login_screen));
             }
         });
 
