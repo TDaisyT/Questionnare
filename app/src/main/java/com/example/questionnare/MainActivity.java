@@ -31,14 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 String email =userEmailET.getText().toString();
                 String password = userPasswordET.getText().toString();
                 // todo mikor engedje a bejelentkezést
-                setContentView(R.layout.home_screen);
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 
         signInRedirect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.signup_screen);
+                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -46,4 +48,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-}g
+}
