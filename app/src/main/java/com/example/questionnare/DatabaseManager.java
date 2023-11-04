@@ -146,7 +146,17 @@ public class DatabaseManager {
                 addQA(questions[i], answers[i][0], answers[i][1], answers[i][2], answers[i][3]);
             }
         }
+    }
 
-
+    public void addAdmin() {
+        String email = "admin@gmail.com";
+        String password = "admin";
+        if(!checkUser(email,password)) {
+            addUser(email, password);
+            Log.d("DatabaseManager", "Admin user added to the database");
+        }
+        else {
+            Log.d("DatabaseManager", "Admin user already exists in the database");
+        }
     }
 }

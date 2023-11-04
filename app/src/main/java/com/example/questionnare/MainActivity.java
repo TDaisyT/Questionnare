@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText userPasswordET;
     private Button LoginButton;
     private TextView signInRedirect;
+    private DatabaseManager dbManager; // DatabaseManager példánya
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         userPasswordET = findViewById(R.id.passwordLogin);
         LoginButton = findViewById(R.id.loginButton);
         signInRedirect = findViewById(R.id.signinRedirect);
+        dbManager = new DatabaseManager(this); // Inicializálás
+
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,8 +35,14 @@ public class MainActivity extends AppCompatActivity {
                 String email =userEmailET.getText().toString();
                 String password = userPasswordET.getText().toString();
                 // todo mikor engedje a bejelentkezést
+                if (dbManager.checkUser(email, password)) {
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
+                }
+                else {
+                    // Ide hogy majd mit csináljon, ha valamit rosszul írtál be
+                }
+
             }
         });
 
