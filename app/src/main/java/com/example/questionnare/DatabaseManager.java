@@ -158,5 +158,31 @@ public class DatabaseManager {
         else {
             Log.d("DatabaseManager", "Admin user already exists in the database");
         }
+
+
     }
+
+    //JUST TO CHECK THE USERS TABLE:
+    public void printUserTable() {
+        Cursor cursor = database.query(DatabaseHelper.TABLE_USERS, null, null, null, null, null, null);
+
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                do {
+                    int userId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_ID));
+                    String userEmail = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_EMAIL));
+                    String userPassword = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_PASSWORD));
+                    Log.d("DatabaseContent", "User ID: " + userId + ", Email: " + userEmail + ", Password: " + userPassword);
+                } while (cursor.moveToNext());
+            }
+            cursor.close();
+        }
+    }
+
+    //Felhasználók id-jának lekérdezése:
+
+    //Kérdések lekérdezése:
+
+
+
 }

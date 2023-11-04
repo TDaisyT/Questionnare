@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         LoginButton = findViewById(R.id.loginButton);
         signInRedirect = findViewById(R.id.signinRedirect);
         dbManager = new DatabaseManager(this); // Inicializálás
+        dbManager.open();
+        dbManager.addAdmin();
+        //dbManager.printUserTable();
 
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 String password = userPasswordET.getText().toString();
                 // todo mikor engedje a bejelentkezést
                 if (dbManager.checkUser(email, password)) {
+                dbManager.close();
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
                 }

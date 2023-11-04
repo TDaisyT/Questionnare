@@ -45,13 +45,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COL_ANSWER4 + " TEXT)";
         db.execSQL(createQATable);
 
-        String createResultTable = "CREATE TABLE " + TABLE_RESULT + " (" +
-                COL_QA_ID + " INTEGER, " +
+        String createResultsTable = "CREATE TABLE " + TABLE_RESULT + " (" +
+                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COL_USERS_ID + " INTEGER, " +
+                COL_QA_ID + " INTEGER, " +
                 COL_FINAL_ANSWER + " TEXT, " +
                 "FOREIGN KEY (" + COL_QA_ID + ") REFERENCES " + TABLE_QA + "(" + COL_ID + "), " +
                 "FOREIGN KEY (" + COL_USERS_ID + ") REFERENCES " + TABLE_USERS + "(" + COL_ID + "))";
-        db.execSQL(createResultTable);
+        db.execSQL(createResultsTable);
+
     }
 
 
