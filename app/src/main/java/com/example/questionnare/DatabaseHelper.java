@@ -23,10 +23,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_ANSWER2 = "answer2";
     public static final String COL_ANSWER3 = "answer3";
     public static final String COL_ANSWER4 = "answer4";
-    public static final String COL_QA_ID = "QAId";
     public static final String COL_USERS_ID = "UserId";
-    public static final String COL_FINAL_ANSWER = "FinalAnswer";
-    
+    public static final String COL_FA1 = "fa1";
+    public static final String COL_FA2 = "fa2";
+    public static final String COL_FA3 = "fa3";
+    public static final String COL_FA4 = "fa4";
+    public static final String COL_FA5 = "fa5";
+    public static final String COL_FA6 = "fa6";
+    public static final String COL_FA7 = "fa7";
+    public static final String COL_FA8 = "fa8";
+    public static final String COL_FA9 = "fa9";
+    public static final String COL_FA10 = "fa10";
+    public static final String COL_FA11 = "fa11";
+    public static final String COL_FA12 = "fa12";
+    public static final String COL_FA13 = "fa13";
+    public static final String COL_FA14 = "fa14";
+    public static final String COL_FA15 = "fa15";
+
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create the tables
@@ -48,11 +62,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String createResultsTable = "CREATE TABLE " + TABLE_RESULT + " (" +
                 COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COL_USERS_ID + " INTEGER, " +
-                COL_QA_ID + " INTEGER, " +
-                COL_FINAL_ANSWER + " TEXT, " +
-                "FOREIGN KEY (" + COL_QA_ID + ") REFERENCES " + TABLE_QA + "(" + COL_ID + "), " +
+                COL_FA1 + " TEXT, " +
+                COL_FA2 + " TEXT, " +
+                COL_FA3 + " TEXT, " +
+                COL_FA4 + " TEXT, " +
+                COL_FA5 + " TEXT, " +
+                COL_FA6 + " TEXT, " +
+                COL_FA7 + " TEXT, " +
+                COL_FA8 + " TEXT, " +
+                COL_FA9 + " TEXT, " +
+                COL_FA10 + " TEXT, " +
+                COL_FA11 + " TEXT, " +
+                COL_FA12 + " TEXT, " +
+                COL_FA13 + " TEXT, " +
+                COL_FA14 + " TEXT, " +
+                COL_FA15 + " TEXT, " +
                 "FOREIGN KEY (" + COL_USERS_ID + ") REFERENCES " + TABLE_USERS + "(" + COL_ID + "))";
         db.execSQL(createResultsTable);
+
 
     }
 
