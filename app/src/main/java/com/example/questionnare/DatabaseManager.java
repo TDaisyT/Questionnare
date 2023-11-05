@@ -75,30 +75,42 @@ public class DatabaseManager {
 
     //I know its ugly, leave me alone
     public void addResult(int userId, String fa1, String fa2, String fa3, String fa4, String fa5, String fa6, String fa7, String fa8, String fa9, String fa10, String fa11, String fa12, String fa13, String fa14, String fa15) {
-        ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COL_USERS_ID, userId);
-        values.put(DatabaseHelper.COL_FA1, fa1);
-        values.put(DatabaseHelper.COL_FA2, fa2);
-        values.put(DatabaseHelper.COL_FA3, fa3);
-        values.put(DatabaseHelper.COL_FA4, fa4);
-        values.put(DatabaseHelper.COL_FA5, fa5);
-        values.put(DatabaseHelper.COL_FA6, fa6);
-        values.put(DatabaseHelper.COL_FA7, fa7);
-        values.put(DatabaseHelper.COL_FA8, fa8);
-        values.put(DatabaseHelper.COL_FA9, fa9);
-        values.put(DatabaseHelper.COL_FA10, fa10);
-        values.put(DatabaseHelper.COL_FA11, fa11);
-        values.put(DatabaseHelper.COL_FA12, fa12);
-        values.put(DatabaseHelper.COL_FA13, fa13);
-        values.put(DatabaseHelper.COL_FA14, fa14);
-        values.put(DatabaseHelper.COL_FA15, fa15);
+        if (!isUserInResultTable(userId)) {
+            ContentValues values = new ContentValues();
+            values.put(DatabaseHelper.COL_USERS_ID, userId);
+            values.put(DatabaseHelper.COL_FA1, fa1);
+            values.put(DatabaseHelper.COL_FA2, fa2);
+            values.put(DatabaseHelper.COL_FA3, fa3);
+            values.put(DatabaseHelper.COL_FA4, fa4);
+            values.put(DatabaseHelper.COL_FA5, fa5);
+            values.put(DatabaseHelper.COL_FA6, fa6);
+            values.put(DatabaseHelper.COL_FA7, fa7);
+            values.put(DatabaseHelper.COL_FA8, fa8);
+            values.put(DatabaseHelper.COL_FA9, fa9);
+            values.put(DatabaseHelper.COL_FA10, fa10);
+            values.put(DatabaseHelper.COL_FA11, fa11);
+            values.put(DatabaseHelper.COL_FA12, fa12);
+            values.put(DatabaseHelper.COL_FA13, fa13);
+            values.put(DatabaseHelper.COL_FA14, fa14);
+            values.put(DatabaseHelper.COL_FA15, fa15);
 
-        long insertedResult = database.insert(DatabaseHelper.TABLE_RESULT, null, values);
-        if (insertedResult == -1) {
-            Log.d("DatabaseManager", "Error: The results weren't inserted into the database");
+            long insertedResult = database.insert(DatabaseHelper.TABLE_RESULT, null, values);
+            if (insertedResult == -1) {
+                Log.d("DatabaseManager", "Error: The results weren't inserted into the database");
+            }
         }
     }
+    private boolean isUserInResultTable(int userId) {
+        String[] columns = { DatabaseHelper.COL_ID };
+        String selection = DatabaseHelper.COL_USERS_ID + " = ?";
+        String[] selectionArgs = { String.valueOf(userId) };
 
+        Cursor cursor = database.query(DatabaseHelper.TABLE_RESULT, columns, selection, selectionArgs, null, null, null);
+        boolean userExistsInResultTable = (cursor.getCount() > 0);
+        cursor.close();
+
+        return userExistsInResultTable;
+    }
 
 
             public Cursor queryDatabase(String query) {
