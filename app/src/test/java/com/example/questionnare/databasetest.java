@@ -16,7 +16,4 @@ public class MyDatabaseTest {
 
     @Test
     public void insertAndReadData() {
-        // Adatok beszúrása az adatbázisba
         myDatabase.myDao().insertData(new Data("example data"));
-
-        // Adat
