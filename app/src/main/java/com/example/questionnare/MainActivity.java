@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         dbManager = new DatabaseManager(this); // Inicializálás
         dbManager.open();
         dbManager.addAdmin();
+        dbManager.addResult(1, "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None");
+        dbManager.logResultTable();
+
         //dbManager.printUserTable();
 
 

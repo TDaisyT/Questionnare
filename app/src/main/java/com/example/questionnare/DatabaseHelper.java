@@ -8,14 +8,16 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     static final String DATABASE_NAME = "Questionnaire";
-    static final int DATABASE_VERSION = 1;
+    static final int DATABASE_VERSION = 4;//át lett írva, hogy a adatbázis fifrsíteni tudja magát
 
     public static final String TABLE_USERS = "User";
     public static final String TABLE_QA = "QA";
     public static final String TABLE_RESULT = "Result";
 
 
-    public static final String COL_ID = "id";
+    public static final String COL_USER_ID = "user_id";
+    public static final String COL_QA_ID = "qa_id";
+    public static final String COL_RESULT_ID = "result_id";
     public static final String COL_EMAIL = "email";
     public static final String COL_PASSWORD = "password";
     public static final String COL_QUESTION = "question";
@@ -45,13 +47,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // Create the tables
         String createUsersTable = "CREATE TABLE " + TABLE_USERS + " (" +
-                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COL_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COL_EMAIL + " TEXT, " +
                 COL_PASSWORD + " TEXT)";
         db.execSQL(createUsersTable);//az adatbázis séma létrehozásáért felelős
 
         String createQATable = "CREATE TABLE " + TABLE_QA + " (" +
-                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COL_QA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COL_QUESTION + " TEXT, " +
                 COL_ANSWER1 + " TEXT, " +
                 COL_ANSWER2 + " TEXT, " +
@@ -60,7 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createQATable);
 
         String createResultsTable = "CREATE TABLE " + TABLE_RESULT + " (" +
-                COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COL_RESULT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COL_USERS_ID + " INTEGER, " +
                 COL_FA1 + " TEXT, " +
                 COL_FA2 + " TEXT, " +
@@ -77,7 +79,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COL_FA13 + " TEXT, " +
                 COL_FA14 + " TEXT, " +
                 COL_FA15 + " TEXT, " +
-                "FOREIGN KEY (" + COL_USERS_ID + ") REFERENCES " + TABLE_USERS + "(" + COL_ID + "))";
+                "FOREIGN KEY (" + COL_USERS_ID + ") REFERENCES " + TABLE_USERS + "(" + COL_USER_ID + "))";
         db.execSQL(createResultsTable);
 
 

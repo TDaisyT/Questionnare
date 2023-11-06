@@ -24,6 +24,7 @@ public class DatabaseManager {
         return this;
     }
 
+
     public void close() {
         dbHelper.close();
     }
@@ -45,7 +46,7 @@ public class DatabaseManager {
 
     // Felhasználó ellenőrzése az email és jelszó alapján (azaz benne van már-e az adatbázisban)
     public boolean checkUser(String email, String password) {
-        String[] columns = { DatabaseHelper.COL_ID };
+        String[] columns = { DatabaseHelper.COL_USER_ID };
         String selection = DatabaseHelper.COL_EMAIL + " = ? AND " + DatabaseHelper.COL_PASSWORD + " = ?";//leellenőrzi hogy a ?, vagyis ami selectionArgs-ba
         //lesz, az megegyezik-e.
         String[] selectionArgs = { email, password };
@@ -73,35 +74,25 @@ public class DatabaseManager {
         }
     }
 
-    //I know its ugly, leave me alone
+    //Hozzáadja a Result táblához a felhasználó válaszait
     public void addResult(int userId, String fa1, String fa2, String fa3, String fa4, String fa5, String fa6, String fa7, String fa8, String fa9, String fa10, String fa11, String fa12, String fa13, String fa14, String fa15) {
         if (!isUserInResultTable(userId)) {
             ContentValues values = new ContentValues();
             values.put(DatabaseHelper.COL_USERS_ID, userId);
-            values.put(DatabaseHelper.COL_FA1, fa1);
-            values.put(DatabaseHelper.COL_FA2, fa2);
-            values.put(DatabaseHelper.COL_FA3, fa3);
-            values.put(DatabaseHelper.COL_FA4, fa4);
-            values.put(DatabaseHelper.COL_FA5, fa5);
-            values.put(DatabaseHelper.COL_FA6, fa6);
-            values.put(DatabaseHelper.COL_FA7, fa7);
-            values.put(DatabaseHelper.COL_FA8, fa8);
-            values.put(DatabaseHelper.COL_FA9, fa9);
-            values.put(DatabaseHelper.COL_FA10, fa10);
-            values.put(DatabaseHelper.COL_FA11, fa11);
-            values.put(DatabaseHelper.COL_FA12, fa12);
-            values.put(DatabaseHelper.COL_FA13, fa13);
-            values.put(DatabaseHelper.COL_FA14, fa14);
-            values.put(DatabaseHelper.COL_FA15, fa15);
-
+            for(int i=1;+i<=15;i++){
+                String column = "DatabaseHelper.COL_FA"+i;
+                String value = "fa"+i;
+                values.put(column, value);
+            }
             long insertedResult = database.insert(DatabaseHelper.TABLE_RESULT, null, values);
             if (insertedResult == -1) {
                 Log.d("DatabaseManager", "Error: The results weren't inserted into the database");
             }
         }
     }
+    //Megnézi hogy a felhasználó szerepel-e a result táblába (hogy véletelen se tegye bele kétszer)
     private boolean isUserInResultTable(int userId) {
-        String[] columns = { DatabaseHelper.COL_ID };
+        String[] columns = { DatabaseHelper.COL_RESULT_ID };
         String selection = DatabaseHelper.COL_USERS_ID + " = ?";
         String[] selectionArgs = { String.valueOf(userId) };
 
@@ -112,18 +103,9 @@ public class DatabaseManager {
         return userExistsInResultTable;
     }
 
-
-            public Cursor queryDatabase(String query) {
-        return database.rawQuery(query, null);
-    }
-
-
-    public void deleteAllQA() {
-        database.delete(DatabaseHelper.TABLE_QA, null, null);
-    }
-
+    //Megnézi hogy benne van a QA tábla már az adatbázisban
     public boolean isQAInDatabase(String question) {
-        String[] columns = { DatabaseHelper.COL_ID };
+        String[] columns = { DatabaseHelper.COL_QA_ID };
         String selection = DatabaseHelper.COL_QUESTION + " = ?";
         String[] selectionArgs = { question };
         Cursor cursor = database.query(DatabaseHelper.TABLE_QA, columns, selection, selectionArgs, null, null, null);
@@ -131,6 +113,7 @@ public class DatabaseManager {
         cursor.close();
         return qaExists;
     }
+    //Csak berakja az adatbázisba a QA tábla adatait, ha még nem tette meg
     public void initializeQA() {
         String[] questions = {
                 "What is your major?",
@@ -174,7 +157,7 @@ public class DatabaseManager {
             }
         }
     }
-
+    //Hozzáadtam az admint
     public void addAdmin() {
         String email = "admin@gmail.com";
         String password = "admin";
@@ -189,6 +172,11 @@ public class DatabaseManager {
 
     }
 
+
+
+    //---------CHECKING TABLES:--------------------
+
+
     //JUST TO CHECK THE USERS TABLE:
     public void printUserTable() {
         Cursor cursor = database.query(DatabaseHelper.TABLE_USERS, null, null, null, null, null, null);
@@ -196,7 +184,7 @@ public class DatabaseManager {
         if (cursor != null) {
             if (cursor.moveToFirst()) {
                 do {
-                    int userId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_ID));
+                    int userId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_USER_ID));
                     String userEmail = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_EMAIL));
                     String userPassword = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_PASSWORD));
                     Log.d("DatabaseContent", "User ID: " + userId + ", Email: " + userEmail + ", Password: " + userPassword);
@@ -205,11 +193,60 @@ public class DatabaseManager {
             cursor.close();
         }
     }
+    //JUST TO CHECK RESULT TABLE:
+   public void logResultTable() {
+        Cursor cursor = database.query(DatabaseHelper.TABLE_RESULT, null, null, null, null, null, null);
 
-    //Felhasználók id-jának lekérdezése:
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                do {
+                    int resultId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_RESULT_ID));
+                    int userId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_USERS_ID));
+                    String logMessage = "Result ID: " + resultId+ " User ID: " + userId;
 
-    //Kérdések lekérdezése:
+                    // Oszlopok sorszámaival való iterálás
+                    for (int i = 1; i <= 15; i++) {
+                        String columnName = "fa" + i;
+                        String columnValue = cursor.getString(cursor.getColumnIndex(columnName));
+                        logMessage += ", " + columnName + ": " + columnValue;
+                    }
+
+                    Log.d("ResultTableContent", logMessage);
+                } while (cursor.moveToNext());
+            }
+            cursor.close();
+        }
+    }
 
 
 
+    /*Home activitybőll lett kiszedve, kiíratja a qa táblát->Függvénnyé tenni futattáshoz
+        Cursor cursor = dbManager.queryDatabase("SELECT * FROM " + DatabaseHelper.TABLE_QA);
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                int id = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_QA_ID));
+                String question = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_QUESTION));
+                String answer1 = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_ANSWER1));
+                String answer2 = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_ANSWER2));
+                String answer3 = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_ANSWER3));
+                String answer4 = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_ANSWER4));
+                Log.d("DatabaseContent", "ID: " + id + ", Question: " + question);
+                Log.d("DatabaseContent", "Answer 1: " + answer1);
+                Log.d("DatabaseContent", "Answer 2: " + answer2);
+                Log.d("DatabaseContent", "Answer 3: " + answer3);
+                Log.d("DatabaseContent", "Answer 4: " + answer4);
+            }
+            cursor.close();
+        }*/
+
+
+    /* Probléma megoldásához készült csak, a legvégén törlésre kerül:
+    public Cursor queryDatabase(String query) {
+        return database.rawQuery(query, null);
+    }
+
+    public void deleteAllQA() {
+        database.delete(DatabaseHelper.TABLE_QA, null, null);
+    }
+*/
 }
