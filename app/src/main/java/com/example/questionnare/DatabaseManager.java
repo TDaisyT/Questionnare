@@ -46,7 +46,7 @@ public class DatabaseManager {
 
     // Felhasználó ellenőrzése az email és jelszó alapján (azaz benne van már-e az adatbázisban)
     public boolean checkUser(String email, String password) {
-        String[] columns = { DatabaseHelper.COL_ID };
+        String[] columns = { DatabaseHelper.COL_USER_ID };
         String selection = DatabaseHelper.COL_EMAIL + " = ? AND " + DatabaseHelper.COL_PASSWORD + " = ?";//leellenőrzi hogy a ?, vagyis ami selectionArgs-ba
         //lesz, az megegyezik-e.
         String[] selectionArgs = { email, password };
