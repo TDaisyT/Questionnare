@@ -1,18 +1,29 @@
 package com.example.questionnare;
 
+import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
 public class HomeActivity extends AppCompatActivity {
-    FragmentManager fragmentManager = getSupportFragmentManager();
-    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    Qlist mylist = new Qlist();
+    private FragmentManager fragmentManager = getSupportFragmentManager();
+    private FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    private Qlist mylist = new Qlist();
+    private ProfileActivity profile = new ProfileActivity();
+
+    private BottomNavigationView bottomNavigationView;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -22,8 +33,26 @@ public class HomeActivity extends AppCompatActivity {
         dbManager.open();
         dbManager.initializeQA();
         dbManager.close();
-        fragmentTransaction.replace(R.id.container, mylist);
-        fragmentTransaction.commit();
+
+        bottomNavigationView = findViewById(R.id.bottomNav);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, mylist).commit();
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+
+                if (item.getItemId() == R.id.home) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, mylist).commit();
+                    return true;
+                } else if (item.getItemId() == R.id.profile) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, profile).commit();
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
 
