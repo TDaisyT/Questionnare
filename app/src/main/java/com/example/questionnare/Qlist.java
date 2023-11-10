@@ -31,6 +31,10 @@ public class Qlist extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //todo
+                //  ha user lép be akkor questionsActivity-t nyissa meg
+                //  ha admin lép be akkor a StatisticActivity-t nyissa meg
                 Intent intent = new Intent(requireActivity(), QuestionsActivity.class);
                 startActivity(intent);
         }});
