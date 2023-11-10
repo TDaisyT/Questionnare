@@ -17,7 +17,7 @@ public class Qlist extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_questions, container, false);
         ListView listView = rootView.findViewById(R.id.list_items);
 
         String[] data = new String[]{"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
