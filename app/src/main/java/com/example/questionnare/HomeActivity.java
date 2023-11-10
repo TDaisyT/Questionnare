@@ -16,7 +16,7 @@ import com.google.android.material.navigation.NavigationBarView;
 public class HomeActivity extends AppCompatActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    private Qlist mylist = new Qlist();
+    private Qlist questionnaireList = new Qlist();
     private ProfileActivity profile = new ProfileActivity();
 
     private BottomNavigationView bottomNavigationView;
@@ -34,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNav);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, mylist).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, questionnaireList).commit();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
@@ -42,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem item) {
 
                 if (item.getItemId() == R.id.home) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container, mylist).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, questionnaireList).commit();
                     return true;
                 } else if (item.getItemId() == R.id.profile) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, profile).commit();
@@ -51,6 +51,7 @@ public class HomeActivity extends AppCompatActivity {
                 return false;
             }
         });
+
     }
 
 
