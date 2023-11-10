@@ -1,4 +1,4 @@
-package com.example.questionnare;
+package com.example.questionnare.AdminHome;
 
 import android.os.Bundle;
 
@@ -8,12 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ProfileActivity extends Fragment {
+import com.example.questionnare.R;
+
+
+public class BarChartFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return inflater.inflate(R.layout.fragment_bar_chart, container, false);
     }
 }

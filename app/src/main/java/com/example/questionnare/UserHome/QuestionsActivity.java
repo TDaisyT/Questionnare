@@ -1,8 +1,10 @@
-package com.example.questionnare;
+package com.example.questionnare.UserHome;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.questionnare.R;
 
 public class QuestionsActivity extends AppCompatActivity {
 

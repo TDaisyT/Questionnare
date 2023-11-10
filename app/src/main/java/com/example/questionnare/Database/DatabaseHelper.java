@@ -1,4 +1,4 @@
-package com.example.questionnare;
+package com.example.questionnare.Database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

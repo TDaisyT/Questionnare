@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="30dp"
-    tools:context=".ProfileActivity">
+    tools:context=".UserHome.ProfileActivity">
 
     <RelativeLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
