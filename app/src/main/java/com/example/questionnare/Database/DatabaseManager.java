@@ -185,6 +185,10 @@ public class DatabaseManager {
 
     }
 
+    public Cursor getQAData() {
+        String[] columns = {DatabaseHelper.COL_QUESTION, DatabaseHelper.COL_ANSWER1, DatabaseHelper.COL_ANSWER2, DatabaseHelper.COL_ANSWER3, DatabaseHelper.COL_ANSWER4};
+        return database.query(DatabaseHelper.TABLE_QA, columns, null, null, null, null, null);
+    }
 
 
     //---------CHECKING TABLES:--------------------
