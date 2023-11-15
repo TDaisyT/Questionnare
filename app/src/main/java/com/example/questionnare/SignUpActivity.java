@@ -46,6 +46,7 @@ public class SignUpActivity  extends AppCompatActivity {
             }
         });
 
+        // vissza visz a bejelentkezéshez
         loginRedirect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

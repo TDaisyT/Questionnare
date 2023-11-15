@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         //dbManager.printUserTable();
 
 
+        //ha minden jó akkor megnyitja a home képernyőt
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //átirányitás a regisztráció képernyőre
         signInRedirect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

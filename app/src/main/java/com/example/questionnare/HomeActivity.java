@@ -34,8 +34,10 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNav);
 
+        //a home  képernyő defaultnak beállitja a kérdőivek listáját tartalmazó képernyőt (Qlist az activityje)
         getSupportFragmentManager().beginTransaction().replace(R.id.container, questionnaireList).commit();
 
+        //jó gombhoz jó képernyőt hozzon be
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
             @Override
