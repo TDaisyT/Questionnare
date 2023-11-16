@@ -25,7 +25,6 @@ public class QuestionsActivity extends AppCompatActivity {
 
 
     //todo
-    // jelenjenek meg a kérdések listviewben
     // adott válaszok elmentése mentés gombra kattintáskor
     // ne engedjen menteni hiányos kitöltésnél
     @Override
