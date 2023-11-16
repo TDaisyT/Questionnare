@@ -31,7 +31,7 @@ public class ProfileActivity extends Fragment {
 
         // Az adatok beállítása a TextView elemekben
         emailProfileTextView.setText("Email: " + email);
-        passwordProfileTextView.setText("Jelszó: " + password);
+        passwordProfileTextView.setText("Password: " + password);
 
         return view;
     }

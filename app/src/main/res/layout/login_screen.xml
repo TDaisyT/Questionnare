@@ -22,7 +22,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:inputType="textPassword"
-        android:text="Jelszó"
+        android:text="Password"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,7 @@
         android:id="@+id/loginButton"
         android:layout_width="200dp"
         android:layout_height="75dp"
-        android:text="Bejelentkezés"
+        android:text="Sign In"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
         android:id="@+id/signinRedirect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Még nincs fiókom"
+        android:text="No account yet"
         android:clickable="true"
         android:textSize="40dp"
         android:background="?android:attr/selectableItemBackground"

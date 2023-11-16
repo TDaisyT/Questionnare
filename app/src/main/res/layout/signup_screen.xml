@@ -24,7 +24,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:inputType="textPassword"
-        android:text="Jelszó"
+        android:text="Password"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:inputType="textPassword"
-        android:text="Jelszó ismétlése"
+        android:text="Password again"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,7 @@
         android:id="@+id/signUpButton"
         android:layout_width="200dp"
         android:layout_height="75dp"
-        android:text="Regisztráció"
+        android:text="Registration"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,7 @@
         android:id="@+id/loginRedirect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Már van fiókom"
+        android:text="Already registered"
         android:clickable="true"
         android:textSize="40dp"
         android:background="?android:attr/selectableItemBackground"
