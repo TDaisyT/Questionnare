@@ -14,7 +14,6 @@ import com.example.questionnare.R;
 public class ProfileActivity extends Fragment {
 
     //todo
-    // felhasználóhoz tartozó adatok megjelenitése
     // kijelentkezés gomb
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
