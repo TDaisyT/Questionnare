@@ -23,7 +23,9 @@
         android:layout_height="match_parent"
         android:layout_below="@id/topline"
         android:layout_above="@id/bottomline"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         tools:listitem="@layout/question_list" />
 
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
