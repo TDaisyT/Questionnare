@@ -45,9 +45,11 @@ public class MainActivity extends AppCompatActivity {
                 String password = userPasswordET.getText().toString();
                 // todo mikor engedje a bejelentkezést
                 if (dbManager.checkUser(email, password)) {
-                dbManager.close();
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(intent);
+                    dbManager.close();
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.putExtra("email", email);
+                    intent.putExtra("password", password);
+                    startActivity(intent);
                 }
                 else {
                     // Ide hogy majd mit csináljon, ha valamit rosszul írtál be
