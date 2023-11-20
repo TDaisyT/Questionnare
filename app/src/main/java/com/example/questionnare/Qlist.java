@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.questionnare.AdminHome.StatisticActivity;
 import com.example.questionnare.UserHome.QuestionsActivity;
 
 public class Qlist extends Fragment {
@@ -38,7 +39,13 @@ public class Qlist extends Fragment {
                 //todo
                 //  ha user lép be akkor questionsActivity-t nyissa meg
                 //  ha admin lép be akkor a StatisticActivity-t nyissa meg
-                Intent intent = new Intent(requireActivity(), QuestionsActivity.class);
+                //Kinyerem az Intentből az emailt és jelszót
+                Intent intent;
+                if(getActivity().getIntent().getStringExtra("email").equals("admin@gmail.com")){
+                    intent = new Intent(requireActivity(), StatisticActivity.class);
+                }else{
+                    intent = new Intent(requireActivity(), QuestionsActivity.class);
+                }
                 startActivity(intent);
         }});
 
