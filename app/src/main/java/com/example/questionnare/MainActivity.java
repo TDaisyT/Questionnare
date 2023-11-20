@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private Button LoginButton;
     private TextView signInRedirect;
     private DatabaseManager dbManager; // DatabaseManager példánya
-    private String adminUser = "admin@gmail.com"; //ide kerül az admin azonosítója, amivel beléphet
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 String password = userPasswordET.getText().toString();
                 if (dbManager.checkUser(email, password)) {
                     dbManager.close();
-                    if(email.equals(adminUser)){
+                    if(email.equals("admin@gmail.com")){
                         Toast.makeText(MainActivity.this, "Successfully logged in as the admin", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(MainActivity.this, "Successfully logged in as "+email, Toast.LENGTH_SHORT).show();
