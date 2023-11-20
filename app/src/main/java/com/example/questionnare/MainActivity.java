@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button LoginButton;
     private TextView signInRedirect;
     private DatabaseManager dbManager; // DatabaseManager példánya
-
+    private String adminUser = "admin@gmail.com"; //ide kerül az admin azonosítója, amivel beléphet
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         dbManager.addResult(1, "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None", "None");
         dbManager.logResultTable();
 
+
         //dbManager.printUserTable();
 
 
@@ -44,15 +45,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email =userEmailET.getText().toString();
                 String password = userPasswordET.getText().toString();
-                // todo mikor engedje a bejelentkezést
                 if (dbManager.checkUser(email, password)) {
                     dbManager.close();
+                    if(email.equals(adminUser)){
+                        Toast.makeText(MainActivity.this, "Successfully logged in as the admin", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(MainActivity.this, "Successfully logged in as "+email, Toast.LENGTH_SHORT).show();
+                    }
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     intent.putExtra("email", email);
                     intent.putExtra("password", password);
                     startActivity(intent);
                 }else{
-                    Toast.makeText(MainActivity.this, "Incorrect e-mail/password combination", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Invalid e-mail/password combination", Toast.LENGTH_SHORT).show();
                 }
 
             }
