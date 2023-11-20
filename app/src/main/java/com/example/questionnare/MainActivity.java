@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.questionnare.Database.DatabaseManager;
 
@@ -50,9 +51,8 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("email", email);
                     intent.putExtra("password", password);
                     startActivity(intent);
-                }
-                else {
-                    // Ide hogy majd mit csináljon, ha valamit rosszul írtál be
+                }else{
+                    Toast.makeText(MainActivity.this, "Incorrect e-mail/password combination", Toast.LENGTH_SHORT).show();
                 }
 
             }
