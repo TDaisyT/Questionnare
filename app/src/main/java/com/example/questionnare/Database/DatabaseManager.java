@@ -56,6 +56,20 @@ public class DatabaseManager {
         return userExists;
     }
 
+    // Felhasználó ellenőrzése az email címe alapján (azaz benne van-e már az adatbázisban az email cím)
+
+    public boolean checkEmail(String email) {
+        String[] columns = { DatabaseHelper.COL_USER_ID };
+        String selection = DatabaseHelper.COL_EMAIL + " = ?";//leellenőrzi hogy a ?, vagyis ami selectionArgs-ba
+        //lesz, az megegyezik-e.
+        String[] selectionArgs = { email };
+        Cursor cursor = database.query(DatabaseHelper.TABLE_USERS, columns, selection, selectionArgs, null, null, null);
+        boolean userExists = (cursor.getCount() > 0);
+        cursor.close();
+        return userExists;
+    }
+
+
     // Kérdések és válaszok kezelése
 
     // Új kérdés és válaszok hozzáadása a "qa" táblához
