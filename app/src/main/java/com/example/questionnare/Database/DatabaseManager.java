@@ -69,6 +69,19 @@ public class DatabaseManager {
         return userExists;
     }
 
+    public int getUserId(String email){
+        String[] columns = { DatabaseHelper.COL_USER_ID };
+        String selection = DatabaseHelper.COL_EMAIL + " = ?";//leellenőrzi hogy a ?, vagyis ami selectionArgs-ba
+        //lesz, az megegyezik-e.
+        String[] selectionArgs = { email };
+        Cursor cursor = database.query(DatabaseHelper.TABLE_USERS, columns, selection, selectionArgs, null, null, null);
+        int userId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_USER_ID));
+
+        cursor.close();
+        return userId;
+    }
+
+
 
     // Kérdések és válaszok kezelése
 
