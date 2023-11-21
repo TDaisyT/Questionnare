@@ -16,7 +16,9 @@ import android.widget.Toast;
 
 import com.example.questionnare.Database.DatabaseHelper;
 import com.example.questionnare.Database.DatabaseManager;
+import com.example.questionnare.MainActivity;
 import com.example.questionnare.R;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -80,8 +82,8 @@ public class QuestionsActivity extends AppCompatActivity {
 
                 if (areAllRadioButtonsChecked()) {
                     saveAnswers();
+                    Toast.makeText(QuestionsActivity.this, "Answers submitted successfully", Toast.LENGTH_SHORT).show();
                 } else {
-
                     Toast.makeText(QuestionsActivity.this, "Please answer all questions", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -105,7 +107,10 @@ public class QuestionsActivity extends AppCompatActivity {
     //Elmenti a válaszokat az adatbázisba
     private void saveAnswers() {
         dbManager.open();
-        int id = dbManager.getUserId();
+        /*
+        to do- idk if it works tbh so ill just leave it here
+        String email = getIntent().getStringExtra("email");
+        int id = dbManager.getUserId(email);
         System.out.println(id);
         String answers [] = new String [listView.getCount()];
         for (int i = 0; i < listView.getCount(); i++) {
@@ -120,13 +125,10 @@ public class QuestionsActivity extends AppCompatActivity {
                 //String question = ((TextView) listItem.findViewById(R.id.questionTextView)).getText().toString();
                 String selectedAnswer = selectedRadioButton.getText().toString();
                 answers[i]=selectedAnswer;
-                /*TO DO
-                elmenteni az adatbázisba
-                 */
             }
         }
         dbManager.addResult(id,answers[0],answers[1],answers[2],answers[3],answers[3],answers[4],answers[5],answers[6],answers[7],answers[8],answers[9],answers[10],answers[11],answers[12],answers[13]);
-
+        */
         dbManager.close();
     }
 }
