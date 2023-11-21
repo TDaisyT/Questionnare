@@ -41,11 +41,11 @@ public class Qlist extends Fragment {
                 //  ha admin lép be akkor a StatisticActivity-t nyissa meg
                 //Kinyerem az Intentből az emailt és jelszót
                 Intent intent;
-                if(getActivity().getIntent().getStringExtra("email").equals("admin@gmail.com")){
-                    intent = new Intent(requireActivity(), StatisticActivity.class);
-                }else{
+                //if(getActivity().getIntent().getStringExtra("email").equals("admin@gmail.com")){
+                  //  intent = new Intent(requireActivity(), StatisticActivity.class);
+                //}else{
                     intent = new Intent(requireActivity(), QuestionsActivity.class);
-                }
+                //}
                 startActivity(intent);
         }});
 

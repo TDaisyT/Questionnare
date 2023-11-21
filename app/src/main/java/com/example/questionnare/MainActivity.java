@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         dbManager.logResultTable();
 
 
-        //dbManager.printUserTable();
+
+        //dbManager.printUserTable();S
 
 
         //ha minden jó akkor megnyitja a home képernyőt
