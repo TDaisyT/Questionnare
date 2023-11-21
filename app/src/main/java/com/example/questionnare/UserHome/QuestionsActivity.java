@@ -105,7 +105,9 @@ public class QuestionsActivity extends AppCompatActivity {
     //Elmenti a válaszokat az adatbázisba
     private void saveAnswers() {
         dbManager.open();
-
+        int id = dbManager.getUserId();
+        System.out.println(id);
+        String answers [] = new String [listView.getCount()];
         for (int i = 0; i < listView.getCount(); i++) {
             View listItem = listView.getChildAt(i);
             RadioGroup radioGroup = listItem.findViewById(R.id.optionsRadioGroup);
@@ -115,14 +117,15 @@ public class QuestionsActivity extends AppCompatActivity {
                 RadioButton selectedRadioButton = listItem.findViewById(selectedRadioButtonId);
 
                 // Get question ID and selected answer text
-                String question = ((TextView) listItem.findViewById(R.id.questionTextView)).getText().toString();
+                //String question = ((TextView) listItem.findViewById(R.id.questionTextView)).getText().toString();
                 String selectedAnswer = selectedRadioButton.getText().toString();
-
+                answers[i]=selectedAnswer;
                 /*TO DO
                 elmenteni az adatbázisba
                  */
             }
         }
+        dbManager.addResult(id,answers[0],answers[1],answers[2],answers[3],answers[3],answers[4],answers[5],answers[6],answers[7],answers[8],answers[9],answers[10],answers[11],answers[12],answers[13]);
 
         dbManager.close();
     }
