@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.questionnare.Database.DatabaseHelper;
 import com.example.questionnare.Database.DatabaseManager;
@@ -21,17 +26,13 @@ import java.util.Map;
 
 public class QuestionsActivity extends AppCompatActivity {
     private DatabaseManager dbManager; // DatabaseManager példánya
-
-
-
-    //todo
-    // adott válaszok elmentése mentés gombra kattintáskor
-    // ne engedjen menteni hiányos kitöltésnél
+    private ListView listView;
+    private Button SubmitButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
-        ListView listView = findViewById(R.id.list_questions);
+        listView = findViewById(R.id.list_questions);
 
         // Kérjük le a kérdéseket és válaszokat a DatabaseManager-ből
         dbManager = new DatabaseManager(this);
@@ -71,8 +72,57 @@ public class QuestionsActivity extends AppCompatActivity {
             cursor.close();
         }
 
+        // Set a click listener for the "Save" button
+        Button submitButton = findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                if (areAllRadioButtonsChecked()) {
+                    saveAnswers();
+                } else {
 
+                    Toast.makeText(QuestionsActivity.this, "Please answer all questions", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        dbManager.close();
+
+    }
+    //Ellenőrzi, hogy kitöltötte-e az összes kérdést
+    private boolean areAllRadioButtonsChecked() {
+        for (int i = 0; i < listView.getCount(); i++) {
+            View listItem = listView.getChildAt(i);
+            RadioGroup radioGroup = listItem.findViewById(R.id.optionsRadioGroup);
+            if (radioGroup.getCheckedRadioButtonId() == -1) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //Elmenti a válaszokat az adatbázisba
+    private void saveAnswers() {
+        dbManager.open();
+
+        for (int i = 0; i < listView.getCount(); i++) {
+            View listItem = listView.getChildAt(i);
+            RadioGroup radioGroup = listItem.findViewById(R.id.optionsRadioGroup);
+            int selectedRadioButtonId = radioGroup.getCheckedRadioButtonId();
+
+            if (selectedRadioButtonId != -1) {
+                RadioButton selectedRadioButton = listItem.findViewById(selectedRadioButtonId);
+
+                // Get question ID and selected answer text
+                String question = ((TextView) listItem.findViewById(R.id.questionTextView)).getText().toString();
+                String selectedAnswer = selectedRadioButton.getText().toString();
+
+                /*TO DO
+                elmenteni az adatbázisba
+                 */
+            }
+        }
 
         dbManager.close();
     }
