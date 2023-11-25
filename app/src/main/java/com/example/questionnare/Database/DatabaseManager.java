@@ -69,15 +69,36 @@ public class DatabaseManager {
         return userExists;
     }
 
-    public int getUserId(String email){
-        String[] columns = { DatabaseHelper.COL_USER_ID };
-        String selection = DatabaseHelper.COL_EMAIL + " = ?";//leellenőrzi hogy a ?, vagyis ami selectionArgs-ba
-        //lesz, az megegyezik-e.
-        String[] selectionArgs = { email };
-        Cursor cursor = database.query(DatabaseHelper.TABLE_USERS, columns, selection, selectionArgs, null, null, null);
-        int userId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_USER_ID));
+    public int getUserId(String email) {
+        if (email == null) {
+            // Handle the case where the email is null, throw an exception or return a default value
+            // Example: throw new IllegalArgumentException("Email cannot be null");
+            return -1; // or any other default value
+        }
 
-        cursor.close();
+        String[] columns = {DatabaseHelper.COL_USER_ID};
+        String selection = DatabaseHelper.COL_EMAIL + " = ?";
+        String[] selectionArgs = {email};
+        int userId = -1; // Default value if email is not found
+
+        Cursor cursor = database.query(
+                DatabaseHelper.TABLE_USERS,
+                columns,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+        try {
+            if (cursor.moveToFirst()) {
+                userId = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_USER_ID));
+            }
+        } finally {
+            cursor.close();
+        }
+
         return userId;
     }
 
@@ -100,36 +121,26 @@ public class DatabaseManager {
     }
 
     //Hozzáadja a Result táblához a felhasználó válaszait
-    public void addResult(int userId, String fa1, String fa2, String fa3, String fa4, String fa5, String fa6, String fa7, String fa8, String fa9, String fa10, String fa11, String fa12, String fa13, String fa14, String fa15) {
+    public void addResult(int userId, String[] answers) {
         if (!isUserInResultTable(userId)) {
             ContentValues values = new ContentValues();
             values.put(DatabaseHelper.COL_USERS_ID, userId);
-            values.put(DatabaseHelper.COL_FA1, fa1);
-            values.put(DatabaseHelper.COL_FA2, fa2);
-            values.put(DatabaseHelper.COL_FA3, fa3);
-            values.put(DatabaseHelper.COL_FA4, fa4);
-            values.put(DatabaseHelper.COL_FA5, fa5);
-            values.put(DatabaseHelper.COL_FA6, fa6);
-            values.put(DatabaseHelper.COL_FA7, fa7);
-            values.put(DatabaseHelper.COL_FA8, fa8);
-            values.put(DatabaseHelper.COL_FA9, fa9);
-            values.put(DatabaseHelper.COL_FA10, fa10);
-            values.put(DatabaseHelper.COL_FA11, fa11);
-            values.put(DatabaseHelper.COL_FA12, fa12);
-            values.put(DatabaseHelper.COL_FA13, fa13);
-            values.put(DatabaseHelper.COL_FA14, fa14);
-            values.put(DatabaseHelper.COL_FA15, fa15);
+
+            for (int i = 0; i < answers.length; i++) {
+                String columnName = "COL_FA" + (i + 1);
+                System.out.println(columnName);
+                System.out.println(answers[i]);
+                values.put(columnName, answers[i]);
+
+            }
 
             long insertedResult = database.insert(DatabaseHelper.TABLE_RESULT, null, values);
             if (insertedResult == -1) {
                 Log.d("DatabaseManager", "Error: The results weren't inserted into the database");
             }
-
-            }
-
-
-
+        }
     }
+
     //Megnézi hogy a felhasználó szerepel-e a result táblába (hogy véletelen se tegye bele kétszer)
     private boolean isUserInResultTable(int userId) {
         String[] columns = { DatabaseHelper.COL_RESULT_ID };
