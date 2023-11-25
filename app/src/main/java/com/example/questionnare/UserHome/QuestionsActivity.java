@@ -46,7 +46,6 @@ public class QuestionsActivity extends AppCompatActivity {
         Cursor cursor = dbManager.getQAData();
 
 
-
         // Ellenőrizzük, hogy a cursor nem üres és van adat a táblában
         if (cursor != null && cursor.moveToFirst()) {
             // Létrehozunk egy listát az adatok tárolására
@@ -149,43 +148,54 @@ public class QuestionsActivity extends AppCompatActivity {
         dbManager.close();
 
     }
+
     //Ellenőrzi, hogy kitöltötte-e az összes kérdést
     private boolean areAllRadioButtonsChecked() {
         for (int i = 0; i < listView.getCount(); i++) {
             View listItem = listView.getChildAt(i);
-            RadioGroup radioGroup = listItem.findViewById(R.id.optionsRadioGroup);
-            if (radioGroup.getCheckedRadioButtonId() == -1) {
-                return false;
+
+            // Check if listItem is not null
+            if (listItem != null) {
+                RadioGroup radioGroup = listItem.findViewById(R.id.optionsRadioGroup);
+
+                // Check if radioGroup is not null
+                if (radioGroup != null && radioGroup.getCheckedRadioButtonId() == -1) {
+                    return false;
+                }
             }
         }
         return true;
     }
 
-    //Elmenti a válaszokat az adatbázisba
+    // Elmenti a válaszokat az adatbázisba
     private void saveAnswers() {
         dbManager.open();
-        /*
-        to do- idk if it works tbh so ill just leave it here
         String email = getIntent().getStringExtra("email");
         int id = dbManager.getUserId(email);
         System.out.println(id);
-        String answers [] = new String [listView.getCount()];
-        for (int i = 0; i < listView.getCount(); i++) {
-            View listItem = listView.getChildAt(i);
+
+        // Assuming there are 14 questions, adjust the size accordingly
+        String answers[] = new String[15];
+
+        SimpleAdapter adapter = (SimpleAdapter) listView.getAdapter();
+
+        for (int i = 0; i < adapter.getCount(); i++) {
+            View listItem = adapter.getView(i, null, listView);
             RadioGroup radioGroup = listItem.findViewById(R.id.optionsRadioGroup);
             int selectedRadioButtonId = radioGroup.getCheckedRadioButtonId();
 
             if (selectedRadioButtonId != -1) {
                 RadioButton selectedRadioButton = listItem.findViewById(selectedRadioButtonId);
-
-                // Get question ID and selected answer text
-                //String question = ((TextView) listItem.findViewById(R.id.questionTextView)).getText().toString();
                 String selectedAnswer = selectedRadioButton.getText().toString();
-                answers[i]=selectedAnswer;
+
+                // Assuming i is within the bounds of the answers array
+                answers[i] = selectedAnswer;
             }
         }
-        dbManager.addResult(id,answers[0],answers[1],answers[2],answers[3],answers[3],answers[4],answers[5],answers[6],answers[7],answers[8],answers[9],answers[10],answers[11],answers[12],answers[13]);
-        */
+
+        // Call the addResult method with the user ID and the array of answers
+        dbManager.addResult(id, answers);
+
         dbManager.close();
     }
 }
