@@ -1,86 +1,97 @@
 package com.example.questionnare;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Dao;
+import androidx.room.Entity;
+import androidx.room.Insert;
+import androidx.room.PrimaryKey;
+import androidx.room.Query;
+import androidx.room.Room;
+import androidx.room.RoomDatabase;
+
+import androidx.test.core.app.ApplicationProvider;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import androidx.test.runner.AndroidJUnit4;
 
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+@RunWith(AndroidJUnit4.class)
 public class Databasetest {
 
-    private Connection connection;
+    private static MyDatabase myDatabase;
 
     @Before
-    public void setUp() throws SQLException {
-        // Adatbázis kapcsolat létrehozása
-        connection = DriverManager.getConnection("jdbc:sqlite::memory:");
-
-        // Példa tábla létrehozása
-        try (PreparedStatement createTable = connection.prepareStatement(
-                "CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, email TEXT)")) {
-            createTable.execute();
-        }
+    public void initDb() {
+        myDatabase = Room.inMemoryDatabaseBuilder(
+                        ApplicationProvider.getApplicationContext(),
+                        MyDatabase.class)
+                .build();
     }
 
     @After
-    public void tearDown() throws SQLException {
-        // Adatbázis kapcsolat lezárása
-        if (connection != null && !connection.isClosed()) {
-            connection.close();
-        }
+    public void closeDb() {
+        myDatabase.close();
     }
 
     @Test
-    public void testInsertUser() throws SQLException {
-        // Felhasználó beszúrása az adatbázisba
-        try (PreparedStatement insertUser = connection.prepareStatement(
-                "INSERT INTO users (username, email) VALUES (?, ?)")) {
-            insertUser.setString(1, "john_doe");
-            insertUser.setString(2, "john@example.com");
-            insertUser.executeUpdate();
-        }
+    public void insertAndReadData() {
+        // Given
+        Data testData = new Data("example data");
 
-        // Beszúrt felhasználó lekérdezése és ellenőrzése
-        try (PreparedStatement selectUser = connection.prepareStatement(
-                "SELECT * FROM users WHERE username=?")) {
-            selectUser.setString(1, "john_doe");
-            try (ResultSet resultSet = selectUser.executeQuery()) {
-                assertTrue(resultSet.next());
-                assertEquals("john_doe", resultSet.getString("username"));
-                assertEquals("john@example.com", resultSet.getString("email"));
-            }
+        // When
+        myDatabase.myDao().insertData(testData);
+
+        // Then
+        Data retrievedData = myDatabase.myDao().getDataById(testData.getId());
+        assertNotNull(retrievedData);
+        assertEquals(testData.getId(), retrievedData.getId());
+        assertEquals(testData.getContent(), retrievedData.getContent());
+    }
+
+    // Az adatbázis definiálása
+    private abstract class MyDatabase extends RoomDatabase {
+        public abstract MyDao myDao();
+
+        public void close() {
         }
     }
 
-    @Test
-    public void testDeleteUser() throws SQLException {
-        // Felhasználó beszúrása az adatbázisba
-        try (PreparedStatement insertUser = connection.prepareStatement(
-                "INSERT INTO users (username, email) VALUES (?, ?)")) {
-            insertUser.setString(1, "jane_doe");
-            insertUser.setString(2, "jane@example.com");
-            insertUser.executeUpdate();
+    // Az adatbázis DAO interfésze
+    @Dao
+    public interface MyDao {
+        @Insert
+        void insertData(Data data);
+
+        @Query("SELECT * FROM data WHERE id = :id")
+        Data getDataById(int id);
+    }
+
+    // Az adatbázisban tárolt adatokat reprezentáló osztály
+    @Entity(tableName = "data")
+    public class Data {
+        @PrimaryKey(autoGenerate = true)
+        private int id;
+
+        @ColumnInfo(name = "content")
+        private final String content;
+
+        public Data(String content) {
+            this.content = content;
         }
 
-        // Felhasználó törlése az adatbázisból
-        try (PreparedStatement deleteUser = connection.prepareStatement(
-                "DELETE FROM users WHERE username=?")) {
-            deleteUser.setString(1, "jane_doe");
-            deleteUser.executeUpdate();
+        public int getId() {
+            return id;
         }
 
-        // Törölt felhasználó lekérdezése és ellenőrzése
-        try (PreparedStatement selectUser = connection.prepareStatement(
-                "SELECT * FROM users WHERE username=?")) {
-            selectUser.setString(1, "jane_doe");
-            try (ResultSet resultSet = selectUser.executeQuery()) {
-                assertFalse(resultSet.next()); // Nincs eredmény, mert a felhasználó törölve lett
-            }
+        public String getContent() {
+            return content;
         }
     }
 }
