@@ -2,6 +2,7 @@ package com.example.questionnare.UserHome;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,8 +19,11 @@ import android.widget.Toast;
 
 import com.example.questionnare.Database.DatabaseHelper;
 import com.example.questionnare.Database.DatabaseManager;
+import com.example.questionnare.HomeActivity;
 import com.example.questionnare.MainActivity;
+import com.example.questionnare.Qlist;
 import com.example.questionnare.R;
+import com.example.questionnare.SignUpActivity;
 
 
 import java.util.ArrayList;
@@ -139,6 +143,8 @@ public class QuestionsActivity extends AppCompatActivity {
                 if (areAllRadioButtonsChecked()) {
                     saveAnswers();
                     Toast.makeText(QuestionsActivity.this, "Answers submitted successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(QuestionsActivity.this, HomeActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(QuestionsActivity.this, "Please answer all questions", Toast.LENGTH_SHORT).show();
                 }
@@ -172,7 +178,6 @@ public class QuestionsActivity extends AppCompatActivity {
         dbManager.open();
         String email = getIntent().getStringExtra("email");
         int id = dbManager.getUserId(email);
-        System.out.println(id);
 
         // Assuming there are 14 questions, adjust the size accordingly
         String answers[] = new String[15];
