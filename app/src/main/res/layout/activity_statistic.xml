@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#c55b11"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/stat_bott_nav_menu" />
+        android:layout_alignParentBottom="true" />
 
     <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/topline"
@@ -24,6 +23,15 @@
         tools:ignore="MissingConstraints">
 
     </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pieChartList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topline"
+        android:layout_above="@id/bottomNav"
+        tools:listitem="@layout/piechart_list"
+        android:layout_margin="10dp"/>
 
     <FrameLayout
         android:id="@+id/container"
