@@ -25,18 +25,18 @@ public class StatisticActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNav);
 
+        // Initialize fragments
+        pieChartFragment = new PieChartFragment();
+        barChartFragment = new BarChartFragment();
+
+        // Set the default fragment
         getSupportFragmentManager().beginTransaction().replace(R.id.container, barChartFragment).commit();
 
-        // todo
-        //  megcsinálni h a lent lévő gombokra kattintva jó képernyőt hozzon be
-        //  lényegében kimásolni a HomeActivityből a setOnItemSelectedListener
-        //  csak az id ket kicserélni 'home' és 'profil' helyet 'barChartButton' re és 'pieCharButton'ra
-        //  és átirni a megnyitandó képernyő nevét
+        // Set up bottom navigation
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-
                 if (item.getItemId() == R.id.barChartButton) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, barChartFragment).commit();
                     return true;

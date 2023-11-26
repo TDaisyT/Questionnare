@@ -39,17 +39,16 @@ public class Qlist extends Fragment {
                 Intent intent;
                 String userEmail = getActivity().getIntent().getStringExtra("email");
 
-                // Check if user is an admin or a regular user
-                /*for some god forsaken reason this shit keeps crashing idk why
+                //Megnézi, hogy a felhasználó admin-e
                 if (userEmail != null && userEmail.equals("admin@gmail.com")) {
                     intent = new Intent(requireActivity(), StatisticActivity.class);
-                } else {*/
+                } else {
                     intent = new Intent(requireActivity(), QuestionsActivity.class);
 
-                    // Pass the email as an extra to QuestionsActivity
+                    //Átadja az e-mail címet a QuestionsActivitynek
                     intent.putExtra("email", userEmail);
 
-
+                }
                 startActivity(intent);
             }
         });
