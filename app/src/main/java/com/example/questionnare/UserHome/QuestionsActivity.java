@@ -172,6 +172,7 @@ public class QuestionsActivity extends AppCompatActivity {
         dbManager.open();
         String email = getIntent().getStringExtra("email");
         int id = dbManager.getUserId(email);
+        System.out.println(email);
         System.out.println(id);
 
         // Assuming there are 14 questions, adjust the size accordingly

@@ -32,22 +32,27 @@ public class Qlist extends Fragment {
         listView.setAdapter(adapter);
 
         //controlálja a kérdőívre való kattintás utáni képernyőt
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                //todo
-                //  ha user lép be akkor questionsActivity-t nyissa meg
-                //  ha admin lép be akkor a StatisticActivity-t nyissa meg
-                //Kinyerem az Intentből az emailt és jelszót
                 Intent intent;
-                //if(getActivity().getIntent().getStringExtra("email").equals("admin@gmail.com")){
-                  //  intent = new Intent(requireActivity(), StatisticActivity.class);
-                //}else{
+                String userEmail = getActivity().getIntent().getStringExtra("email");
+
+                // Check if user is an admin or a regular user
+                /*for some god forsaken reason this shit keeps crashing idk why
+                if (userEmail != null && userEmail.equals("admin@gmail.com")) {
+                    intent = new Intent(requireActivity(), StatisticActivity.class);
+                } else {*/
                     intent = new Intent(requireActivity(), QuestionsActivity.class);
-                //}
+
+                    // Pass the email as an extra to QuestionsActivity
+                    intent.putExtra("email", userEmail);
+
+
                 startActivity(intent);
-        }});
+            }
+        });
 
         return rootView;
     }
