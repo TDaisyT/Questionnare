@@ -7,6 +7,12 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class DatabaseManager {
     private DatabaseHelper dbHelper;//Adatbázis sémát kezelő segédosztály
     private Context context;//Alkalmazás kontexusa
@@ -127,11 +133,8 @@ public class DatabaseManager {
             values.put(DatabaseHelper.COL_USERS_ID, userId);
 
             for (int i = 0; i < answers.length; i++) {
-                String columnName = "COL_FA" + (i + 1);
-                System.out.println(columnName);
-                System.out.println(answers[i]);
+                String columnName = "fa" + (i + 1);
                 values.put(columnName, answers[i]);
-
             }
 
             long insertedResult = database.insert(DatabaseHelper.TABLE_RESULT, null, values);
@@ -221,6 +224,30 @@ public class DatabaseManager {
         }
 
 
+    }
+
+    // Kérdés száma alapján visszatér a válaszokkal
+    public ArrayList<String> getAnswersByQuestion(int qNumber){
+        ArrayList<String> answers = new ArrayList<>();
+
+        String questionCol="fa"+qNumber;
+
+        String[] columns = { questionCol };
+        Cursor cursor = database.query(DatabaseHelper.TABLE_RESULT, columns, null,null, null, null, null);
+        //a database.query lényegében egy adatbázis lekérdezés, ahol a user táblát a megadott oszlopokkal, szűrési feltétellel és argumentumokkal kéri le.
+        //Cursor objektumba van tárolva, hogy be tudjuk járni az eredményhalmazt
+        if (cursor != null && cursor.moveToFirst()) {
+            // Létrehozunk egy listát az adatok tárolására
+            List<Map<String, String>> questionList = new ArrayList<>();
+
+            // A cursor bejárása és az adatok hozzáadása a listához
+            do {
+                answers.add(cursor.getString(cursor.getColumnIndex(questionCol)));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+
+        return answers;
     }
 
     public Cursor getQAData() {
