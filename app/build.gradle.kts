@@ -46,6 +46,7 @@ dependencies {
     implementation("androidx.test:core:1.5.0")
     implementation("androidx.test:runner:1.5.2")
     implementation("androidx.test.espresso:espresso-intents:3.5.1")
+    implementation("androidx.test.espresso:espresso-contrib:3.5.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     //implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
