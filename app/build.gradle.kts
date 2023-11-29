@@ -49,9 +49,12 @@ dependencies {
     implementation("androidx.test.espresso:espresso-contrib:3.5.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    //implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("com.github.AnyChart:AnyChart-Android:1.1.5")
     annotationProcessor("androidx.room:room-compiler:2.6.0")
     androidTestImplementation ("androidx.test.core:core:1.4.0")
+    testImplementation("org.mockito:mockito-core:3.11.2")
+    testImplementation("org.robolectric:robolectric:4.11.1")
+
 
 }
