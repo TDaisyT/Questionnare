@@ -1,4 +1,4 @@
-package com.example.myapp.tests;
+package com.example.questionnare;
 
 import com.example.questionnare.HomeActivity;
 import com.example.questionnare.MainActivity;
