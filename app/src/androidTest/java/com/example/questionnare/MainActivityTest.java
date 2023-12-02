@@ -1,5 +1,9 @@
 package com.example.myapp.tests;
 
+import com.example.questionnare.HomeActivity;
+import com.example.questionnare.MainActivity;
+import com.example.questionnare.R;
+
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.espresso.intent.Intents;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
