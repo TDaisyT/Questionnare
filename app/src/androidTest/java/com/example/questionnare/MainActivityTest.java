@@ -1,4 +1,4 @@
-package com.example.questionnare;
+package com.example.myapp.tests;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.espresso.intent.Intents;
@@ -20,32 +20,29 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
 
+    private static final String TEST_EMAIL = "user@example.com";
+    private static final String TEST_PASSWORD = "securepassword";
+
     @Before
-    public void setUp() {
+    public void launchActivity() {
         ActivityScenario.launch(MainActivity.class);
+        Intents.init();
     }
 
     @After
-    public void tearDown() {
+    public void releaseIntents() {
         Intents.release();
     }
 
     @Test
     public void testSuccessfulLogin() {
-        // Arrange
-        Intents.init();
-        String email = "user@example.com";
-        String password = "securepassword";
 
-        // Act
-        onView(withId(R.id.emailLogin)).perform(replaceText(email));
-        onView(withId(R.id.passwordLogin)).perform(replaceText(password));
+        onView(withId(R.id.emailLogin)).perform(replaceText(TEST_EMAIL));
+        onView(withId(R.id.passwordLogin)).perform(replaceText(TEST_PASSWORD));
         onView(withId(R.id.loginButton)).perform(click());
 
-        // Assert
         intended(hasComponent(HomeActivity.class.getName()));
-        intended(hasExtra("email", email));
-        intended(hasExtra("password", password));
-
+        intended(hasExtra("email", TEST_EMAIL));
+        intended(hasExtra("password", TEST_PASSWORD));
     }
 }
