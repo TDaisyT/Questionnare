@@ -6,6 +6,7 @@ Teszt leírása: Az applikáció különböző osztálya valamint az adatbázis�
 
 
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
+| ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
 | setUp(): |Célja a tesztek előkészítése, inicializálása. Ez magában foglalja az alkalmazás kontextusának létrehozását, az adatbázis kapcsolat megnyitását is a DatabaseManager open() metódusából | 	2023.11.29. 15:30	| setUp() metódus sikeres végrehajtása és az adatbázis kapcsolat megnyitása Megkaptam az „Expected Result”-ot	| PASS	| Papp Gréta |
 | tearDown(): | metódus célja a tesztek utókészítése, takarítás. Az adatbázis kapcsolat bezárása és egyéb szükséges lépések elvégzése.	| 2023.11.29. 15:30 |	tearDown() metódus sikeres végrehajtása. Az adatbázis kapcsolat lezárása.	Megkaptam az „Expected Result”-ot	| PASS	| Papp Gréta |
 | addUserTest(): | Ellenőrzi, hogy a DatabaseManager megfelelően hozzá tud-e adni egy felhasználót az adatbázishoz.	| 2023.11.29.16:17	| checkUser metódus visszaadja, hogy a felhasználó hozzá lett adva  Megkaptam az „Expected Result”-ot	| PASS	| Papp Gréta |
