@@ -72,7 +72,7 @@ Megjegyzés: A tesztek végrehajtásakor biztosítva van, hogy az adatbázis ini
 
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
-| Arrange: Itt inicializáljuk és előkészítjük azokat az objektumokat vagy értékeket, amelyekre a tesztünk szüksége van. Ebben az esetben két egész számot állítunk be (operand1 és operand2). | 2023.11.14. 23.11. |   Megkaptam az „Expected Result”-ot | egész számok beállítódtak | 
+| Arrange: Itt inicializáljuk és előkészítjük azokat az objektumokat vagy értékeket, amelyekre a tesztünk szüksége van. Ebben az esetben két egész számot állítunk be (operand1 és operand2). | 2023.11.14. 23.11. |   Megkaptam az „Expected Result”-ot | egész számok beállítódtak | PASS | Fekete Enikő és Varga Petra |
 | Act: Ebben a szakaszban meghívjuk azt a funkciót vagy metódust, amelyet tesztelni szeretnénk. Ebben az esetben az ArithmeticUtil.add metódust hívjuk meg az operand1 és operand2 értékekkel, és a visszatérő értéket tároljuk a result változóban. | 2023.11.14. 23.33. | Megkaptam az „Expected Result”-ot | értékek a result változóban vannak |  PASS | Fekete Enikő és Varga Petra |
 | Assert: Ebben a részben ellenőrizzük, hogy az aktuális eredmény megegyezik-e a várt eredménnyel. Ha az összeadás helyesen működik, akkor a result értékenek 4-nek kell lennie. Az assertEquals függvény segítségével ellenőrizzük ezt, és hiba esetén kijelzi egy megfelelő üzenettel. | 2023.11.14. 23.59.  | Megkaptam az „Expected Result”-ot | 4-es érték jön ki |  PASS | Fekete Enikő és Varga Petra |
 
