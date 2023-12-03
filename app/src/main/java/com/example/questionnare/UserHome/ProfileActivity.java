@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.example.questionnare.MainActivity;
 import com.example.questionnare.R;
 
+import java.util.Objects;
+
 public class ProfileActivity extends Fragment {
 
     @Override
@@ -24,16 +26,13 @@ public class ProfileActivity extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         Button logOutButton = view.findViewById(R.id.logout);
-        logOutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                startActivity(intent);
-            }
+        logOutButton.setOnClickListener(view1 -> {
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
         });
         //Kinyerem az Intentből az emailt és jelszót
-        String email = getActivity().getIntent().getStringExtra("email");
-        String password = getActivity().getIntent().getStringExtra("password");
+        String email = requireActivity().getIntent().getStringExtra("email");
+        String password = requireActivity().getIntent().getStringExtra("password");
 
         // Az XML nézet elemek megkeresése
         TextView emailProfileTextView = view.findViewById(R.id.emailProfile);
