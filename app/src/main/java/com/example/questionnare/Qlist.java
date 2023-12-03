@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.questionnare.AdminHome.StatisticActivity;
 import com.example.questionnare.UserHome.QuestionsActivity;
+
 
 public class Qlist extends Fragment {
 
@@ -32,25 +32,22 @@ public class Qlist extends Fragment {
         listView.setAdapter(adapter);
 
         //controlálja a kérdőívre való kattintás utáni képernyőt
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        listView.setOnItemClickListener((parent, view, position, id) -> {
 
-                Intent intent;
-                String userEmail = getActivity().getIntent().getStringExtra("email");
+            Intent intent;
+            String userEmail = requireActivity().getIntent().getStringExtra("email");
 
-                //Megnézi, hogy a felhasználó admin-e
-                if (userEmail != null && userEmail.equals("admin@gmail.com")) {
-                    intent = new Intent(requireActivity(), StatisticActivity.class);
-                } else {
-                    intent = new Intent(requireActivity(), QuestionsActivity.class);
+            //Megnézi, hogy a felhasználó admin-e
+            if (userEmail != null && userEmail.equals("admin@gmail.com")) {
+                intent = new Intent(requireActivity(), StatisticActivity.class);
+            } else {
+                intent = new Intent(requireActivity(), QuestionsActivity.class);
 
-                    //Átadja az e-mail címet a QuestionsActivitynek
-                    intent.putExtra("email", userEmail);
+                //Átadja az e-mail címet a QuestionsActivitynek
+                intent.putExtra("email", userEmail);
 
-                }
-                startActivity(intent);
             }
+            startActivity(intent);
         });
 
         return rootView;
