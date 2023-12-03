@@ -51,3 +51,11 @@ Megjegyzés: A tesztek végrehajtásakor biztosítva van, hogy az adatbázis ini
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
 | testListItemClick(): a teszt azt ellenőrzi, hogy a lista első elemére történő kattintás működik-e megfelelően a MainActivity alkalmazásban | 2023.11.23. 23.46. | Megkaptam az „Expected Result”-ot | a kattintások során minden elem megfelelően működik | PASS | Fekete Enikő |
+
+| Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
+| ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
+| initDb metódus:Az inMemoryDatabaseBuilder segítségével egy Room adatbázist hoz létre az alkalmazás kontextusával. | 2023.11.26. 7.15. |  Megkaptam az „Expected Result”-ot | adatbázsi létrehozva |  PASS | Fekete Enikő és Papp Gréta |
+| closeDb :Lezárja az adatbázist a teszt után. | 2023.11.26. 9.01. |  Megkaptam az „Expected Result”-ot | addatbázis zárva |  PASS | Fekete Enikő és Papp Gréta |
+| insertAndReadData: egyszerű teszt, amely adatokat szúr be az adatbázisba, majd kiolvassa azokat, és ellenőrzi, hogy a beolvasott adatok megegyeznek-e a beillesztett adatokkal. | 2023.11.26. 10.32. |  Megkaptam az „Expected Result”-ot | az adatok egyértelműen megegyeznek |  PASS | Fekete Enikő és Papp Gréta |
+| MyDatabase osztály: Ez egy abstract Room adatbázis osztály, amely kiterjeszti a RoomDatabase osztályt. | 2023.11.26. 12.35. |  Megkaptam az „Expected Result”-ot | adatbázis kiterjesztve |  PASS | Fekete Enikő és Papp Gréta |
+| MyDao interfész:A metódusok segítségével az adatbázishoz való hozzáférést definiálja. | 2023.11.26. 14.07. | Megkaptam az „Expected Result”-ot | külön hozzáférések definiálva |  PASS | Fekete Enikő és Papp Gréta |
