@@ -38,19 +38,23 @@ Megjegyzés: A tesztek végrehajtásakor biztosítva van, hogy az adatbázis ini
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
 | testDefaultFragment(): , ez a teszteset azt biztosítja, hogy amikor a HomeActivity elindul, az alapértelmezett fragmens a megadott konténerben (R.id.container) a Qlist típusú legyen | 2023.11.22. 22.58. |  Megkaptam az „Expected Result”-ot  |  a típus megegyezik | PASS | Fekete Enikő és Kaponyás Lüszi |
 
+
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
 | testSuccessfulLogin():  ellenőrzi hogy  a bejelentkezési művelet a megfelelő módon fut-e le, és hogy a HomeActivity az elvárt adatokkal kerül-e megnyitásra | 2023.11.23. 07.12. | Megkaptam az „Expected Result”-ot | az adatok rendben betöltődnek | PASS | Fekete Enikő és Kaponyás Lüszi |
 | Intents.release(): Ez a sor felszabadítja az Espresso Intents keretrendszerrel kapcsolatos erőforrásokat. | 2023.11.23. 07.59. | Megkaptam az „Expected Result”-ot | az erőforrás megtisztult | PASS | Fekete Enikő és Kaponyás Luszy |
 | launchActivity():  elindítja az Android alkalmazás MainActivity komponensét, és inicializálja az Espresso Intents keretrendszert | 2021.11.23. 10.51. | Megkaptam az „Expected Result”-ot | minden tesztmetódus előtt lefut | PASS | Fekete Enikő és Kaponyás Lüszi |
 
+
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
 | validatePackageName():Az összehasonlítás segítségével a teszt megállapítja, hogy az alkalmazás csomagnéve megegyezik-e a várt értékkel ("com.example.questionnare") | 2023.11.23. 18.24. | Megkaptam az „Expected Result”-ot | a tesztben és az appban megegyeznek a nevek | PASS | Fekete Enikő és Papp Gréta |
 
+
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
 | testListItemClick(): a teszt azt ellenőrzi, hogy a lista első elemére történő kattintás működik-e megfelelően a MainActivity alkalmazásban | 2023.11.23. 23.46. | Megkaptam az „Expected Result”-ot | a kattintások során minden elem megfelelően működik | PASS | Fekete Enikő |
+
 
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
@@ -60,7 +64,14 @@ Megjegyzés: A tesztek végrehajtásakor biztosítva van, hogy az adatbázis ini
 | MyDatabase osztály: Ez egy abstract Room adatbázis osztály, amely kiterjeszti a RoomDatabase osztályt. | 2023.11.26. 12.35. |  Megkaptam az „Expected Result”-ot | adatbázis kiterjesztve |  PASS | Fekete Enikő és Papp Gréta |
 | MyDao interfész:A metódusok segítségével az adatbázishoz való hozzáférést definiálja. | 2023.11.26. 14.07. | Megkaptam az „Expected Result”-ot | külön hozzáférések definiálva |  PASS | Fekete Enikő és Papp Gréta |
 
+
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
 |setup():elindítja a SignUpActivity-t a ActivityScenario.launch(SignUpActivity.class) hívással. | 2023.11.25. 22.59. |   Megkaptam az „Expected Result”-ot | elindult a bejelentkezési folyamat |  PASS | Fekete Enikő és Varga Petra|
 | testRegistrationSuccess(): lehetővé teszi az Android alkalmazások felhasználói felületének (UI) automatizált tesztelését. A konkrét műveletek a regisztrációs űrlap kitöltését és a regisztrációs gomb megnyomását szimulálják. Azt várják, hogy ezek a műveletek sikeresen lefutnak, és a regisztráció eredményeként a helyes nézetek jelennek meg a felhasználói felületen. | 2023.11.25. 21.41. |   Megkaptam az „Expected Result”-ot |  helyes nézet jelenik meg |  PASS | Fekete Enikő és Varga Petra |
+
+| Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
+| ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
+| Arrange: Itt inicializáljuk és előkészítjük azokat az objektumokat vagy értékeket, amelyekre a tesztünk szüksége van. Ebben az esetben két egész számot állítunk be (operand1 és operand2). | 2023.11.14. 23.11. |   Megkaptam az „Expected Result”-ot | egész számok beállítódtak | 
+| Act: Ebben a szakaszban meghívjuk azt a funkciót vagy metódust, amelyet tesztelni szeretnénk. Ebben az esetben az ArithmeticUtil.add metódust hívjuk meg az operand1 és operand2 értékekkel, és a visszatérő értéket tároljuk a result változóban. | 2023.11.14. 23.33. |   Megkaptam az „Expected Result”-ot | értékek a result változóban vannak |  PASS | Fekete Enikő és Varga Petra |
+| Assert: Ebben a részben ellenőrizzük, hogy az aktuális eredmény megegyezik-e a várt eredménnyel. Ha az összeadás helyesen működik, akkor a result értékenek 4-nek kell lennie. Az assertEquals függvény segítségével ellenőrizzük ezt, és hiba esetén kijelzi egy megfelelő üzenettel. | 2023.11.14. 23.59.   Megkaptam az „Expected Result”-ot | 4-es érték jön ki |  PASS | Fekete Enikő és Varga Petra |
