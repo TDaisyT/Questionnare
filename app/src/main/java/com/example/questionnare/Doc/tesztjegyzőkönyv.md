@@ -41,10 +41,13 @@ Megjegyzés: A tesztek végrehajtásakor biztosítva van, hogy az adatbázis ini
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
 | testSuccessfulLogin():  ellenőrzi hogy  a bejelentkezési művelet a megfelelő módon fut-e le, és hogy a HomeActivity az elvárt adatokkal kerül-e megnyitásra | 2023.11.23. 07.12. | Megkaptam az „Expected Result”-ot | az adatok rendben betöltődnek | PASS | Fekete Enikő és Kaponyás Lüszi |
+| Intents.release(): Ez a sor felszabadítja az Espresso Intents keretrendszerrel kapcsolatos erőforrásokat. | 2023.11.23. 07.59. | Megkaptam az „Expected Result”-ot | az erőforrás megtisztult | PASS | Fekete Enikő és Kaponyás Luszy |
+| launchActivity():  elindítja az Android alkalmazás MainActivity komponensét, és inicializálja az Espresso Intents keretrendszert | 2021.11.23. 10.51. | Megkaptam az „Expected Result”-ot | minden tesztmetódus előtt lefut | PASS | Fekete Enikő és Kaponyás Lüszi |
 
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
-| validatePackageName():Az összehasonlítás segítségével a teszt megállapítja, hogy az alkalmazás csomagnéve megegyezik-e a várt értékkel ("com.example.questionnare") | 2023.11.23. 18.24. | a tesztben és az appban megegyeznek a nevek | PASS | Fekete Enikő és Papp Gréta |
+| validatePackageName():Az összehasonlítás segítségével a teszt megállapítja, hogy az alkalmazás csomagnéve megegyezik-e a várt értékkel ("com.example.questionnare") | 2023.11.23. 18.24. | Megkaptam az „Expected Result”-ot | a tesztben és az appban megegyeznek a nevek | PASS | Fekete Enikő és Papp Gréta |
 
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
+| testListItemClick(): a teszt azt ellenőrzi, hogy a lista első elemére történő kattintás működik-e megfelelően a MainActivity alkalmazásban | 2023.11.23. 23.46. | Megkaptam az „Expected Result”-ot | a kattintások során minden elem megfelelően működik | PASS | Fekete Enikő |
