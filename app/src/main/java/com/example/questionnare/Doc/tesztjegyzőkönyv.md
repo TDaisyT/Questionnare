@@ -1,4 +1,4 @@
-#Teszt jegyzőkönyv
+Teszt jegyzőkönyve
 
 Tesztelt projekt: Questionnare
 Teszt kezdete: 2023.11.01.
@@ -31,8 +31,16 @@ Megjegyzés: A tesztek végrehajtásakor biztosítva van, hogy az adatbázis ini
 
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
-| testQuestionsActivity: A teszt azt ellenőrzi, hogy a QuestionsActivity helyesen jelenik meg, a felhasználók helyesen válaszolnak-e a kérdésekre (legalább egy rádiógomb van bejelölve minden kérdéshez), és a válaszok elküldése után a megfelelő átmenet történik-e a HomeActivity-re. | 2023.11.22. 13.52. | a kérdés lebonyolításának ellenőrzése | PASS | Fekete Enikő | 
-| areAllRadioButtonsChecked:  az a feladata, hogy ellenőrizze, hogy az összes rádiógomb be van-e jelölve a QuestionsActivity által megjelenített kérdéseknél. | 2023. 11. 14.48. | a gombok megjelennek | PASS | Fekete Enikő |
+| testQuestionsActivity: A teszt azt ellenőrzi, hogy a QuestionsActivity helyesen jelenik meg, a felhasználók helyesen válaszolnak-e a kérdésekre (legalább egy rádiógomb van bejelölve minden kérdéshez), és a válaszok elküldése után a megfelelő átmenet történik-e a HomeActivity-re. | 2023.11.22. 13.52. |  Megkaptam az „Expected Result”-ot  |  a kérdés lebonyolításának ellenőrzése | PASS | Fekete Enikő | 
+| areAllRadioButtonsChecked:  az a feladata, hogy ellenőrizze, hogy az összes rádiógomb be van-e jelölve a QuestionsActivity által megjelenített kérdéseknél. | 2023. 11.22. 14.48.  |  Megkaptam az „Expected Result”-ot  |  a gombok megjelennek | PASS | Fekete Enikő |
+
+| Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
+| ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
+| testDefaultFragment(): , ez a teszteset azt biztosítja, hogy amikor a HomeActivity elindul, az alapértelmezett fragmens a megadott konténerben (R.id.container) a Qlist típusú legyen | 2023.11.22. 22.58. |  Megkaptam az „Expected Result”-ot  |  a típus megegyezik | PASS | Fekete Enikő és Kaponyás Lüszi |
+
+| Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
+| ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
+| testSuccessfulLogin():  ellenőrzi hogy  a bejelentkezési művelet a megfelelő módon fut-e le, és hogy a HomeActivity az elvárt adatokkal kerül-e megnyitásra | 2023.11.23. 07.12. | Megkaptam az „Expected Result”-ot | az adatok rendben betöltődnek | PASS | Fekete Enikő és Kaponyás Lüszi |
 
 | Step Description | Test Date	| Expected Result | 	Actual Results | PASS/FAIL	| Additional Notes/Who did it |
 | ---------------- | ---------  | --------------- | ---------------- | ---------- | --------------------------- |
